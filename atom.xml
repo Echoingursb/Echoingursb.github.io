@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WHOAMI</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://echoingursb.github.io/"/>
+  <updated>2017-08-30T03:05:57.444Z</updated>
+  <id>http://echoingursb.github.io/</id>
+  
+  <author>
+    <name>whoami</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单词</title>
+    <link href="http://echoingursb.github.io/2017/08/30/%E5%8D%95%E8%AF%8D/"/>
+    <id>http://echoingursb.github.io/2017/08/30/单词/</id>
+    <published>2017-08-30T01:07:30.000Z</published>
+    <updated>2017-08-30T03:05:57.444Z</updated>
+    
+    <content type="html"><![CDATA[<p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
+<ul>
+<li>A</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>发音</th>
+<th>释义 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>asynchronous</td>
+<td>英 [eɪˈsɪŋkrənəs]   美 [e’sɪŋkrənəs]</td>
+<td>adj.异步的</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>B</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>发音</th>
+<th>释义 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BMI</td>
+<td></td>
+<td>n.Body Mass Index （体质指数）</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>发音</th>
+<th>释义 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>concatenate</td>
+<td>英 [kɒn’kætɪneɪt]   美 [kɑnˈkæt(ə)ˌneɪt]</td>
+<td>vt.把 （一系列事件、事情等）联系起来；连接   adj. 连接的，联系在一起的</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在这里总结一下遇到的单词，方便自己学习和查阅。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="单词" scheme="http://echoingursb.github.io/tags/%E5%8D%95%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HelloWorld</title>
+    <link href="http://echoingursb.github.io/2017/08/28/HelloWorld/"/>
+    <id>http://echoingursb.github.io/2017/08/28/HelloWorld/</id>
+    <published>2017-08-28T05:14:46.000Z</published>
+    <updated>2017-08-29T05:24:55.007Z</updated>
+    
+    <content type="html"><![CDATA[<p>我有一头小毛驴，我从来也不骑 (=・ω・=)<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">  ((`&apos;-&quot;``&quot;&quot;-&apos;`)) </div><div class="line">   )   -    -  ( </div><div class="line">  /   (o _ o)   \ </div><div class="line">  \    ( 0 )    / </div><div class="line">  _&apos;-.._&apos;=&apos;_..-&apos;_ </div><div class="line">/`;#&apos;#&apos;#.-.#&apos;#&apos;#;`\ </div><div class="line">\_))    &apos;#&apos;    ((_/ </div><div class="line">  #.  ☆ ☆ ☆   # </div><div class="line">  &apos;#.         .#&apos;           </div><div class="line">  / &apos;#.      .#&apos; \ </div><div class="line"> _\  \&apos;#. .#&apos;/  /_ </div><div class="line">(((___) &apos;#&apos; (___)</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我有一头小毛驴，我从来也不骑 (=・ω・=)&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://echoingursb.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="心情" scheme="http://echoingursb.github.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
+  
+</feed>
