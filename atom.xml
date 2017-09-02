@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-08-30T03:05:57.444Z</updated>
+  <updated>2017-09-01T02:49:08.393Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -16,11 +16,148 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【简明版】有道云笔记Markdown指南</title>
+    <link href="http://echoingursb.github.io/2017/09/01/%E3%80%90%E7%AE%80%E6%98%8E%E7%89%88%E3%80%91%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0Markdown%E6%8C%87%E5%8D%97%20/"/>
+    <id>http://echoingursb.github.io/2017/09/01/【简明版】有道云笔记Markdown指南 /</id>
+    <published>2017-09-01T02:08:36.000Z</published>
+    <updated>2017-09-01T02:49:08.393Z</updated>
+    
+    <content type="html"><![CDATA[<p>什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。</p>
+<p>有道云笔记内置Markdown编辑器和使用指南，非技术类笔记用户，千万不要被「标记」、「语言」吓到，Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
+<p>就是这十个不到的标记符号，却能让人优雅地沉浸式记录，专注内容而不是纠结排版，达到「心中无尘，码字入神」的境界。</p>
+<a id="more"></a>
+<h2 id="一-利用Markdown可以做什么？"><a href="#一-利用Markdown可以做什么？" class="headerlink" title="一.利用Markdown可以做什么？"></a>一.利用Markdown可以做什么？</h2><ul>
+<li>1.代码高亮</li>
+</ul>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<ul>
+<li>2.制作待办事项To-do List</li>
+</ul>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<ul>
+<li>3.高效绘制流程图、序列图、甘特图、表格</li>
+</ul>
+<p>流程图：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p>序列图：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p>甘特图：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p>表格：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<ul>
+<li>4.书写数学公式</li>
+</ul>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<h2 id="二-有道云笔记Markdown简明版使用指南"><a href="#二-有道云笔记Markdown简明版使用指南" class="headerlink" title="二.有道云笔记Markdown简明版使用指南"></a>二.有道云笔记Markdown简明版使用指南</h2><ul>
+<li>1.标题</li>
+</ul>
+<p>标题是每篇文章必备而且最常用的格式。</p>
+<p>在Markdown中，如果想将一段文字定义为标题，只需要在这段文字前面加上 #，再在 # 后加一个空格即可。还可增加二、三、四、五、六级标题，总共六级，只需要增加 # ，增加一个 # ，标题字号相应降低一级。如图：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<ul>
+<li>2.列表</li>
+</ul>
+<p>列表格式也很常用，它可以让你的文稿变得井井有条。在 Markdown 中，你只需要在文字前面加上 - 就可以了；如果你希望是有序列表，在文字前面加上 1. 2. 3. 即可。</p>
+<blockquote>
+<p><em>注：-、1.和文字之间要保留一个字符的空格。</em></p>
+</blockquote>
+<ul>
+<li>3.引用</li>
+</ul>
+<p>如果你需要在文稿中引用一段别处的句子，那么就要用到「引用」格式。</p>
+<p>在引用文字前加上 &gt; 并与文字保留一个字符的空格，即可。</p>
+<ul>
+<li>4.粗体和斜体</li>
+</ul>
+<p>Markdown 的粗体和斜体也非常简单：</p>
+<p>用两个 * 包含一段文本就是体的语法；</p>
+<p>用一个 * 包含一段文本就是斜体的语法。</p>
+<ul>
+<li>5.链接与图片</li>
+</ul>
+<p>链接：在 Markdown 中，插入链接只需要使用 <a href="链接地址">显示文本</a> 即可。</p>
+<p>图片：在 Markdown 中，插入图片只需要使用 <img src="图片链接地址" alt="显示文本">即可。</p>
+<p>注：插入图片的语法和链接的语法很像，只是前面多了一个 ！</p>
+<ul>
+<li>6.分割线</li>
+</ul>
+<p>分割线的语法只需要另起一行，连续输入三个星号 <em>*</em> 即可分割两段文字内容。</p>
+<p>如图：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<ul>
+<li>7.表格</li>
+</ul>
+<p>当你需要在Markdown文稿中键入表格，代码如下：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p>示例参考：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<blockquote>
+<p><em>如上7大格式是写作文稿时最常使用的</em>。</p>
+</blockquote>
+<p>怎么样，看了相关Markdown语法是不是觉得挺简单？</p>
+<p>当然，Markdown新手在使用不熟练的情况下，可能会忘记相关语法，也没关系，笔记的工具栏内置了Markdown语法，方便学习与熟悉。</p>
+<p>如，「表格」语法相对复杂，你可能忘记了，这时候，你只需要点击编辑框上方工具栏，点选「表格」的图标，左边编辑区便会出现「表格」相应代码：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p>然后，你只需要将代码替换成相应文本即可，如图：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p>熟悉语法之后，还是建议大家少使用辅助工具栏，尽量自己键入代码，感受纯文本之美。</p>
+<p>当然，有道云笔记的Markdown还能支持制作待办事项，书写流程图、序列图、甘特图，书写数学公式等，是不是够极客，够有逼格？</p>
+<p>看看笔记菌用Markdown甘特图写的项目计划时间表：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<blockquote>
+<p>Tips for 有道云笔记中的 Markdown</p>
+</blockquote>
+<ul>
+<li>1.实时同步预览，所看即所得</li>
+</ul>
+<p>我们将笔记编辑界面一分为二，左边为编辑区，右边为预览区，两区滚动条同步。在编辑区的操作能够实时反映在预览区，方便及时调整和查看最终版面效果。</p>
+<ul>
+<li>2.工具栏内置Markdown语法，方便新手学习</li>
+</ul>
+<p>编辑页面顶端的工具栏有对应代码，如果你是一个不熟悉Markdown语法的新手，可以先尝试用工具栏辅助操作。也可以在网上搜索「Markdown语法指南」进行学习。</p>
+<p>当然，如果你觉得工具栏太打扰，点击下方分界条即可隐藏工具栏，切换到极简编辑环境。</p>
+<ul>
+<li>3.实时云端保存</li>
+</ul>
+<p>Markdown模式继承了有道云笔记的优良传统，你每一次击键的内容都会实时保存在云端，无需担心浏览器崩溃、设备没电、突然断网等情况。对于写作者来说，更是再也不用担心因为各种原因痛失文稿的情况了。</p>
+<ul>
+<li>4.界面大小可点击分界条调整。</li>
+</ul>
+<p>点击“1”处，工具栏收起；</p>
+<p>点击“2”处，右侧预览区收起。</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p>点击后效果如图：</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<blockquote>
+<p>传送门：</p>
+<ul>
+<li><a href="http://note.youdao.com/iyoudao/?p=2411" target="_blank" rel="external">【简明版】有道云笔记Markdown指南</a></li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。&lt;/p&gt;
+&lt;p&gt;有道云笔记内置Markdown编辑器和使用指南，非技术类笔记用户，千万不要被「标记」、「语言」吓到，Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。&lt;/p&gt;
+&lt;p&gt;就是这十个不到的标记符号，却能让人优雅地沉浸式记录，专注内容而不是纠结排版，达到「心中无尘，码字入神」的境界。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Markdown语法(有道云笔记)" scheme="http://echoingursb.github.io/tags/Markdown%E8%AF%AD%E6%B3%95-%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>单词</title>
     <link href="http://echoingursb.github.io/2017/08/30/%E5%8D%95%E8%AF%8D/"/>
     <id>http://echoingursb.github.io/2017/08/30/单词/</id>
     <published>2017-08-30T01:07:30.000Z</published>
-    <updated>2017-08-30T03:05:57.444Z</updated>
+    <updated>2017-09-02T04:08:15.840Z</updated>
     
     <content type="html"><![CDATA[<p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
 <ul>
@@ -39,6 +176,11 @@
 <td>asynchronous</td>
 <td>英 [eɪˈsɪŋkrənəs]   美 [e’sɪŋkrənəs]</td>
 <td>adj.异步的</td>
+</tr>
+<tr>
+<td>annotation</td>
+<td>英 [ˌænə’teɪʃn]   美 [ˌænə’teɪʃn]</td>
+<td>n.注释</td>
 </tr>
 </tbody>
 </table>
@@ -59,56 +201,6 @@
 <td></td>
 <td>n.Body Mass Index （体质指数）</td>
 </tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
 </tbody>
 </table>
 <ul>
@@ -127,11 +219,6 @@
 <td>concatenate</td>
 <td>英 [kɒn’kætɪneɪt]   美 [kɑnˈkæt(ə)ˌneɪt]</td>
 <td>vt.把 （一系列事件、事情等）联系起来；连接   adj. 连接的，联系在一起的</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
 </tr>
 </tbody>
 </table>
