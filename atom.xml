@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-03T03:34:49.971Z</updated>
+  <updated>2017-09-03T03:35:57.354Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,12 +20,16 @@
     <link href="http://echoingursb.github.io/2017/09/03/%E3%80%90%E8%BF%9B%E9%98%B6%E7%89%88%E3%80%91%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0Markdown%E6%8C%87%E5%8D%97/"/>
     <id>http://echoingursb.github.io/2017/09/03/【进阶版】有道云笔记Markdown指南/</id>
     <published>2017-09-03T03:34:49.000Z</published>
-    <updated>2017-09-03T03:34:49.971Z</updated>
+    <updated>2017-09-03T03:35:57.354Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Markdown语法(有道云笔记)" scheme="http://echoingursb.github.io/tags/Markdown%E8%AF%AD%E6%B3%95-%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
