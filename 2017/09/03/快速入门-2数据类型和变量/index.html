@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="WHOAMI">
 <meta property="og:description" content="快速入门-2数据类型和变量">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-03T08:11:02.696Z">
+<meta property="og:updated_time" content="2017-09-03T08:25:00.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速入门-2数据类型和变量">
 <meta name="twitter:description" content="快速入门-2数据类型和变量">
@@ -211,7 +211,7 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">true &amp;&amp; true; // 这个&amp;&amp;语句计算结果为true</div><div class="line">true &amp;&amp; false; // 这个&amp;&amp;语句计算结果为false</div><div class="line">false &amp;&amp; true &amp;&amp; false; // 这个&amp;&amp;语句计算结果为false</div></pre></td></tr></table></figure>
 <p><code>||</code>运算是或运算，只要其中有一个为<code>true</code>，<code>||</code>运算结果就是<code>true</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">false || false; // 这个||语句计算结果为false</div><div class="line">true || false; // 这个||语句计算结果为true</div><div class="line">false || true || false; // 这个||语句计算结果为true</div></pre></td></tr></table></figure>
-<p><code>!</code>运算是非运算，它是一个单目运算符，把<code>true</code>变成<code>false</code>，false变成true：</p>
+<p><code>!</code>运算是非运算，它是一个单目运算符，把<code>true</code>变成<code>false</code>，<code>false</code>变成<code>true</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">! true; // 结果为false</div><div class="line">! false; // 结果为true</div><div class="line">! (2 &gt; 5); // 结果为true</div></pre></td></tr></table></figure>
 <p>布尔值经常用在条件判断中，比如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var age = 15;</div><div class="line">if (age &gt;= 18) &#123;</div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">    alert(&apos;teenager&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -224,7 +224,7 @@ var _hmt = _hmt || [];
 <p>第二种是<code>===</code>比较，它不会自动转换数据类型，如果数据类型不一致，返回<code>false</code>，如果一致，再比较。</p>
 <p>由于JavaScript这个设计缺陷，不要使用<code>==</code>比较，始终坚持使用<code>===</code>比较。</p>
 <p>另一个例外是<code>NaN</code>这个特殊的<code>Number</code>与所有其他值都不相等，包括它自己：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">NaN === NaN; // false</div></pre></td></tr></table></figure></p>
-<p>唯一能判断NaN的方法是通过isNaN()函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">isNaN(NaN); // true</div></pre></td></tr></table></figure></p>
+<p>唯一能判断NaN的方法是通过<code>isNaN()</code>函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">isNaN(NaN); // true</div></pre></td></tr></table></figure></p>
 <p>最后要注意浮点数的相等比较：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 / 3 === (1 - 2 / 3); // false</div></pre></td></tr></table></figure></p>
 <p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Math.abs(1 / 3 - (1 - 2 / 3)) &lt; 0.0000001; // true</div></pre></td></tr></table></figure></p>
 <h2 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h2><p><code>null</code>表示一个“空”的值，它和<code>0</code>以及空字符串<code>&#39;&#39;</code>不同，<code>0</code>是一个数值，<code>&#39;&#39;</code>表示长度为0的字符串，而<code>null</code>表示“空”。</p>
@@ -626,11 +626,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
