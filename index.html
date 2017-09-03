@@ -196,24 +196,9 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>快速入门-1基本语法</p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>JavaScript的语法和Java语言类似，每个语句以;结束，语句块用{…}。但是，JavaScript并不强制要求在每个语句的结尾加;，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上;。</p>
-<p><em>注意：让JavaScript引擎自动加分号在某些情况下会改变程序的语义，导致运行结果与期望不一致。在本教程中，我们不会省略;，所有语句都会添加;。</em></p>
-<p>例如，下面的一行代码就是一个完整的赋值语句：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = 1;</div></pre></td></tr></table></figure>
-<p>下面的一行代码是一个字符串，但仍然可以视为一个完整的语句：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&apos;Hello, World&apos;;</div></pre></td></tr></table></figure>
-<p>下面的一行代码包含两个语句，每个语句用;表示语句结束：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = 1; var y = 2; // 不建议一行写多个语句!</div></pre></td></tr></table></figure>
-<p>语句块是一组语句的集合，例如，下面的代码先做了一个判断，如果判断成立，将执行{…}中的所有语句：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (2 &gt; 1) &#123;</div><div class="line">    x = 1;</div><div class="line">    y = 2;</div><div class="line">    z = 3;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意花括号{…}内的语句具有缩进，通常是4个空格。缩进不是JavaScript语法要求必须的，但缩进有助于我们理解代码的层次，所以编写代码时要遵守缩进规则。很多文本编辑器具有“自动缩进”的功能，可以帮助整理代码。</p>
-<p>{…}还可以嵌套，形成层级结构：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">if (2 &gt; 1) &#123;</div><div class="line">    x = 1;</div><div class="line">    y = 2;</div><div class="line">    z = 3;</div><div class="line">    if (x &lt; y) &#123;</div><div class="line">        z = 4;</div><div class="line">    &#125;</div><div class="line">    if (x &gt; y) &#123;</div><div class="line">        z = 5;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>JavaScript本身对嵌套的层级没有限制，但是过多的嵌套无疑会大大增加看懂代码的难度。遇到这种情况，需要把部分代码抽出来，作为函数来调用，这样可以减少代码的复杂度。</p>
-<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>以//开头直到行末的字符被视为行注释，注释是给开发人员看到，JavaScript引擎会自动忽略：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 这是一行注释</div><div class="line">alert(&apos;hello&apos;); // 这也是注释</div></pre></td></tr></table></figure>
-<p>另一种块注释是用/<em>…</em>/把多行字符包裹起来，把一大“块”视为一个注释：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/* 从这里开始是块注释</div><div class="line">仍然是注释</div><div class="line">仍然是注释</div><div class="line">注释结束 */</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/09/03/快速入门-1基本语法/#more">more >></a>
+        
       
 
       
