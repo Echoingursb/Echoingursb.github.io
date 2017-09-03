@@ -17,7 +17,7 @@
 <meta property="og:description" content="快速入门">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://note.youdao.com/favicon.ico">
-<meta property="og:updated_time" content="2017-09-03T05:08:32.254Z">
+<meta property="og:updated_time" content="2017-09-03T05:12:29.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速入门">
 <meta name="twitter:description" content="快速入门">
@@ -218,7 +218,7 @@ var _hmt = _hmt || [];
 <p><em>注意：不可以用Word或写字板来编写JavaScript或HTML，因为带格式的文本保存后不是纯文本文件，无法被浏览器正常读取。</em></p>
 <h1 id="如何运行JavaScript"><a href="#如何运行JavaScript" class="headerlink" title="如何运行JavaScript"></a>如何运行JavaScript</h1><p>要让浏览器运行JavaScript，必须先有一个HTML页面，在HTML页面中引入JavaScript，然后，让浏览器加载该HTML页面，就可以执行JavaScript代码。</p>
 <p>你也许会想，直接在我的硬盘上创建好HTML和JavaScript文件，然后用浏览器打开，不就可以看到效果了吗？</p>
-<p>这种方式运行部分JavaScript代码没有问题，但由于浏览器的安全限制，以file://开头的地址无法执行如联网等JavaScript代码，最终，你还是需要架设一个Web服务器，然后以<code>http://</code>开头的地址来正常执行所有JavaScript代码。</p>
+<p>这种方式运行部分JavaScript代码没有问题，但由于浏览器的安全限制，以<code>file://</code>开头的地址无法执行如联网等JavaScript代码，最终，你还是需要架设一个Web服务器，然后以<code>http://</code>开头的地址来正常执行所有JavaScript代码。</p>
 <p>不过，开始学习阶段，你无须关心如何搭建开发环境的问题，我们提供在页面输入JavaScript代码并直接运行的功能，让你专注于JavaScript的学习。</p>
 <p>试试直接点击“Run”按钮执行下面的JavaScript代码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  // 以//开头直到行末的是注释，将被浏览器忽略</div><div class="line">  // 第一个JavaScript代码:</div><div class="line">  &lt;script&gt;</div><div class="line">    alert(<span class="string">'Hello, world'</span>);</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  ...</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
