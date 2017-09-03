@@ -202,12 +202,12 @@
     <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E7%AE%80%E4%BB%8B/"/>
     <id>http://echoingursb.github.io/2017/09/03/JavaScript简介/</id>
     <published>2017-09-03T03:46:53.000Z</published>
-    <updated>2017-09-03T04:09:12.140Z</updated>
+    <updated>2017-09-03T07:38:29.734Z</updated>
     
     <content type="html"><![CDATA[<p>JavaScript简介<br><a id="more"></a></p>
 <h1 id="JavaScript历史"><a href="#JavaScript历史" class="headerlink" title="JavaScript历史"></a>JavaScript历史</h1><p>要了解JavaScript，我们首先要回顾一下JavaScript的诞生。</p>
 <p>在上个世纪的1995年，当时的网景公司正凭借其Navigator浏览器成为Web时代开启时最著名的第一代互联网公司。</p>
-<p>由于网景公司希望能在静态HTML页面上添加一些动态效果，于是叫Brendan Eich这哥们在两周之内设计出了JavaScript语言。你没看错，这哥们只用了10天时间。</p>
+<p>由于网景公司希望能在静态HTML页面上添加一些动态效果，于是叫<a href="https://baike.baidu.com/item/Brendan%20Eich/561441?fr=aladdin" target="_blank" rel="external">Brendan Eich</a>这哥们在两周之内设计出了JavaScript语言。你没看错，这哥们只用了10天时间。</p>
 <p>为什么起名叫JavaScript？原因是当时Java语言非常红火，所以网景公司希望借Java的名气来推广，但事实上JavaScript除了语法上有点像Java，其他部分基本上没啥关系。</p>
 <h1 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h1><p>因为网景开发了JavaScript，一年后微软又模仿JavaScript开发了JScript，为了让JavaScript成为全球标准，几个公司联合ECMA（European Computer Manufacturers Association）组织定制了JavaScript语言的标准，被称为ECMAScript标准。</p>
 <p>所以简单说来就是，ECMAScript是一种语言标准，而JavaScript是网景公司对ECMAScript标准的一种实现。</p>
