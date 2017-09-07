@@ -600,4 +600,59 @@
     
   </entry>
   
+  <entry>
+    <title>关于小熊</title>
+    <link href="http://echoingursb.github.io/2017/08/27/%E5%85%B3%E4%BA%8E%E5%B0%8F%E7%86%8A/"/>
+    <id>http://echoingursb.github.io/2017/08/27/关于小熊/</id>
+    <published>2017-08-27T07:03:35.000Z</published>
+    <updated>2017-09-07T07:12:36.860Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>属性面板</p>
+</blockquote>
+<ul>
+<li>专业：电子信息工程</li>
+<li>爱好：动漫、编程</li>
+</ul>
+<blockquote>
+<p>职业天赋</p>
+</blockquote>
+<ul>
+<li>写作：</li>
+<li>开发：</li>
+<li>爬虫：</li>
+</ul>
+<blockquote>
+<p>技能加点</p>
+</blockquote>
+<p>Java：Structs、Hibernate、Spring<br>Web：HTML5、CSS3、Javascript、Jquery、Vue.js</p>
+<blockquote>
+<p>通关副本</p>
+<p>社交方式</p>
+</blockquote>
+<ul>
+<li>Github：<a href="https://github.com/Echoingursb" target="_blank" rel="external">Echoingursb</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;属性面板&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;专业：电子信息工程&lt;/li&gt;
+&lt;li&gt;爱好：动漫、编程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;职业天赋&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;写作：&lt;/
+    
+    </summary>
+    
+    
+  </entry>
+  
 </feed>
