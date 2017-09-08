@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-03T10:04:48.284Z</updated>
+  <updated>2017-09-08T12:19:16.937Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -16,13 +16,178 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>朋友是一曲音乐</title>
+    <link href="http://echoingursb.github.io/2017/09/08/%E6%9C%8B%E5%8F%8B%E6%98%AF%E4%B8%80%E6%9B%B2%E9%9F%B3%E4%B9%90/"/>
+    <id>http://echoingursb.github.io/2017/09/08/朋友是一曲音乐/</id>
+    <published>2017-09-08T11:57:53.000Z</published>
+    <updated>2017-09-08T12:19:16.937Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>家里空间小，孩子哭大人叫，电视上嘿嘿哈哈地上演白痴版连续剧。这个时候我见听音乐，让轻柔的音乐盖过烦嚣。</p>
+<p><script><br><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"><pre class="aplayer-lrc-content">[ti:5.野子-苏运莹]
+[ar: 是]
+[al:]
+[by:]
+[offset:0]
+[00:00.10]野子 - 苏运莹
+[00:00.20]词：苏运莹
+[00:00.30]曲：苏运莹
+[00:00.40]
+[00:25.72]怎么大风越狠
+[00:28.82]我心越荡
+[00:30.91]
+[00:31.96]幻如一丝尘土
+[00:33.79]随风自由的在狂舞
+[00:37.62]
+[00:38.32]我要握紧手中坚定
+[00:41.40]却又飘散的勇气
+[00:44.78]我会变成巨人
+[00:46.73]踏着力气 踩着梦
+[00:49.22]
+[00:51.22]怎么大风越狠
+[00:54.29]我心越荡
+[00:57.53]又如一丝消沙
+[00:59.38]随风轻飘的在狂舞
+[01:03.91]我要深埋心头上秉持
+[01:07.10]却又重小的勇气
+[01:10.21]一直往大风吹的方向走过去
+[01:16.20]吹啊吹啊 我的骄傲放纵
+[01:19.58]吹啊吹不毁我纯净花园
+[01:22.27]任风吹 任它乱
+[01:24.02]毁不灭是我 尽头的展望
+[01:29.15]吹啊吹啊 我赤脚不害怕
+[01:32.34]吹啊吹啊 无所谓 扰乱我
+[01:35.52]你看我在勇敢地微笑
+[01:37.98]
+[01:38.50]你看我在勇敢地去挥手啊
+[01:42.88]
+[01:55.14]是你吗 会给我一扇心房
+[01:57.60]让我勇敢前行
+[02:00.48]
+[02:01.47]是你呀 会给我一扇灯窗
+[02:04.39]让我让我无所畏惧
+[02:07.56]吹啊吹啊 我的骄傲放纵
+[02:10.76]吹啊吹不毁我纯净花园
+[02:13.54]任风吹 任它乱
+[02:15.23]毁不灭是我 尽头的展望
+[02:19.72]
+[02:20.46]吹啊吹啊 我赤脚不害怕
+[02:23.53]吹啊吹啊 无所谓 扰乱我
+[02:26.62]你看我在勇敢地微笑
+[02:29.72]你看我在勇敢地去挥手啊
+[02:33.97]
+[02:40.03]怎么大风越狠 我心越荡
+[02:46.28]
+[02:46.93]我会变成巨人
+[02:49.75]踏着力气 踩着梦</pre></div>
+		<script>
+			new APlayer({
+				element: document.getElementById("aplayer0"),
+				narrow: false,
+				autoplay: true,
+				showlrc: 2,
+				music: {
+					title: "野子",
+					author: "苏运莹",
+					url: "http://og9ocpmwk.bkt.clouddn.com/01%20%E9%87%8E%E5%AD%90.m4a",
+					pic: "http://og9ocpmwk.bkt.clouddn.com/%E9%87%8E%E5%AD%90.jpg",
+				}
+			});
+		</script><br><br><a id="more"></a><br>听着听着就走神儿，我拿起手机来看。上面存着几天前的短信，朋友发来的，无非两句谈话：“起床了，看见阳光了，热。”心里荡漾起久已不见的温暖。</p>
+<p>从小到大，数得上来的朋友只有两个。</p>
+<p>初中一个，梳羊角辫，手拉手，公不离婆，槌不离锣。我撒谎，她帮我圆谎，她抄袭，我帮她抄袭。有一次，</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;家里空间小，孩子哭大人叫，电视上嘿嘿哈哈地上演白痴版连续剧。这个时候我见听音乐，让轻柔的音乐盖过烦嚣。&lt;/p&gt;
+&lt;p&gt;&lt;script&gt;&lt;br&gt;&lt;div id=&quot;aplayer0&quot; class=&quot;aplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;pre class=&quot;aplayer-lrc-content&quot;&gt;[ti:5.野子-苏运莹]
+[ar: 是]
+[al:]
+[by:]
+[offset:0]
+[00:00.10]野子 - 苏运莹
+[00:00.20]词：苏运莹
+[00:00.30]曲：苏运莹
+[00:00.40]
+[00:25.72]怎么大风越狠
+[00:28.82]我心越荡
+[00:30.91]
+[00:31.96]幻如一丝尘土
+[00:33.79]随风自由的在狂舞
+[00:37.62]
+[00:38.32]我要握紧手中坚定
+[00:41.40]却又飘散的勇气
+[00:44.78]我会变成巨人
+[00:46.73]踏着力气 踩着梦
+[00:49.22]
+[00:51.22]怎么大风越狠
+[00:54.29]我心越荡
+[00:57.53]又如一丝消沙
+[00:59.38]随风轻飘的在狂舞
+[01:03.91]我要深埋心头上秉持
+[01:07.10]却又重小的勇气
+[01:10.21]一直往大风吹的方向走过去
+[01:16.20]吹啊吹啊 我的骄傲放纵
+[01:19.58]吹啊吹不毁我纯净花园
+[01:22.27]任风吹 任它乱
+[01:24.02]毁不灭是我 尽头的展望
+[01:29.15]吹啊吹啊 我赤脚不害怕
+[01:32.34]吹啊吹啊 无所谓 扰乱我
+[01:35.52]你看我在勇敢地微笑
+[01:37.98]
+[01:38.50]你看我在勇敢地去挥手啊
+[01:42.88]
+[01:55.14]是你吗 会给我一扇心房
+[01:57.60]让我勇敢前行
+[02:00.48]
+[02:01.47]是你呀 会给我一扇灯窗
+[02:04.39]让我让我无所畏惧
+[02:07.56]吹啊吹啊 我的骄傲放纵
+[02:10.76]吹啊吹不毁我纯净花园
+[02:13.54]任风吹 任它乱
+[02:15.23]毁不灭是我 尽头的展望
+[02:19.72]
+[02:20.46]吹啊吹啊 我赤脚不害怕
+[02:23.53]吹啊吹啊 无所谓 扰乱我
+[02:26.62]你看我在勇敢地微笑
+[02:29.72]你看我在勇敢地去挥手啊
+[02:33.97]
+[02:40.03]怎么大风越狠 我心越荡
+[02:46.28]
+[02:46.93]我会变成巨人
+[02:49.75]踏着力气 踩着梦&lt;/pre&gt;&lt;/div&gt;
+		&lt;script&gt;
+			new APlayer({
+				element: document.getElementById(&quot;aplayer0&quot;),
+				narrow: false,
+				autoplay: true,
+				showlrc: 2,
+				music: {
+					title: &quot;野子&quot;,
+					author: &quot;苏运莹&quot;,
+					url: &quot;http://og9ocpmwk.bkt.clouddn.com/01%20%E9%87%8E%E5%AD%90.m4a&quot;,
+					pic: &quot;http://og9ocpmwk.bkt.clouddn.com/%E9%87%8E%E5%AD%90.jpg&quot;,
+				}
+			});
+		&lt;/script&gt;&lt;br&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://echoingursb.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="散文" scheme="http://echoingursb.github.io/tags/%E6%95%A3%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>快速入门-3数组</title>
     <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-3%E6%95%B0%E7%BB%84/"/>
     <id>http://echoingursb.github.io/2017/09/03/快速入门-3数组/</id>
     <published>2017-09-03T09:55:32.000Z</published>
     <updated>2017-09-03T10:04:48.284Z</updated>
     
-    <content type="html"><![CDATA[<p>快速入门-3数组</p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-3数组</p>
 <a id="more"></a>
 <p>JavaScript的<code>Array</code>可以包含任意数据类型，并通过索引来访问每个元素。</p>
 <p>要取得<code>Array</code>的长度，直接访问<code>length</code>属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3.14, &apos;Hello&apos;, null, true];</div><div class="line">arr.length; // 6</div></pre></td></tr></table></figure></p>
@@ -75,7 +240,7 @@
     <published>2017-09-03T08:43:39.000Z</published>
     <updated>2017-09-03T09:03:38.535Z</updated>
     
-    <content type="html"><![CDATA[<p>快速入门-3字符串</p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-3字符串</p>
 <a id="more"></a>
 <p>JavaScript的字符串就是用<code>&#39;&#39;</code>或<code>&quot;&quot;</code>括起来的字符表示。</p>
 <p>如果<code>&#39;</code>本身也是一个字符，那就可以用<code>&quot;&quot;</code>括起来，比如<code>&quot;I&#39;m OK&quot;</code>包含的字符是<code>I</code>，<code>&#39;</code>，<code>m</code>，<code>空格</code>，<code>O</code>，<code>K</code>这6个字符。</p>
@@ -127,7 +292,7 @@
     <published>2017-09-03T07:12:08.000Z</published>
     <updated>2017-09-03T08:28:39.461Z</updated>
     
-    <content type="html"><![CDATA[<p>快速入门-2数据类型和变量</p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-2数据类型和变量</p>
 <a id="more"></a>
 <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>计算机顾名思义就是可以做数学计算的机器，因此，计算机程序理所当然地可以处理各种数值。但是，计算机能处理的远不止数值，还可以处理文本、图形、音频、视频、网页等各种各样的数据，不同的数据，需要定义不同的数据类型。在JavaScript中定义了以下几种数据类型：</p>
 <h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>JavaScript不区分整数和浮点数，统一用Number表示，以下都是合法的Number类型：</p>
@@ -211,7 +376,7 @@
     <published>2017-09-03T05:43:59.000Z</published>
     <updated>2017-09-03T08:02:56.386Z</updated>
     
-    <content type="html"><![CDATA[<p>快速入门-1基本语法</p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-1基本语法</p>
 <a id="more"></a>
 <h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>JavaScript的语法和Java语言类似，每个语句以<code>;</code>结束，语句块用<code>{...}</code>。但是，JavaScript并不强制要求在每个语句的结尾加<code>;</code>，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上<code>;</code>。</p>
 <p><em>注意：让JavaScript引擎自动加分号在某些情况下会改变程序的语义，导致运行结果与期望不一致。在本教程中，我们不会省略<code>;</code>，所有语句都会添加<code>;</code>。</em></p>
@@ -251,7 +416,7 @@
     <published>2017-09-03T04:10:04.000Z</published>
     <updated>2017-09-03T07:52:18.466Z</updated>
     
-    <content type="html"><![CDATA[<p>快速入门</p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门</p>
 <a id="more"></a>
 <p>JavaScript代码可以直接嵌在网页的任何地方，不过通常我们都把JavaScript代码放到<code>&lt;head&gt;</code>中：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    alert(<span class="string">'Hello, world'</span>);</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  ...</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
@@ -309,7 +474,7 @@
     <published>2017-09-03T03:46:53.000Z</published>
     <updated>2017-09-03T07:38:29.734Z</updated>
     
-    <content type="html"><![CDATA[<p>JavaScript简介<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>JavaScript简介<br><a id="more"></a></p>
 <h1 id="JavaScript历史"><a href="#JavaScript历史" class="headerlink" title="JavaScript历史"></a>JavaScript历史</h1><p>要了解JavaScript，我们首先要回顾一下JavaScript的诞生。</p>
 <p>在上个世纪的1995年，当时的网景公司正凭借其Navigator浏览器成为Web时代开启时最著名的第一代互联网公司。</p>
 <p>由于网景公司希望能在静态HTML页面上添加一些动态效果，于是叫<a href="https://baike.baidu.com/item/Brendan%20Eich/561441?fr=aladdin" target="_blank" rel="external">Brendan Eich</a>这哥们在两周之内设计出了JavaScript语言。你没看错，这哥们只用了10天时间。</p>
@@ -344,7 +509,11 @@
     <published>2017-09-03T03:34:49.000Z</published>
     <updated>2017-09-03T03:35:57.354Z</updated>
     
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script>]]></content>
+    
     <summary type="html">
+    
+      &lt;script src=&quot;\assets\js\APlayer.min.js&quot;&gt; &lt;/script&gt;
     
     </summary>
     
@@ -362,7 +531,7 @@
     <published>2017-09-01T02:08:36.000Z</published>
     <updated>2017-09-01T02:49:08.393Z</updated>
     
-    <content type="html"><![CDATA[<p>什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。</p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。</p>
 <p>有道云笔记内置Markdown编辑器和使用指南，非技术类笔记用户，千万不要被「标记」、「语言」吓到，Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
 <p>就是这十个不到的标记符号，却能让人优雅地沉浸式记录，专注内容而不是纠结排版，达到「心中无尘，码字入神」的境界。</p>
 <a id="more"></a>
@@ -499,7 +668,7 @@
     <published>2017-08-30T01:07:30.000Z</published>
     <updated>2017-09-02T04:08:15.840Z</updated>
     
-    <content type="html"><![CDATA[<p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
 <ul>
 <li>A</li>
 </ul>
@@ -584,7 +753,7 @@
     <published>2017-08-28T05:14:46.000Z</published>
     <updated>2017-09-07T07:27:38.422Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><blockquote>
 <p>属性面板</p>
 </blockquote>
 <ul>
@@ -616,18 +785,14 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      &lt;script src=&quot;\assets\js\APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;blockquote&gt;
 &lt;p&gt;属性面板&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;专业：电子信息工程&lt;/li&gt;
 &lt;li&gt;爱好：动漫、编程&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;职业天赋&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;写作：&lt;/
+&lt;bl
     
     </summary>
     
