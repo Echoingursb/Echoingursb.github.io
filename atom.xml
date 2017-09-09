@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-09T05:14:31.572Z</updated>
+  <updated>2017-09-09T15:27:21.197Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -16,13 +16,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://echoingursb.github.io/2017/09/09/html5-canvas-drawing-app/"/>
+    <id>http://echoingursb.github.io/2017/09/09/html5-canvas-drawing-app/</id>
+    <published>2017-09-09T15:20:17.930Z</published>
+    <updated>2017-09-09T15:27:21.197Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 Create HTML5 Canvas JavaScript Drawing App Example</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <script type="text/javascript" src="../js/html5-canvas-drawing-app.js"></script>
+  </head>
+  <body>
+  <div style="width:530px;margin:10px auto">
+    <div id="canvasDiv"></div>
+  </div>
+    <script type="text/javascript"> $(document).ready(function() {
+    	 prepareCanvas();
+});</script>
+<div style="text-align:center;clear:both;margin-top:30px">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+  </body>
+</html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;\assets\js\APlayer.min.js&quot;&gt; &lt;/script&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML5 Create HTML5 Canvas JavaScript Drawing 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>朋友是一曲音乐</title>
     <link href="http://echoingursb.github.io/2017/09/08/%E6%9C%8B%E5%8F%8B%E6%98%AF%E4%B8%80%E6%9B%B2%E9%9F%B3%E4%B9%90/"/>
     <id>http://echoingursb.github.io/2017/09/08/朋友是一曲音乐/</id>
     <published>2017-09-08T11:57:53.000Z</published>
-    <updated>2017-09-09T05:14:31.572Z</updated>
+    <updated>2017-09-09T14:49:13.800Z</updated>
     
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><a id="more"></a>
+
 			<div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
 			<script>
 				var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","music":[{"title":"平凡之路","author":"朴树","url":"http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3","pic":"https://ogd99kckh.qnssl.com/1.jpg","lrc":"http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.txt"},{"title":"野子","author":"苏运莹","url":"http://og9ocpmwk.bkt.clouddn.com/01%20%E9%87%8E%E5%AD%90.m4a","pic":"http://og9ocpmwk.bkt.clouddn.com/%E9%87%8E%E5%AD%90.jpg","lrc":"https://ogd99kckh.qnssl.com/%E9%87%8E%E5%AD%90.txt"}]};
@@ -31,7 +77,6 @@
 			</script>
 
 		
-<a id="more"></a>
 <p>家里空间小，孩子哭大人叫，电视上嘿嘿哈哈地上演白痴版连续剧。这个时候我就听音乐，让轻柔的音乐盖过烦嚣。</p>
 <p>听着听着就走神儿，我拿起手机来看。上面存着几天前的短信，朋友发来的，无非两句谈话：“起床了，看见阳光了，热。”心里荡漾起久已不见的温暖。</p>
 <p>从小到大，数得上来的朋友只有两个。</p>
@@ -50,12 +95,9 @@
     
     <summary type="html">
     
-      &lt;div id=&quot;aplayer0&quot; class=&quot;aplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;
-			&lt;script&gt;
-				var options = {&quot;narrow&quot;:false,&quot;autoplay&quot;:true,&quot;showlrc&quot;:3,&quot;mode&quot;:&quot;random&quot;,&quot;music&quot;:[{&quot;title&quot;:&quot;平凡之路&quot;,&quot;author&quot;:&quot;朴树&quot;,&quot;url&quot;:&quot;http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3&quot;,&quot;pic&quot;:&quot;https://ogd99kckh.qnssl.com/1.jpg&quot;,&quot;lrc&quot;:&quot;http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.txt&quot;},{&quot;title&quot;:&quot;野子&quot;,&quot;author&quot;:&quot;苏运莹&quot;,&quot;url&quot;:&quot;http://og9ocpmwk.bkt.clouddn.com/01%20%E9%87%8E%E5%AD%90.m4a&quot;,&quot;pic&quot;:&quot;http://og9ocpmwk.bkt.clouddn.com/%E9%87%8E%E5%AD%90.jpg&quot;,&quot;lrc&quot;:&quot;https://ogd99kckh.qnssl.com/%E9%87%8E%E5%AD%90.txt&quot;}]};
-				options.element = document.getElementById(&quot;aplayer0&quot;);
-				new APlayer(options);
-			&lt;/script&gt;
+      &lt;script src=&quot;\assets\js\APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+			&lt;div id=&quot;aplayer0&quot; class=&quot;aplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/di
     
     </summary>
     
