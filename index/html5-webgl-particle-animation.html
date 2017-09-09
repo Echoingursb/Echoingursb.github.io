@@ -7,25 +7,6 @@
 
 
 	<link rel="stylesheet" href="../css/html5-webgl-particle-animation.css">
-	 
-
-
-</head>
-
-<body>
-
-	<canvas id="c"></canvas>
-
-	<script id="shader-fs" type="x-shader/x-fragment">
-		#ifdef GL_ES precision highp float; #endif void main(void) { gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0); }
-	</script>
-
-	<script id="shader-vs" type="x-shader/x-vertex">
-		attribute vec3 vertexPosition; uniform mat4 modelViewMatrix; uniform mat4 perspectiveMatrix; void main(void) { gl_Position
-		= perspectiveMatrix * modelViewMatrix * vec4( vertexPosition, 1.0); }
-	</script>
-
-	<!-- <script src="../js/html5-webgl-particle-animation.js"></script> -->
 	<script type="text/script">
 		window.onload = loadScene;
 		
@@ -497,6 +478,26 @@
 		  setTimeout(timer, 1500);
 		}
 	</script>
+	 
+
+
+</head>
+
+<body>
+
+	<canvas id="c"></canvas>
+
+	<script id="shader-fs" type="x-shader/x-fragment">
+		#ifdef GL_ES precision highp float; #endif void main(void) { gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0); }
+	</script>
+
+	<script id="shader-vs" type="x-shader/x-vertex">
+		attribute vec3 vertexPosition; uniform mat4 modelViewMatrix; uniform mat4 perspectiveMatrix; void main(void) { gl_Position
+		= perspectiveMatrix * modelViewMatrix * vec4( vertexPosition, 1.0); }
+	</script>
+
+	<!-- <script src="../js/html5-webgl-particle-animation.js"></script> -->
+	
 </body>
 
 </html>
