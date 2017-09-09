@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-09T19:31:21.973Z</updated>
+  <updated>2017-09-09T19:36:18.785Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title></title>
-    <link href="http://echoingursb.github.io/2017/09/10/css3shinecube/"/>
-    <id>http://echoingursb.github.io/2017/09/10/css3shinecube/</id>
+    <link href="http://echoingursb.github.io/2017/09/10/index/"/>
+    <id>http://echoingursb.github.io/2017/09/10/index/</id>
     <published>2017-09-09T19:19:52.020Z</published>
-    <updated>2017-09-09T19:31:21.973Z</updated>
+    <updated>2017-09-09T19:36:18.785Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><!doctype html>
 <html>
