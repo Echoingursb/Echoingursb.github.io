@@ -756,8 +756,7 @@ body,button,input,select,textarea {
 
 body {
   overflow-y: hidden;
-  background: url("/background/bg-13.jpg") 0% 0% / cover fixed;
-	/* background: #eaeaea */
+	background: #eaeaea
 }
 
 #container,body,html {
