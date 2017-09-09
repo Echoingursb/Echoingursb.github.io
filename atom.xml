@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-09T15:34:43.896Z</updated>
+  <updated>2017-09-09T15:39:33.743Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/09/09/html5-canvas-drawing-app/"/>
     <id>http://echoingursb.github.io/2017/09/09/html5-canvas-drawing-app/</id>
     <published>2017-09-09T15:20:17.930Z</published>
-    <updated>2017-09-09T15:34:43.896Z</updated>
+    <updated>2017-09-09T15:39:33.743Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script>
 
@@ -28,7 +28,7 @@
 <html>
   <head>
     <title>HTML5 Create HTML5 Canvas JavaScript Drawing App Example</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="../js/html5-canvas-drawing-app.js"></script>
   </head>
