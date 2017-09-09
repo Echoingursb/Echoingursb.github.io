@@ -93,36 +93,36 @@ function prepareCanvas()
 	// -----------
 	crayonImage.onload = function() { resourceLoaded(); 
 	};
-	crayonImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/crayon-outline.png";
+	crayonImage.src = "../images/crayon-outline.png";
 	//context.drawImage(crayonImage, 0, 0, 100, 100);
 	
 	markerImage.onload = function() { resourceLoaded(); 
 	};
-	markerImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/eraser-outline.png";
+	markerImage.src = "../images/marker-outline.png";
 	
 	eraserImage.onload = function() { resourceLoaded(); 
 	};
-	eraserImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/eraser-outline.png";	
+	eraserImage.src = "../images/eraser-outline.png";	
 	
 	crayonBackgroundImage.onload = function() { resourceLoaded(); 
 	};
-	crayonBackgroundImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/crayon-background.png";
+	crayonBackgroundImage.src = "../images/crayon-background.png";
 	
 	markerBackgroundImage.onload = function() { resourceLoaded(); 
 	};
-	markerBackgroundImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/marker-background.png";
+	markerBackgroundImage.src = "../images/marker-background.png";
 	
 	eraserBackgroundImage.onload = function() { resourceLoaded(); 
 	};
-	eraserBackgroundImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/eraser-background.png";
+	eraserBackgroundImage.src = "../images/eraser-background.png";
 
 	crayonTextureImage.onload = function() { resourceLoaded(); 
 	};
-	crayonTextureImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/crayon-texture.png";
+	crayonTextureImage.src = "../images/crayon-texture.png";
 	
 	outlineImage.onload = function() { resourceLoaded(); 
 	};
-	outlineImage.src = "http://www.html5tricks.com/demo/html5-canvas-drawing-app/images/watermelon-duck-outline.png";
+	outlineImage.src = "../images/watermelon-duck-outline.png";
 
 	// Add mouse events
 	// ----------------

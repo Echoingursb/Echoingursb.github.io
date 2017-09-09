@@ -176,29 +176,244 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="false-html5-canvas-drawing-app" class="article article-type-false  article-index" itemscope itemprop="blogPost">
+    <article id="false-css3-shine-cube" class="article article-type-false  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
         <script src="\assets\js\APlayer.min.js"> </script>
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>HTML5 Create HTML5 Canvas JavaScript Drawing App Example</title>
-    <script type="text/javascript" src="http://www.html5tricks.com/demo/html5-canvas-drawing-app/jquery.js"></script>
-    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
-    <script type="text/javascript" src="http://www.html5tricks.com/demo/html5-canvas-drawing-app/html5-canvas-drawing-app.js"></script>
-  </head>
-  <body>
+<head>
+<meta charset="utf-8">
+<title>超绚丽CSS3多色彩发光立方体旋转动画DEMO演示</title>
+
+<style>
+/* body {
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+} */
+
+.world {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  width: 100vh;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cube {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 50vh;
+  height: 50vh;
+  position: relative;
+  -webkit-animation: rotator 4.5s linear infinite;
+          animation: rotator 4.5s linear infinite;
+  outline: 0;
+}
+.cube * {
+  background: #000;
+  box-shadow: 0 0 3vh currentColor;
+  -webkit-transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+.cube:hover * {
+  background: currentColor;
+  box-shadow: 0 0 20vh currentColor;
+}
+.cube .cube__front {
+  color: deeppink;
+  -webkit-transform: translateZ(25vh);
+          transform: translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__right {
+  color: lightcoral;
+  -webkit-transform: rotateY(90deg) translateZ(25vh);
+          transform: rotateY(90deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__left {
+  color: skyblue;
+  -webkit-transform: rotateY(270deg) translateZ(25vh);
+          transform: rotateY(270deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__back {
+  color: seagreen;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(180deg) translateZ(25vh);
+          transform: rotateY(180deg) translateZ(25vh);
+}
+.cube .cube__top {
+  color: mediumseagreen;
+  -webkit-transform: rotateX(90deg) translateZ(25vh);
+          transform: rotateX(90deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__bottom {
+  color: dodgerblue;
+  -webkit-transform: rotateX(270deg) translateZ(25vh);
+          transform: rotateX(270deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="world">
+  <div class="cube" tabindex="0">
+    <div class="cube__front"></div>
+    <div class="cube__back"></div>
+    <div class="cube__left"></div>
+    <div class="cube__right"></div>
+    <div class="cube__top"></div>
+    <div class="cube__bottom"></div>
+  </div>
+</div>
+
+</body>
+</html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/10/css3-shine-cube/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="false-html5-canvas-drawing-app" class="article article-type-false  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script src="\assets\js\APlayer.min.js"> </script><!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML5 Create HTML5 Canvas JavaScript Drawing App Example</title>
+  <script type="text/javascript" src="http://www.html5tricks.com/demo/html5-canvas-drawing-app/jquery.js"></script>
+  <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+  <script type="text/javascript" src="https://raw.githubusercontent.com/Echoingursb/html5tricks/master/html5-canvas-drawing-app/html5-canvas-drawing-app.js"></script>
+</head>
+
+<body>
   <div style="width:530px;margin:10px auto">
     <div id="canvasDiv"></div>
   </div>
-    <script type="text/javascript"> $(document).ready(function() {
-    	 prepareCanvas();
-});</script>
-  </body>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      prepareCanvas();
+    });
+  </script>
+</body>
+
 </html>
       
 
@@ -854,88 +1069,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/09/03/【进阶版】有道云笔记Markdown指南/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【简明版】有道云笔记Markdown指南 " class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/01/【简明版】有道云笔记Markdown指南 /">【简明版】有道云笔记Markdown指南</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/01/【简明版】有道云笔记Markdown指南 /" class="archive-article-date">
-  	<time datetime="2017-09-01T02:08:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。</p>
-<p>有道云笔记内置Markdown编辑器和使用指南，非技术类笔记用户，千万不要被「标记」、「语言」吓到，Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
-<p>就是这十个不到的标记符号，却能让人优雅地沉浸式记录，专注内容而不是纠结排版，达到「心中无尘，码字入神」的境界。</p>
-        
-          <a class="article-more-a" href="/2017/09/01/【简明版】有道云笔记Markdown指南 /#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Markdown语法(有道云笔记)</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/01/【简明版】有道云笔记Markdown指南 /">展开全文 >></a>
         </p>
       
 
