@@ -755,14 +755,16 @@ body,button,input,select,textarea {
 }
 
 body {
-	overflow-y: hidden;
-	background: #eaeaea
+  overflow-y: hidden;
+  background: url("/background/bg-13.jpg") 0% 0% / cover fixed;
+	/* background: #eaeaea */
 }
 
 #container,body,html {
 	height: 100%;
 	overflow-x: hidden;
-	overflow-y: auto
+  overflow-y: auto;
+  cursor: url("/img/cursor.ico"), auto;
 }
 
 #mobile-nav {
