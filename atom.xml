@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-09T18:43:13.230Z</updated>
+  <updated>2017-09-09T18:53:54.784Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/09/08/%E6%9C%8B%E5%8F%8B%E6%98%AF%E4%B8%80%E6%9B%B2%E9%9F%B3%E4%B9%90/"/>
     <id>http://echoingursb.github.io/2017/09/08/朋友是一曲音乐/</id>
     <published>2017-09-08T11:57:53.000Z</published>
-    <updated>2017-09-09T18:43:13.230Z</updated>
+    <updated>2017-09-09T18:53:54.784Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
 		<script>
@@ -30,10 +30,10 @@
 				autoplay: true,
 				showlrc: 0,
 				music: {
-					title: "Caffeine",
-					author: "Jeff Williams",
-					url: "https://github.com/Echoingursb/cloudMusic/blob/master/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81(Cover%EF%BC%9AKasaYAYA).mp3",
-					pic: "",
+					title: "漫步在岁月洪流",
+					author: "DoerChan",
+					url: "http://airing.ursb.me/music/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81%28Cover%EF%BC%9AKasaYAYA%29.mp3",
+					pic: "http://airing.ursb.me/music/2017041606.jpeg",
 				}
 			});
 		</script>
@@ -64,10 +64,10 @@
 				autoplay: true,
 				showlrc: 0,
 				music: {
-					title: &quot;Caffeine&quot;,
-					author: &quot;Jeff Williams&quot;,
-					url: &quot;https://github.com/Echoingursb/cloudMusic/blob/master/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81(Cover%EF%BC%9AKasaYAYA).mp3&quot;,
-					pic: &quot;&quot;,
+					title: &quot;漫步在岁月洪流&quot;,
+					author: &quot;DoerChan&quot;,
+					url: &quot;http://airing.ursb.me/music/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81%28Cover%EF%BC%9AKasaYAYA%29.mp3&quot;,
+					pic: &quot;http://airing.ursb.me/music/2017041606.jpeg&quot;,
 				}
 			});
 		&lt;/script&gt;
