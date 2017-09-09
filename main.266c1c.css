@@ -755,15 +755,15 @@ body,button,input,select,textarea {
 }
 
 body {
-  overflow-y: hidden;
+    overflow-y: hidden;
 	background: #eaeaea
 }
 
 #container,body,html {
 	height: 100%;
 	overflow-x: hidden;
-  overflow-y: auto;
-  cursor: url("/img/cursor.ico"), auto;
+    overflow-y: auto;
+    cursor: url("/img/cursor.ico"), auto
 }
 
 #mobile-nav {
@@ -772,7 +772,7 @@ body {
 
 #container {
 	position: relative;
-	min-height: 100%
+	min-height: 100%;
 }
 
 #container .anm-canvas {
@@ -4048,6 +4048,7 @@ a.pswp__share--download:hover {
 	text-decoration: underline
 }
 
+/* copyright */
 .copyright {
     width: 85%;
     max-width: 45em;
