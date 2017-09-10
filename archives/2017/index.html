@@ -5,9 +5,11 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
   <title>Archives: 2017 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <meta name="description" content="Web Java front-end">
 <meta property="og:type" content="website">
 <meta property="og:title" content="WHOAMI">
@@ -25,12 +27,12 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.266c1c.css">
-  <style type="text/css">
+  <!-- <style type="text/css">
   
     #container.show {
       background: linear-gradient(200deg,#a0cfe4,#e8c37e);
     }
-  </style>
+  </style> -->
   
 
   
@@ -45,6 +47,22 @@ var _hmt = _hmt || [];
 </script>
 
 
+
+  <script>
+    var backgroundList = ["url(../../source/background/bg-1.jpg)", "url(../../source/background/bg-2.jpg)", "url(../../source/background/bg-3.jpg)",
+        "url(../../source/background/bg-4.jpg)", "url(../../source/background/bg-5.jpg)", "url(../../source/background/bg-6.jpg)",
+        "url(../../source/background/bg-7.jpg)", "url(../../source/background/bg-8.jpg)", "url(../../source/background/bg-9.jpg)",
+        "url(../../source/background/bg-10.jpg)", "url(../../source/background/bg-11.jpg)", "url(../../source/background/bg-12.jpg)",
+        "url(../../source/background/bg-13.jpg)", "url(../../source/background/bg-14.jpg)", "url(../../source/background/bg-15.jpg)",
+        "url(../../source/background/bg-16.jpg)", "url(../../source/background/bg-17.jpg)", "url(../../source/background/bg-18.jpg)"
+    ];
+    var background = Math.floor(Math.random() * backgroundList.length);
+    $("body").css({
+        "background": backgroundList[background],
+        "background-attachment": "fixed",
+        "background-size": "cover"
+    });
+</script>
 </head>
 
  
@@ -856,11 +874,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
