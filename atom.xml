@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-09T18:53:54.784Z</updated>
+  <updated>2017-09-10T12:36:34.428Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -16,68 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>朋友是一曲音乐</title>
-    <link href="http://echoingursb.github.io/2017/09/08/%E6%9C%8B%E5%8F%8B%E6%98%AF%E4%B8%80%E6%9B%B2%E9%9F%B3%E4%B9%90/"/>
-    <id>http://echoingursb.github.io/2017/09/08/朋友是一曲音乐/</id>
-    <published>2017-09-08T11:57:53.000Z</published>
-    <updated>2017-09-09T18:53:54.784Z</updated>
+    <title>快速入门-5对象</title>
+    <link href="http://echoingursb.github.io/2017/09/10/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-5%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://echoingursb.github.io/2017/09/10/快速入门-5对象/</id>
+    <published>2017-09-10T12:29:41.000Z</published>
+    <updated>2017-09-10T12:36:34.428Z</updated>
     
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
-		<script>
-			new APlayer({
-				element: document.getElementById("aplayer0"),
-				narrow: false,
-				autoplay: true,
-				showlrc: 0,
-				music: {
-					title: "漫步在岁月洪流",
-					author: "DoerChan",
-					url: "http://airing.ursb.me/music/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81%28Cover%EF%BC%9AKasaYAYA%29.mp3",
-					pic: "http://airing.ursb.me/music/2017041606.jpeg",
-				}
-			});
-		</script>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-5对象</p>
 <a id="more"></a>
-<p>家里空间小，孩子哭大人叫，电视上嘿嘿哈哈地上演白痴版连续剧。这个时候我就听音乐，让轻柔的音乐盖过烦嚣。</p>
-<p>听着听着就走神儿，我拿起手机来看。上面存着几天前的短信，朋友发来的，无非两句谈话：“起床了，看见阳光了，热。”心里荡漾起久已不见的温暖。</p>
-<p>从小到大，数得上来的朋友只有两个。</p>
-<p>初中一个，梳羊角辫，手拉手，公不离婆，槌不离锣。我撒谎，她帮我圆谎，她抄袭，我帮她抄袭。有一次，我和家里闹别扭，留张字条给她，想悄悄出走，她很快追出校门，披头散发，衣服穿得乱七八糟，眼泪流得哗哗的……</p>
-<p>当时想着要好一生一世，谁知道逐渐就淡了，十几年后再相聚，已经是两条路上的人了，除了黑白片一样的回忆，仿佛再也找不到可以维系友情的线索。</p>
-<p>晚上做梦，却还能梦见她，还是当年梳羊角辫的那个…….</p>
-<p>第二个朋友，是遭受大难之后相识的。</p>
-<p>那年，我忽然生了一场大病，一下子被打蒙了，成天在心里骂：“真他妈的！”一个亲戚出国，把一台旧电脑送给我，结果失重的我一头就栽进了网络。</p>
-<p>这时一片黑海，一个黑洞，不仅我早堕落到生命不息，泡网不止，网恋无穷了。我后来就想，肯定有神仙劝“孙悟空”：赶紧去救唐僧，去得迟些儿，救怕被妖精吃了！自从认识，他就想孙悟空，整天忙着搭救我，鼓励我读书，写东西，不许我进聊天室，有时候我偷偷往聊天室跑，他一发现就拎出来痛骂：“几乎失业了，还有闲心聊天？”</p>
-<p>至今，我两年写了40万字，稿费足够养活我自己乃至全家，都是被他骂出来的。失业引起的焦虑大大减轻，轻到几乎没有，而我的病渐渐好转，愈发自信。</p>
-<p>我也一路陪他走过艰难的两年半，一直走到他博士毕业。原想与子偕老的，我浪漫地幻想过，还写了如此的文章发表，可是现在联系越来越少，越来越少。以前，一天发的短信塞爆信箱，得不停地删，现在一个星期的短信也不过三五条，越来越淡…….也失落过，自问过为什么？后来感觉大家的前路都天宽地阔，逐渐明白，无论我对他还是他对我，就是朋友罢了，很好的朋友—其实，也够了。</p>
-<p>“我们在黑暗中摸索，绊倒在物体上，我们抓牢这些物体，相信它们便是我们所拥有的唯一的东西。光明来临时，我们放松了所占有的东西，发觉它们不过是与我们相关的万物之中的一部分而已。”泰戈尔的话多凉啊，原来他早就什么都知道，什么都经历过。</p>
-<p>有时想，朋友就是一曲音乐，在滚滚红尘为稻粱谋的时候，可以对市侩、庸俗、计较起一种适当有效的屏蔽，让自己在生计以外的精神层面，有一个较为自由顺畅的呼吸，如同菊花丘上之于陶五柳，鲈鱼莼菜之于张季鹰。但音乐不是全部，朋友不能终老。一曲终了，该干什么就干什么。钟子期死了，俞伯牙干脆把琴都摔了，这样不好。风云际会固然可喜，无风无云的时候，还得学会一曲瑶琴，给自己听。</p>
-<p>可是天宽地阔，为什么一边听歌一边寂寞，纵然看得开放得下，终究是欲舍难舍、朋友啊，就算我再也不知道你们现在何方，做着什么，有何种忧乐，可是你们一颦一笑，一言一语，仍如杨花乱舞，点点都在我的心头。</p>
-]]></content>
+<p>JavaScript的对象是一种无序的集合数据类型，它由若干键值对组成。</p>
+<p>JavaScript的对象用于描述现实世界中的某个对象。例如，为了描述“小明”这个淘气的小朋友，我们可以用若干键值对来描述他：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    school: &apos;No.1 Middle School&apos;,</div><div class="line">    height: 1.70,</div><div class="line">    weight: 65,</div><div class="line">    score: null</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>JavaScript用一个<code>{...}</code>表示一个对象，键值对以<code>xxx: xxx</code>形式申明，用<code>,</code>隔开。注意，最后一个键值对不需要在末尾加<code>,</code>，如果加了<code>，</code>有的浏览器（如低版本的IE）将报错。</p>
+<p>上述对象申明了一个<code>name</code>属性，值是<code>&#39;小明&#39;</code>，<code>birth</code>属性，值是<code>1990</code>，以及其他一些属性。最后，把这个对象赋值给变量<code>xiaoming</code>后，就可以通过变量<code>xiaoming</code>来获取小明的属性了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xiaoming.name; // &apos;小明&apos;</div><div class="line">xiaoming.birth; // 1990</div></pre></td></tr></table></figure>
+<p>访问属性是通过<code>.</code>操作符完成的，但这要求属性名必须是一个有效的变量名。如果属性名包含特殊字符，就必须用<code>&#39;&#39;</code>括起来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var xiaohong = &#123;</div><div class="line">    name: &apos;小红&apos;,</div><div class="line">    &apos;middle-school&apos;: &apos;No.1 Middle School&apos;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>xiaohong</code>的属性名<code>middle-school</code>不是一个有效的变量，就需要用<code>&#39;&#39;</code>括起来。访问这个属性也无法使用<code>.</code>操作符，必须用<code>[&#39;xxx&#39;]</code>来访问：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xiaohong[&apos;middle-school&apos;]; // &apos;No.1 Middle School&apos;</div><div class="line">xiaohong[&apos;name&apos;]; // &apos;小红&apos;</div><div class="line">xiaohong.name; // &apos;小红&apos;</div></pre></td></tr></table></figure>
+<p>也可以用<code>xiaohong[&#39;name&#39;]</code>来访问<code>xiaohong</code>的<code>name</code>属性，不过<code>xiaohong.name</code>的写法更简洁。我们在编写JavaScript代码的时候，属性名尽量使用标准的变量名，这样就可以直接通过<code>object.prop</code>的形式访问一个属性了。</p>
+<p>实际上JavaScript对象的所有属性都是字符串，不过属性对应的值可以是任意数据类型。</p>
+<p>如果访问一个不存在的属性会返回什么呢？JavaScript规定，访问不存在的属性不报错，而是返回<code>undefined</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;</div><div class="line">&#125;;</div><div class="line">xiaoming.age; // undefined</div></pre></td></tr></table></figure>
+<p>由于JavaScript的对象是动态类型，你可以自由地给一个对象添加或删除属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;</div><div class="line">&#125;;</div><div class="line">xiaoming.age; // undefined</div><div class="line">xiaoming.age = 18; // 新增一个age属性</div><div class="line">xiaoming.age; // 18</div><div class="line">delete xiaoming.age; // 删除age属性</div><div class="line">xiaoming.age; // undefined</div><div class="line">delete xiaoming[&apos;name&apos;]; // 删除name属性</div><div class="line">xiaoming.name; // undefined</div><div class="line">delete xiaoming.school; // 删除一个不存在的school属性也不会报错</div></pre></td></tr></table></figure>
+<p>如果我们要检测<code>xiaoming</code>是否拥有某一属性，可以用<code>in</code>操作符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    school: &apos;No.1 Middle School&apos;,</div><div class="line">    height: 1.70,</div><div class="line">    weight: 65,</div><div class="line">    score: null</div><div class="line">&#125;;</div><div class="line">&apos;name&apos; in xiaoming; // true</div><div class="line">&apos;grade&apos; in xiaoming; // false</div></pre></td></tr></table></figure>
+<p>不过要小心，如果<code>in</code>判断一个属性存在，这个属性不一定是<code>xiaoming</code>的，它可能是<code>xiaoming</code>继承得到的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&apos;toString&apos; in xiaoming; // true</div></pre></td></tr></table></figure>
+<p>因为<code>toString</code>定义在<code>object</code>对象中，而所有对象最终都会在原型链上指向<code>object</code>，所以<code>xiaoming</code>也拥有<code>toString</code>属性。</p>
+<p>要判断一个属性是否是<code>xiaoming</code>自身拥有的，而不是继承得到的，可以用<code>hasOwnProperty()</code>方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;</div><div class="line">&#125;;</div><div class="line">xiaoming.hasOwnProperty(&apos;name&apos;); // true</div><div class="line">xiaoming.hasOwnProperty(&apos;toString&apos;); // false</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;div id=&quot;aplayer0&quot; class=&quot;aplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;
-		&lt;script&gt;
-			new APlayer({
-				element: document.getElementById(&quot;aplayer0&quot;),
-				narrow: false,
-				autoplay: true,
-				showlrc: 0,
-				music: {
-					title: &quot;漫步在岁月洪流&quot;,
-					author: &quot;DoerChan&quot;,
-					url: &quot;http://airing.ursb.me/music/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81%28Cover%EF%BC%9AKasaYAYA%29.mp3&quot;,
-					pic: &quot;http://airing.ursb.me/music/2017041606.jpeg&quot;,
-				}
-			});
-		&lt;/script&gt;
+      &lt;p&gt;快速入门-5对象&lt;/p&gt;
     
     </summary>
     
     
-      <category term="随笔" scheme="http://echoingursb.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="散文" scheme="http://echoingursb.github.io/tags/%E6%95%A3%E6%96%87/"/>
+      <category term="Javascript" scheme="http://echoingursb.github.io/tags/Javascript/"/>
     
   </entry>
   
