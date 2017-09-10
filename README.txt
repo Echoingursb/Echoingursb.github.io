@@ -1,6 +1,3 @@
----
-layout: false
----
 > 属性面板
 
 - 专业：电子信息工程
@@ -20,8 +17,8 @@ layout: false
 > 通关副本
 
 - 1
-
 - 2
+
 > 社交方式
 
 - Github：[Echoingursb](https://github.com/Echoingursb)
