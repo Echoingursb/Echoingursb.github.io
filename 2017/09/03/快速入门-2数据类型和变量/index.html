@@ -694,11 +694,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -857,6 +857,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
     <script>
+    var colorList = ["#6da336", "#ff945c", "#66CC66", "#99CC99", "#CC6666", "#76becc", "#c99979", "#918597", "#4d4d4d"];
+  	var id = Math.ceil(Math.random()*(colorList.length-1));
+  	//移动页面
+  	$("#container #mobile-nav .overlay").css({"background-color": colorList[id],"opacity": .7});
+  	//PC页面
+      $("#container .left-col .overlay").css({"background-color": colorList[id],"opacity": .3});
+    //随机背景图片  
     var backgroundList = ["url(../../source/background/bg-1.jpg)", "url(../../source/background/bg-2.jpg)", "url(../../source/background/bg-3.jpg)",
         "url(../../source/background/bg-4.jpg)", "url(../../source/background/bg-5.jpg)", "url(../../source/background/bg-6.jpg)",
         "url(../../source/background/bg-7.jpg)", "url(../../source/background/bg-8.jpg)", "url(../../source/background/bg-9.jpg)",
