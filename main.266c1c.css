@@ -2933,7 +2933,22 @@ pre .css~* .id,pre .id {
 .footer-right {
 	float: right
 }
-
+#footer-time {
+	max-width: 100%;
+	margin: 0 154px;
+	position: relative;
+  }
+  .fa.fa-heart {
+	color: #f00;
+  }
+  .my-face {
+	-webkit-animation: my-face 5s infinite ease-in-out;
+	-moz-animation: my-face 5s infinite ease-in-out;
+	-ms-animation: my-face 5s infinite ease-in-out;
+	animation: my-face 5s infinite ease-in-out;
+	display: inline-block;
+	margin: 0 5px;
+  }
 @media screen and (max-width:800px) {
 	#container,body,html {
 		height: auto;
