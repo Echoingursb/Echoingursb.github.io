@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="WHOAMI">
 <meta property="og:description" content="快速入门-7循环">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-12T03:21:25.882Z">
+<meta property="og:updated_time" content="2017-09-12T07:17:25.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速入门-7循环">
 <meta name="twitter:description" content="快速入门-7循环">
@@ -214,7 +214,46 @@ var _hmt = _hmt || [];
       
         <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-7循环</p>
 <a id="more"></a>
-
+<p>要计算<code>1+2+3</code>，我们可以直接写表达式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 + 2 + 3; // 6</div></pre></td></tr></table></figure>
+<p>要计算<code>1+2+3+...+10</code>，勉强也能写出来。</p>
+<p>但是，要计算<code>1+2+3+...+10000</code>，直接写表达式就不可能了。</p>
+<p>为了让计算机能计算成千上万次的重复运算，我们就需要循环语句。</p>
+<p>JavaScript的循环有两种，一种是<code>for</code>循环，通过初始条件、结束条件和递增条件来循环执行语句块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var x = 0;</div><div class="line">var i;</div><div class="line">for (i=1; i&lt;=10000; i++) &#123;</div><div class="line">    x = x + i;</div><div class="line">&#125;</div><div class="line">x; // 50005000</div></pre></td></tr></table></figure>
+<p>让我们来分析一下for循环的控制条件：</p>
+<ul>
+<li><code>i=1</code> 这是初始条件，将变量i置为1；</li>
+<li><code>i&lt;=10000</code> 这是判断条件，满足时就继续循环，不满足就退出循环；</li>
+<li><code>i++</code> 这是每次循环后的递增条件，由于每次循环后变量<code>i</code>都会加<code>1</code>，因此它终将在若干次循环后不满足判断条件<code>i&lt;=10000</code>而退出循环。</li>
+</ul>
+<p>练习</p>
+<p>利用<code>for</code>循环计算<code>1 * 2 * 3 * ... * 10</code>的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">use &apos;strict&apos;;</div><div class="line">var x = 1;</div><div class="line">for (var i=1; i&lt;=10; i++) &#123;</div><div class="line">    x = x * i;</div><div class="line">&#125;</div><div class="line">alert(x);</div><div class="line">if (x===3628800) &#123;</div><div class="line">    alert(&apos;1 * 2 * 3 * ... * 10 = &apos;+ x);</div><div class="line">&#125;else &#123;</div><div class="line">    alert(&apos;计算错误&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>for</code>循环最常用的地方是利用索引来遍历数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;Apple&apos;,&apos;Google&apos;,&apos;Microsoft&apos;];</div><div class="line">var x;</div><div class="line">for (var i =0;i&lt;arr.length;i++) &#123;</div><div class="line">    x = arr[i];</div><div class="line">    alert(x);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>for</code>循环的3个条件都是可以省略的，如果没有退出循环的判断条件，就必须使用<code>break</code>语句退出循环，否则就是死循环：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var x = 0;</div><div class="line">for (;;) &#123; // 将无限循环下去</div><div class="line">    if (x &gt; 100) &#123;</div><div class="line">        break; // 通过if判断来退出循环</div><div class="line">    &#125;</div><div class="line">    x ++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>for … in</p>
+<p><code>for</code>循环的一个变体是<code>for ... in</code>循环，它可以把一个对象的所有属性依次循环出来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    name: &apos;Jack&apos;,</div><div class="line">    age: 20,</div><div class="line">    city: &apos;Beijing&apos;</div><div class="line">&#125;;</div><div class="line">for (var key in o) &#123;</div><div class="line">    alert(key); // name, age, city</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>要过滤掉对象继承的属性，用<code>hasOwnProperty()</code>来实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    name: &apos;Jack&apos;,</div><div class="line">    age: 20,</div><div class="line">    city: &apos;Beijing&apos;</div><div class="line">&#125;;</div><div class="line">for (var key in o) &#123;</div><div class="line">    if (o.hasOwnProperty(key)) &#123;</div><div class="line">        alert(key); // name, age, city</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>由于<code>Array</code>也是对象，而它的每个元素的索引被视为对象的属性，因此，<code>for ... in</code>循环可以直接循环出<code>Array</code>的索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var a = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;];</div><div class="line">for (var i in a) &#123;</div><div class="line">    alert(i); // 0,1,2</div><div class="line">    alert(arr[i]); // A,B,C</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>请注意</em>，<code>for ... in</code>对<code>Array</code>的循环得到的是<code>String</code>而不是<code>Number</code>。</p>
+<p>while</p>
+<p><code>for</code>循环在已知循环的初始和结束条件时非常有用。而上述忽略了条件的<code>for</code>循环容易让人看不清循环的逻辑，此时用<code>while</code>循环更佳。</p>
+<p><code>while</code>循环只有一个判断条件，条件满足，就不断循环，条件不满足时则退出循环。比如我们要计算100以内所有奇数之和，可以用<code>while</code>循环实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//1.for循环</div><div class="line">var x = 0;</div><div class="line">for (var i =1;i&lt;=100;i+=2) &#123;</div><div class="line">    x = x + i;</div><div class="line">&#125;</div><div class="line">alert(x); // 2500</div><div class="line"></div><div class="line">//2.while循环(循环条件自增)</div><div class="line">var y = 0;</div><div class="line">var m = 1;</div><div class="line">while (m&lt;=100) &#123;</div><div class="line">    y = y + m;</div><div class="line">    m += 2;</div><div class="line">&#125;</div><div class="line">alert(y); // 2500</div><div class="line"></div><div class="line">//3.whille循环(循环条件自减)</div><div class="line">var z =0;</div><div class="line">var n = 99;</div><div class="line">while ( n&gt;=0) &#123;</div><div class="line">    z = z + n;</div><div class="line">    n -= 2;</div><div class="line">&#125;</div><div class="line">alert(z);// 2500</div></pre></td></tr></table></figure>
+<p>在循环内部变量<code>n</code>不断自减，直到变为<code>-1</code>时，不再满足<code>while</code>条件，循环退出。</p>
+<p>do … while</p>
+<p>最后一种循环是<code>do { ... } while()</code>循环，它和<code>while</code>循环的唯一区别在于，不是在每次循环开始的时候判断条件，而是在每次循环完成的时候判断条件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var n = 0;</div><div class="line">do &#123;</div><div class="line">    n = n + 1;</div><div class="line">&#125; while (n &lt; 100);</div><div class="line">n; // 100</div></pre></td></tr></table></figure>
+<p>用<code>do { ... } while()</code>循环要小心，循环体会至少执行<code>1</code>次，而<code>for</code>和<code>while</code>循环则可能一次都不执行。</p>
+<p>练习</p>
+<p>请利用循环遍历数组中的每个名字，并显示<code>Hello, xxx!</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">use &apos;strict&apos;;</div><div class="line">var arr = [&apos;Bart&apos;,&apos;Lisa&apos;,&apos;Adam&apos;];</div><div class="line">for (var i=0;i&lt;arr.length;i++) &#123;</div><div class="line">    alert(&apos;Hello,&apos; + arr[i]+ &apos;!&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -328,7 +367,7 @@ var _hmt = _hmt || [];
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
     <p><span>发布时间:</span>2017年09月12日 - 11时18分</p>
-    <p><span>最后更新:</span>2017年09月12日 - 11时21分</p>
+    <p><span>最后更新:</span>2017年09月12日 - 15时17分</p>
     <p>
       <span>原始链接:</span><a class="post-url" href="/2017/09/12/快速入门-7循环/" title="快速入门-7循环">http://echoingursb.github.io/2017/09/12/快速入门-7循环/</a>
       <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/12/快速入门-7循环/　　作者: echo" title="点击复制文章链接">
