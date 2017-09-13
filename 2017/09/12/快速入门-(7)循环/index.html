@@ -7,21 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>快速入门-4数组 | WHOAMI</title>
+  <title>快速入门-(7)循环 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <meta name="description" content="快速入门-3数组">
+  <meta name="description" content="快速入门-(7)循环">
 <meta name="keywords" content="技术,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速入门-4数组">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/03/快速入门-4数组/index.html">
+<meta property="og:title" content="快速入门-(7)循环">
+<meta property="og:url" content="http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-3数组">
+<meta property="og:description" content="快速入门-(7)循环">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-10T05:46:26.355Z">
+<meta property="og:updated_time" content="2017-09-13T06:35:45.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速入门-4数组">
-<meta name="twitter:description" content="快速入门-3数组">
+<meta name="twitter:title" content="快速入门-(7)循环">
+<meta name="twitter:description" content="快速入门-(7)循环">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -192,58 +192,68 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-快速入门-4数组" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-快速入门-(7)循环" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      快速入门-4数组
+      快速入门-(7)循环
     </h1>
   
 
         
-        <a href="/2017/09/03/快速入门-4数组/" class="archive-article-date">
-  	<time datetime="2017-09-03T09:55:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
+        <a href="/2017/09/12/快速入门-(7)循环/" class="archive-article-date">
+  	<time datetime="2017-09-12T03:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-3数组</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(7)循环</p>
 <a id="more"></a>
-<p>JavaScript的<code>Array</code>可以包含任意数据类型，并通过索引来访问每个元素。</p>
-<p>要取得<code>Array</code>的长度，直接访问<code>length</code>属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3.14, &apos;Hello&apos;, null, true];</div><div class="line">arr.length; // 6</div></pre></td></tr></table></figure></p>
-<p>请注意，直接给<code>Array</code>的<code>length</code>赋一个新的值会导致<code>Array</code>大小的变化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3];</div><div class="line">arr.length; // 3</div><div class="line">arr.length = 6;</div><div class="line">arr; // arr变为[1, 2, 3, undefined, undefined, undefined]</div><div class="line">arr.length = 2;</div><div class="line">arr; // arr变为[1, 2]</div></pre></td></tr></table></figure></p>
-<p><code>Array</code>可以通过索引把对应的元素修改为新的值，因此，对<code>Array</code>的索引进行赋值会直接修改这个<code>Array</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];</div><div class="line">arr[1] = 99;</div><div class="line">arr; // arr现在变为[&apos;A&apos;, 99, &apos;C&apos;]</div></pre></td></tr></table></figure></p>
-<p>请注意，如果通过索引赋值时，索引超过了范围，同样会引起<code>Array</code>大小的变化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3];</div><div class="line">arr[5] = &apos;x&apos;;</div><div class="line">arr; // arr变为[1, 2, 3, undefined, undefined, &apos;x&apos;]</div></pre></td></tr></table></figure></p>
-<p>大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的<code>Array</code>却不会有任何错误。在编写代码时，不建议直接修改<code>Array</code>的大小，访问索引时要确保索引不会越界。</p>
-<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h3><p>与<code>String</code>类似，<code>Array</code>也可以通过<code>indexOf()</code>来搜索一个指定的元素的位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [10, 20, &apos;30&apos;, &apos;xyz&apos;];</div><div class="line">arr.indexOf(10); // 元素10的索引为0</div><div class="line">arr.indexOf(20); // 元素20的索引为1</div><div class="line">arr.indexOf(30); // 元素30没有找到，返回-1</div><div class="line">arr.indexOf(&apos;30&apos;); // 元素&apos;30&apos;的索引为2</div></pre></td></tr></table></figure></p>
-<p>注意了，数字<code>30</code>和字符串<code>&#39;30&#39;</code>是不同的元素。</p>
-<h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><p><code>slice()</code>就是对应<code>String</code>的<code>substring()</code>版本，它截取<code>Array</code>的部分元素，然后返回一个新的<code>Array</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;];</div><div class="line">arr.slice(0, 3); // 从索引0开始，到索引3结束，但不包括索引3: [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line">arr.slice(3); // 从索引3开始到结束: [&apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;]</div></pre></td></tr></table></figure></p>
-<p>注意到<code>slice()</code>的起止参数包括开始索引，不包括结束索引。</p>
-<p>如果不给<code>slice()</code>传递任何参数，它就会从头到尾截取所有元素。利用这一点，我们可以很容易地复制一个<code>Array</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;];</div><div class="line">var aCopy = arr.slice();</div><div class="line">aCopy; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;]</div><div class="line">aCopy === arr; // false</div></pre></td></tr></table></figure></p>
-<h1 id="push和pop"><a href="#push和pop" class="headerlink" title="push和pop"></a>push和pop</h1><p><code>push()</code>向<code>Array</code>的末尾添加若干元素，<code>pop()</code>则把<code>Array</code>的最后一个元素删除掉：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2];</div><div class="line">arr.push(&apos;A&apos;, &apos;B&apos;); // 返回Array新的长度: 4</div><div class="line">arr; // [1, 2, &apos;A&apos;, &apos;B&apos;]</div><div class="line">arr.pop(); // pop()返回&apos;B&apos;</div><div class="line">arr; // [1, 2, &apos;A&apos;]</div><div class="line">arr.pop(); arr.pop(); arr.pop(); // 连续pop 3次</div><div class="line">arr; // []</div><div class="line">arr.pop(); // 空数组继续pop不会报错，而是返回undefined</div><div class="line">arr; // []</div></pre></td></tr></table></figure></p>
-<h1 id="unshift和shift"><a href="#unshift和shift" class="headerlink" title="unshift和shift"></a>unshift和shift</h1><p>如果要往<code>Array</code>的头部添加若干元素，使用<code>unshift()</code>方法，<code>shift()</code>方法则把<code>Array</code>的第一个元素删掉：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2];</div><div class="line">arr.unshift(&apos;A&apos;, &apos;B&apos;); // 返回Array新的长度: 4</div><div class="line">arr; // [&apos;A&apos;, &apos;B&apos;, 1, 2]</div><div class="line">arr.shift(); // &apos;A&apos;</div><div class="line">arr; // [&apos;B&apos;, 1, 2]</div><div class="line">arr.shift(); arr.shift(); arr.shift(); // 连续shift 3次</div><div class="line">arr; // []</div><div class="line">arr.shift(); // 空数组继续shift不会报错，而是返回undefined</div><div class="line">arr; // []</div></pre></td></tr></table></figure></p>
-<h1 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h1><p><code>sort()</code>可以对当前<code>Array</code>进行排序，它会直接修改当前<code>Array</code>的元素位置，直接调用时，按照默认顺序排序：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;B&apos;, &apos;C&apos;, &apos;A&apos;];</div><div class="line">arr.sort();</div><div class="line">arr; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div></pre></td></tr></table></figure>
-<p>能否按照我们自己指定的顺序排序呢？完全可以，我们将在后面的函数中讲到。</p>
-<h1 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h1><p><code>reverse()</code>把整个<code>Array</code>的元素给掉个个，也就是反转：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;one&apos;, &apos;two&apos;, &apos;three&apos;];</div><div class="line">arr.reverse(); </div><div class="line">arr; // [&apos;three&apos;, &apos;two&apos;, &apos;one&apos;]</div></pre></td></tr></table></figure></p>
-<h1 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h1><p><code>splice()</code>方法是修改<code>Array</code>的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;Microsoft&apos;, &apos;Apple&apos;, &apos;Yahoo&apos;, &apos;AOL&apos;, &apos;Excite&apos;, &apos;Oracle&apos;];</div><div class="line">// 从索引2开始删除3个元素,然后再添加两个元素:</div><div class="line">arr.splice(2, 3, &apos;Google&apos;, &apos;Facebook&apos;); // 返回删除的元素 [&apos;Yahoo&apos;, &apos;AOL&apos;, &apos;Excite&apos;]</div><div class="line">arr; // [&apos;Microsoft&apos;, &apos;Apple&apos;, &apos;Google&apos;, &apos;Facebook&apos;, &apos;Oracle&apos;]</div><div class="line">// 只删除,不添加:</div><div class="line">arr.splice(2, 2); // [&apos;Google&apos;, &apos;Facebook&apos;]</div><div class="line">arr; // [&apos;Microsoft&apos;, &apos;Apple&apos;, &apos;Oracle&apos;]</div><div class="line">// 只添加,不删除:</div><div class="line">arr.splice(2, 0, &apos;Google&apos;, &apos;Facebook&apos;); // 返回[],因为没有删除任何元素</div><div class="line">arr; // [&apos;Microsoft&apos;, &apos;Apple&apos;, &apos;Google&apos;, &apos;Facebook&apos;, &apos;Oracle&apos;]</div></pre></td></tr></table></figure></p>
-<h1 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h1><p><code>concat()</code>方法把当前的<code>Array</code>和另一个<code>Array</code>连接起来，并返回一个新的<code>Array</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];</div><div class="line">var added = arr.concat([1, 2, 3]);</div><div class="line">added; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3]</div><div class="line">arr; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div></pre></td></tr></table></figure></p>
-<p>请注意，<code>concat()</code>方法并没有修改当前<code>Array</code>，而是返回了一个新的<code>Array</code>。</p>
-<p>实际上，<code>concat()</code>方法可以接收任意个元素和<code>Array</code>，并且自动把<code>Array</code>拆开，然后全部添加到新的<code>Array</code>里：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];</div><div class="line">arr.concat(1, 2, [3, 4]); // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3, 4]</div></pre></td></tr></table></figure></p>
-<h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><p><code>join()</code>方法是一个非常实用的方法，它把当前<code>Array</code>的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3];</div><div class="line">arr.join(&apos;-&apos;); // &apos;A-B-C-1-2-3&apos;</div></pre></td></tr></table></figure></p>
-<p>如果<code>Array</code>的元素不是字符串，将自动转换为字符串后再连接。</p>
-<h1 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h1><p>如果数组的某个元素又是一个<code>Array</code>，则可以形成多维数组，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = [[1, 2, 3], [400, 500, 600], &apos;-&apos;];</div></pre></td></tr></table></figure></p>
-<p>上述<code>Array</code>包含3个元素，其中头两个元素本身也是<code>Array</code>。</p>
-<p>练习：如何通过索引取到500这个值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var arr = [[1, 2, 3], [400, 500, 600], &apos;-&apos;];</div><div class="line">var x = ??;</div><div class="line">alert(x); // x应该为500</div></pre></td></tr></table></figure>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>Array提供了一种顺序存储一组元素的功能，并可以按索引来读写。</p>
-<p>练习：在新生欢迎会上，你已经拿到了新同学的名单，请排序后显示：欢迎XXX，XXX，XXX和XXX同学！：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var arr = [&apos;小明&apos;, &apos;小红&apos;, &apos;大军&apos;, &apos;阿黄&apos;];</div><div class="line">alert(&apos;???&apos;);</div></pre></td></tr></table></figure>
+<p>要计算<code>1+2+3</code>，我们可以直接写表达式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 + 2 + 3; // 6</div></pre></td></tr></table></figure>
+<p>要计算<code>1+2+3+...+10</code>，勉强也能写出来。</p>
+<p>但是，要计算<code>1+2+3+...+10000</code>，直接写表达式就不可能了。</p>
+<p>为了让计算机能计算成千上万次的重复运算，我们就需要循环语句。</p>
+<p>JavaScript的循环有两种，一种是<code>for</code>循环，通过初始条件、结束条件和递增条件来循环执行语句块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var x = 0;</div><div class="line">var i;</div><div class="line">for (i=1; i&lt;=10000; i++) &#123;</div><div class="line">    x = x + i;</div><div class="line">&#125;</div><div class="line">x; // 50005000</div></pre></td></tr></table></figure>
+<p>让我们来分析一下for循环的控制条件：</p>
+<ul>
+<li><code>i=1</code> 这是初始条件，将变量i置为1；</li>
+<li><code>i&lt;=10000</code> 这是判断条件，满足时就继续循环，不满足就退出循环；</li>
+<li><code>i++</code> 这是每次循环后的递增条件，由于每次循环后变量<code>i</code>都会加<code>1</code>，因此它终将在若干次循环后不满足判断条件<code>i&lt;=10000</code>而退出循环。</li>
+</ul>
+<p>练习</p>
+<p>利用<code>for</code>循环计算<code>1 * 2 * 3 * ... * 10</code>的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">use &apos;strict&apos;;</div><div class="line">var x = 1;</div><div class="line">for (var i=1; i&lt;=10; i++) &#123;</div><div class="line">    x = x * i;</div><div class="line">&#125;</div><div class="line">alert(x);</div><div class="line">if (x===3628800) &#123;</div><div class="line">    alert(&apos;1 * 2 * 3 * ... * 10 = &apos;+ x);</div><div class="line">&#125;else &#123;</div><div class="line">    alert(&apos;计算错误&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>for</code>循环最常用的地方是利用索引来遍历数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;Apple&apos;,&apos;Google&apos;,&apos;Microsoft&apos;];</div><div class="line">var x;</div><div class="line">for (var i =0;i&lt;arr.length;i++) &#123;</div><div class="line">    x = arr[i];</div><div class="line">    alert(x);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>for</code>循环的3个条件都是可以省略的，如果没有退出循环的判断条件，就必须使用<code>break</code>语句退出循环，否则就是死循环：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var x = 0;</div><div class="line">for (;;) &#123; // 将无限循环下去</div><div class="line">    if (x &gt; 100) &#123;</div><div class="line">        break; // 通过if判断来退出循环</div><div class="line">    &#125;</div><div class="line">    x ++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>for … in</p>
+<p><code>for</code>循环的一个变体是<code>for ... in</code>循环，它可以把一个对象的所有属性依次循环出来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    name: &apos;Jack&apos;,</div><div class="line">    age: 20,</div><div class="line">    city: &apos;Beijing&apos;</div><div class="line">&#125;;</div><div class="line">for (var key in o) &#123;</div><div class="line">    alert(key); // name, age, city</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>要过滤掉对象继承的属性，用<code>hasOwnProperty()</code>来实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    name: &apos;Jack&apos;,</div><div class="line">    age: 20,</div><div class="line">    city: &apos;Beijing&apos;</div><div class="line">&#125;;</div><div class="line">for (var key in o) &#123;</div><div class="line">    if (o.hasOwnProperty(key)) &#123;</div><div class="line">        alert(key); // name, age, city</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>由于<code>Array</code>也是对象，而它的每个元素的索引被视为对象的属性，因此，<code>for ... in</code>循环可以直接循环出<code>Array</code>的索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var a = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;];</div><div class="line">for (var i in a) &#123;</div><div class="line">    alert(i); // 0,1,2</div><div class="line">    alert(arr[i]); // A,B,C</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>请注意</em>，<code>for ... in</code>对<code>Array</code>的循环得到的是<code>String</code>而不是<code>Number</code>。</p>
+<p>while</p>
+<p><code>for</code>循环在已知循环的初始和结束条件时非常有用。而上述忽略了条件的<code>for</code>循环容易让人看不清循环的逻辑，此时用<code>while</code>循环更佳。</p>
+<p><code>while</code>循环只有一个判断条件，条件满足，就不断循环，条件不满足时则退出循环。比如我们要计算100以内所有奇数之和，可以用<code>while</code>循环实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//1.for循环</div><div class="line">var x = 0;</div><div class="line">for (var i =1;i&lt;=100;i+=2) &#123;</div><div class="line">    x = x + i;</div><div class="line">&#125;</div><div class="line">alert(x); // 2500</div><div class="line"></div><div class="line">//2.while循环(循环条件自增)</div><div class="line">var y = 0;</div><div class="line">var m = 1;</div><div class="line">while (m&lt;=100) &#123;</div><div class="line">    y = y + m;</div><div class="line">    m += 2;</div><div class="line">&#125;</div><div class="line">alert(y); // 2500</div><div class="line"></div><div class="line">//3.whille循环(循环条件自减)</div><div class="line">var z =0;</div><div class="line">var n = 99;</div><div class="line">while ( n&gt;=0) &#123;</div><div class="line">    z = z + n;</div><div class="line">    n -= 2;</div><div class="line">&#125;</div><div class="line">alert(z);// 2500</div></pre></td></tr></table></figure>
+<p>在循环内部变量<code>n</code>不断自减，直到变为<code>-1</code>时，不再满足<code>while</code>条件，循环退出。</p>
+<p>do … while</p>
+<p>最后一种循环是<code>do { ... } while()</code>循环，它和<code>while</code>循环的唯一区别在于，不是在每次循环开始的时候判断条件，而是在每次循环完成的时候判断条件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var n = 0;</div><div class="line">do &#123;</div><div class="line">    n = n + 1;</div><div class="line">&#125; while (n &lt; 100);</div><div class="line">n; // 100</div></pre></td></tr></table></figure>
+<p>用<code>do { ... } while()</code>循环要小心，循环体会至少执行<code>1</code>次，而<code>for</code>和<code>while</code>循环则可能一次都不执行。</p>
+<p>练习</p>
+<p>请利用循环遍历数组中的每个名字，并显示<code>Hello, xxx!</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">use &apos;strict&apos;;</div><div class="line">var arr = [&apos;Bart&apos;,&apos;Lisa&apos;,&apos;Adam&apos;];</div><div class="line">for (var i=0;i&lt;arr.length;i++) &#123;</div><div class="line">    alert(&apos;Hello,&apos; + arr[i]+ &apos;!&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -337,7 +347,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/03/快速入门-4数组/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -351,16 +361,16 @@ var _hmt = _hmt || [];
   
   
   <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/03/快速入门-4数组/">快速入门-4数组</a></p>
+    <p><span>本文标题:</span><a href="/2017/09/12/快速入门-(7)循环/">快速入门-(7)循环</a></p>
     <p><span>文章作者:</span>
       <a href="/" title="访问 echo 的个人博客">echo</a>
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
-    <p><span>发布时间:</span>2017年09月03日 - 17时55分</p>
-    <p><span>最后更新:</span>2017年09月10日 - 13时46分</p>
+    <p><span>发布时间:</span>2017年09月12日 - 11时18分</p>
+    <p><span>最后更新:</span>2017年09月13日 - 14时35分</p>
     <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/03/快速入门-4数组/" title="快速入门-4数组">http://echoingursb.github.io/2017/09/03/快速入门-4数组/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/03/快速入门-4数组/　　作者: echo" title="点击复制文章链接">
+      <span>原始链接:</span><a class="post-url" href="/2017/09/12/快速入门-(7)循环/" title="快速入门-(7)循环">http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/　　作者: echo" title="点击复制文章链接">
           <i class="fa fa-clipboard"></i>
       </span>
     </p>
@@ -375,18 +385,18 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2017/09/10/快速入门-5对象/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/13/快速入门-(8)Map和Set/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          快速入门-5对象
+          快速入门-(8)Map和Set
         
       </div>
     </a>
   
   
-    <a href="/2017/09/03/快速入门-3字符串/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">快速入门-3字符串</div>
+    <a href="/2017/09/12/快速入门-(6)条件判断/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速入门-(6)条件判断</div>
       <i class="icon-circle-right"></i>
     </a>
   

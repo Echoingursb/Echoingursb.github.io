@@ -7,21 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>快速入门-6条件判断 | WHOAMI</title>
+  <title>快速入门-(8)Map和Set | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <meta name="description" content="快速入门-6条件判断">
-<meta name="keywords" content="技术,javascript">
+  <meta name="description" content="快速入门-(8)Map和Set">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速入门-6条件判断">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/12/快速入门-6条件判断/index.html">
+<meta property="og:title" content="快速入门-(8)Map和Set">
+<meta property="og:url" content="http://echoingursb.github.io/2017/09/13/快速入门-(8)Map和Set/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-6条件判断">
+<meta property="og:description" content="快速入门-(8)Map和Set">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-12T03:21:21.262Z">
+<meta property="og:updated_time" content="2017-09-13T06:36:12.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速入门-6条件判断">
-<meta name="twitter:description" content="快速入门-6条件判断">
+<meta name="twitter:title" content="快速入门-(8)Map和Set">
+<meta name="twitter:description" content="快速入门-(8)Map和Set">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -192,61 +191,28 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-快速入门-6条件判断" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-快速入门-(8)Map和Set" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      快速入门-6条件判断
+      快速入门-(8)Map和Set
     </h1>
   
 
         
-        <a href="/2017/09/12/快速入门-6条件判断/" class="archive-article-date">
-  	<time datetime="2017-09-12T02:44:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
+        <a href="/2017/09/13/快速入门-(8)Map和Set/" class="archive-article-date">
+  	<time datetime="2017-09-13T06:32:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-6条件判断</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(8)Map和Set</p>
 <a id="more"></a>
-<p>JavaScript使用<code>if () { ... } else { ... }</code>来进行条件判断。例如，根据年龄显示不同内容，可以用<code>if</code>语句实现如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var age = 20;</div><div class="line">if (age &gt;= 18) &#123; // 如果age &gt;= 18为true，则执行if语句块</div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">&#125; else &#123; // 否则执行else语句块</div><div class="line">    alert(&apos;teenager&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>其中<code>else</code>语句是可选的。如果语句块只包含一条语句，那么可以省略<code>{}</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var age = 20;</div><div class="line">if (age &gt;= 18) </div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">else</div><div class="line">    alert(&apos;teenager&apos;);</div></pre></td></tr></table></figure>
-<p>省略<code>{}</code>的危险之处在于，如果后来想添加一些语句，却忘了写<code>{}</code>，就改变了<code>if...else...</code>的语义，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var age = 20;</div><div class="line">if (age &gt;= 18)</div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">else</div><div class="line">    console.log(&apos;age &lt; 18&apos;); // 添加一行日志</div><div class="line">    alert(&apos;teenager&apos;); // &lt;- 这行语句已经不在else的控制范围了</div></pre></td></tr></table></figure>
-<p>上述代码的<code>else</code>子句实际上只负责执行<code>console.log(&#39;age &lt; 18&#39;);</code>，原有的<code>alert(&#39;teenager&#39;);</code>已经不属于<code>if...else...</code>的控制范围了，它每次都会执行。</p>
-<p>相反地，有<code>{}</code>的语句就不会出错：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var age = 20;</div><div class="line">if (age &gt;= 18) &#123;</div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">    console.log(&apos;age &lt; 18&apos;);</div><div class="line">    alert(&apos;teenager&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这就是为什么我们建议永远都要写上<code>{}</code>。</p>
-<p>多行条件判断</p>
-<p>如果还要更细致地判断条件，可以使用多个<code>if...else...</code>的组合：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var age = 3;</div><div class="line">if (age &gt;= 18) &#123;</div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">&#125; else if (age &gt;= 6) &#123;</div><div class="line">    alert(&apos;teenager&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">    alert(&apos;kid&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>但是我们通常把<code>else if</code>连写在一起，来增加可读性。这里的<code>else</code>略掉了<code>{}</code>是没有问题的，因为它只包含一个<code>if</code>语句。注意最后一个单独的<code>else</code>不要略掉<code>{}</code>。</p>
-<p><em>请注意</em>，<code>if...else...</code>语句的执行特点是二选一，在多个<code>if...else...</code>语句中，如果某个条件成立，则后续就不再继续判断了。</p>
-<p>试解释为什么下面的代码显示的是<code>teenager</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var age = 20;</div><div class="line">if (age &gt;= 6) &#123;</div><div class="line">    alert(&apos;teenager&apos;);</div><div class="line">&#125; else if (age &gt;= 18) &#123;</div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">    alert(&apos;kid&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>由于<code>age</code>的值为<code>20</code>，它实际上同时满足条件<code>age &gt;= 6</code>和<code>age &gt;= 18</code>，这说明条件判断的顺序非常重要。请修复后让其显示<code>adult</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var age = 20;</div><div class="line">if (age &gt;= 20) &#123;</div><div class="line">    alert(&apos;adult&apos;);</div><div class="line">&#125; else if (age &gt;= 18) &#123;</div><div class="line">    alert(&apos;teenager&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">    alert(&apos;kid&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如果<code>if</code>的条件判断语句结果不是<code>true</code>或<code>false</code>怎么办？例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var s = &apos;123&apos;;</div><div class="line">if (s.length) &#123; // 条件计算结果为3</div><div class="line">    //</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>JavaScript把<code>null</code>、<code>undefined</code>、<code>0</code>、<code>NaN</code>和空字符串<code>&#39;&#39;</code>视为<code>false</code>，其他值一概视为<code>true</code>，因此上述代码条件判断的结果是<code>true</code>。</p>
-<p>练习</p>
-<p>小明身高1.75，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：</p>
-<ul>
-<li>低于18.5：过轻</li>
-<li>18.5-25：正常</li>
-<li>25-28：过重</li>
-<li>28-32：肥胖</li>
-<li>高于32：严重肥胖</li>
-</ul>
-<p>用<code>if...else...</code>判断并显示结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var weight = parseFloat(prompt(&apos;请输入体重(kg)：&apos;));</div><div class="line">var height = parseFloat(prompt(&apos;请输入身高(m)：&apos;));</div><div class="line">var bmi = weight/(height * height);</div><div class="line">if (bmi&gt; 32) &#123;</div><div class="line">    alert(&apos;严重过胖&apos;);</div><div class="line">&#125; else if (bmi &gt;= 28) &#123;</div><div class="line">    alert(&apos;肥胖&apos;);</div><div class="line">&#125; else if (bmi &gt;= 25) &#123;</div><div class="line">    alert(&apos;过重&apos;);</div><div class="line">&#125; esle if (bmi &gt;= 18.5) &#123;</div><div class="line">    alert(&apos;正常&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">    alert(&apos;过轻&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -275,21 +241,6 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -340,7 +291,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/12/快速入门-6条件判断/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/13/快速入门-(8)Map和Set/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,16 +305,16 @@ var _hmt = _hmt || [];
   
   
   <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/12/快速入门-6条件判断/">快速入门-6条件判断</a></p>
+    <p><span>本文标题:</span><a href="/2017/09/13/快速入门-(8)Map和Set/">快速入门-(8)Map和Set</a></p>
     <p><span>文章作者:</span>
       <a href="/" title="访问 echo 的个人博客">echo</a>
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
-    <p><span>发布时间:</span>2017年09月12日 - 10时44分</p>
-    <p><span>最后更新:</span>2017年09月12日 - 11时21分</p>
+    <p><span>发布时间:</span>2017年09月13日 - 14时32分</p>
+    <p><span>最后更新:</span>2017年09月13日 - 14时36分</p>
     <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/12/快速入门-6条件判断/" title="快速入门-6条件判断">http://echoingursb.github.io/2017/09/12/快速入门-6条件判断/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/12/快速入门-6条件判断/　　作者: echo" title="点击复制文章链接">
+      <span>原始链接:</span><a class="post-url" href="/2017/09/13/快速入门-(8)Map和Set/" title="快速入门-(8)Map和Set">http://echoingursb.github.io/2017/09/13/快速入门-(8)Map和Set/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/13/快速入门-(8)Map和Set/　　作者: echo" title="点击复制文章链接">
           <i class="fa fa-clipboard"></i>
       </span>
     </p>
@@ -378,18 +329,9 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2017/09/12/快速入门-7循环/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          快速入门-7循环
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/10/快速入门-5对象/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">快速入门-5对象</div>
+    <a href="/2017/09/12/快速入门-(7)循环/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速入门-(7)循环</div>
       <i class="icon-circle-right"></i>
     </a>
   
