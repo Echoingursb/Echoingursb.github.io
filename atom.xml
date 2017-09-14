@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-14T06:15:15.175Z</updated>
+  <updated>2017-09-14T06:19:49.420Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/09/14/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(9)iterable/"/>
     <id>http://echoingursb.github.io/2017/09/14/快速入门-(9)iterable/</id>
     <published>2017-09-14T05:46:39.000Z</published>
-    <updated>2017-09-14T06:15:15.175Z</updated>
+    <updated>2017-09-14T06:19:49.420Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(9)iterable</p>
 <a id="more"></a>
@@ -54,6 +54,10 @@
     
     </summary>
     
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="javascript" scheme="http://echoingursb.github.io/tags/javascript/"/>
     
   </entry>
   
@@ -760,7 +764,7 @@
     <link href="http://echoingursb.github.io/2017/08/30/%E5%8D%95%E8%AF%8D/"/>
     <id>http://echoingursb.github.io/2017/08/30/单词/</id>
     <published>2017-08-30T01:07:30.000Z</published>
-    <updated>2017-09-12T03:32:55.222Z</updated>
+    <updated>2017-09-14T06:49:46.453Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
 <ul>
@@ -827,6 +831,44 @@
 <td>concatenate</td>
 <td>英 [kɒn’kætɪneɪt]   美 [kɑnˈkæt(ə)ˌneɪt]</td>
 <td>vt.把 （一系列事件、事情等）联系起来；连接   adj. 连接的，联系在一起的</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>D</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>发音</th>
+<th>释义 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BMI</td>
+<td></td>
+<td>n.Body Mass Index （体质指数）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>I</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>发音</th>
+<th>释义 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iterator</td>
+<td>英 [ɪtə’reɪtə]   美 [ɪtə’reɪtə]</td>
+<td>[计] 迭代器，迭代程序</td>
 </tr>
 </tbody>
 </table>
