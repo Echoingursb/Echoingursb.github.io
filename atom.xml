@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-14T06:19:49.420Z</updated>
+  <updated>2017-09-15T07:17:17.531Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数</title>
+    <link href="http://echoingursb.github.io/2017/09/15/%E5%87%BD%E6%95%B0/"/>
+    <id>http://echoingursb.github.io/2017/09/15/函数/</id>
+    <published>2017-09-15T07:14:21.000Z</published>
+    <updated>2017-09-15T07:17:17.531Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数</p>
+<a id="more"></a>
+<p>我们知道圆的面积计算公式为：</p>
+<p><code>$S = πr^2$</code></p>
+<p>当我们知道半径r的值时，就可以根据公式计算出面积。假设我们需要计算3个不同大小的圆的面积：</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;函数&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="javascript" scheme="http://echoingursb.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>快速入门-(9)iterable</title>
@@ -764,7 +791,7 @@
     <link href="http://echoingursb.github.io/2017/08/30/%E5%8D%95%E8%AF%8D/"/>
     <id>http://echoingursb.github.io/2017/08/30/单词/</id>
     <published>2017-08-30T01:07:30.000Z</published>
-    <updated>2017-09-14T06:49:46.453Z</updated>
+    <updated>2017-09-14T06:59:49.564Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
 <ul>
