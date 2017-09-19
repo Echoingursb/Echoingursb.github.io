@@ -62,7 +62,21 @@ var _hmt = _hmt || [];
   <!-- <link rel="stylesheet" href="/css/_util/normalize.css">
   <link rel="stylesheet" href="/css/_util/styles.css"> -->
   <link rel="import" href="/webcomponent/github-card.html">
-</script>
+  <div id="container"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  var gitment = new Gitment({
+    id: '页面 ID', // 可选。默认为 location.href
+    owner: 'echoingursb',
+    repo: 'echoingursb.github.io',
+    oauth: {
+      client_id: 'ffff908e7f47730b61e7',
+      client_secret: '9fbf51b7ce2dcc118dca6c505dc7f10f14efcb29',
+    },
+  })
+  gitment.render('container')
+  </script>
 </head>
 
  
@@ -428,22 +442,6 @@ var _hmt = _hmt || [];
   
 
   
-    <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'Echoingursb'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
-  
 
 
           </div>
@@ -708,11 +706,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">

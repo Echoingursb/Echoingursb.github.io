@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="WHOAMI">
 <meta property="og:description" content="在这里总结一下遇到的单词，方便自己学习和查阅。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-14T06:59:49.564Z">
+<meta property="og:updated_time" content="2017-09-18T07:13:41.271Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单词">
 <meta name="twitter:description" content="在这里总结一下遇到的单词，方便自己学习和查阅。">
@@ -62,7 +62,21 @@ var _hmt = _hmt || [];
   <!-- <link rel="stylesheet" href="/css/_util/normalize.css">
   <link rel="stylesheet" href="/css/_util/styles.css"> -->
   <link rel="import" href="/webcomponent/github-card.html">
-</script>
+  <div id="container"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  var gitment = new Gitment({
+    id: '页面 ID', // 可选。默认为 location.href
+    owner: 'echoingursb',
+    repo: 'echoingursb.github.io',
+    oauth: {
+      client_id: 'ffff908e7f47730b61e7',
+      client_secret: '9fbf51b7ce2dcc118dca6c505dc7f10f14efcb29',
+    },
+  })
+  gitment.render('container')
+  </script>
 </head>
 
  
@@ -316,6 +330,11 @@ var _hmt = _hmt || [];
 <td>英 [ɪtə’reɪtə]   美 [ɪtə’reɪtə]</td>
 <td>[计] 迭代器，迭代程序</td>
 </tr>
+<tr>
+<td>instantiation</td>
+<td>英 [ɪnstænʃɪ’eɪʃən]   美 [ɪnstænʃɪ’eɪʃən]</td>
+<td>n.实例化，例示</td>
+</tr>
 </tbody>
 </table>
 
@@ -432,7 +451,7 @@ var _hmt = _hmt || [];
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
     <p><span>发布时间:</span>2017年08月30日 - 09时07分</p>
-    <p><span>最后更新:</span>2017年09月14日 - 14时59分</p>
+    <p><span>最后更新:</span>2017年09月18日 - 15时13分</p>
     <p>
       <span>原始链接:</span><a class="post-url" href="/2017/08/30/单词/" title="单词">http://echoingursb.github.io/2017/08/30/单词/</a>
       <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/08/30/单词/　　作者: echo" title="点击复制文章链接">
@@ -492,22 +511,6 @@ var _hmt = _hmt || [];
 
   
 
-  
-    <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'Echoingursb'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
   
 
 
@@ -773,11 +776,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
