@@ -59,21 +59,6 @@ var _hmt = _hmt || [];
   <!-- <link rel="stylesheet" href="/css/_util/normalize.css">
   <link rel="stylesheet" href="/css/_util/styles.css"> -->
   <link rel="import" href="/webcomponent/github-card.html">
-  <div id="container"></div>
-  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-  <script>
-  var gitment = new Gitment({
-    id: '页面 ID', // 可选。默认为 location.href
-    owner: 'echoingursb',
-    repo: 'echoingursb.github.io',
-    oauth: {
-      client_id: 'ffff908e7f47730b61e7',
-      client_secret: '9fbf51b7ce2dcc118dca6c505dc7f10f14efcb29',
-    },
-  })
-  gitment.render('container')
-  </script>
 </head>
 
  
@@ -558,6 +543,22 @@ var _hmt = _hmt || [];
     });
     daovoice('update');
   </script>
+
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: 'echoingursb',
+  repo: 'echoingursb.github.io',
+  oauth: {
+    client_id: 'ffff908e7f47730b61e7',
+    client_secret: '9fbf51b7ce2dcc118dca6c505dc7f10f14efcb29',
+  },
+})
+gitment.render('container')
+</script>
 </footer>
 
     </div>
@@ -662,11 +663,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
