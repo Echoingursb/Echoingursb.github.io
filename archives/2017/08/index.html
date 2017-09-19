@@ -279,6 +279,48 @@ var _hmt = _hmt || [];
           </div>
         </div>
       </div>
+      {% if theme.gitment.enable %}
+{% set owner = theme.gitment.githubID %}
+{% set repo = theme.gitment.repo %}
+{% set cid = theme.gitment.ClientID %}
+{% set cs = theme.gitment.ClientSecret %}
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+{% if not theme.gitment.lazy %}
+    <script type="text/javascript">
+        var gitment = new Gitment({
+           id: document.location.href, 
+            owner: '{{owner}}',
+            repo: '{{repo}}',
+            oauth: {
+                client_id: '{{cid}}',
+                client_secret: '{{cs}}',
+            }});
+        gitment.render('gitment-container');
+    </script>
+{% else %}
+    <script type="text/javascript">
+        function ShowGitment(){
+            document.getElementById("gitment-display-button").style.display = "none";
+            document.getElementById("gitment-container").style.display = "block";
+            var gitment = new Gitment({
+                id: document.location.href, 
+                owner: '{{owner}}',
+                repo: '{{repo}}',
+                oauth: {
+                    client_id: '{{cid}}',
+                    client_secret: '{{cs}}',
+                }});
+            gitment.render('gitment-container');
+        }
+    </script>
+{% endif %}
+{% endif %}
+
+作者：仁伯安
+链接：http://www.jianshu.com/p/10134c474991
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
       <!-- <footer id="footer">
   <div class="outer">
     <div id="footer-info">
