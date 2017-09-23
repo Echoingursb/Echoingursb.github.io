@@ -773,6 +773,7 @@ body {
 #container {
 	position: relative;
 	min-height: 100%;
+	opacity: 0.8
 }
 
 #container .anm-canvas {
@@ -794,8 +795,7 @@ body {
 	min-height: 100%;
 	background: #eaeaea;
 	left: 300px;
-	width: auto;
-	opacity: 0.8
+	width: auto
 }
 
 .mid-col.show {
