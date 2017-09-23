@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-23T17:52:10.636Z</updated>
+  <updated>2017-09-23T17:58:52.159Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://echoingursb.github.io/2017/09/15/%E5%87%BD%E6%95%B0/"/>
     <id>http://echoingursb.github.io/2017/09/15/函数/</id>
     <published>2017-09-15T07:14:21.000Z</published>
-    <updated>2017-09-23T17:52:10.636Z</updated>
+    <updated>2017-09-23T17:58:52.159Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数</p>
 <a id="more"></a>
 <p>我们知道圆的面积计算公式为：</p>
 <p><code>S = πr^2</code></p>
 <p>当我们知道半径<code>r</code>的值时，就可以根据公式计算出面积。假设我们需要计算3个不同大小的圆的面积：</p>
-<p>var r1 = 12.34;<br>var r2 = 9.08;<br>var r3 = 73.1;<br>var s1 = 3.14 <em> r1 </em> r1;<br>var s2 = 3.14 <em> r2 </em> r2;<br>var s3 = 3.14 <em> r3 </em> r3;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var r1 = 12.34;</div><div class="line">var r2 = 9.08;</div><div class="line">var r3 = 73.1;</div><div class="line">var s1 = 3.14 * r1 * r1;</div><div class="line">var s2 = 3.14 * r2 * r2;</div><div class="line">var s3 = 3.14 * r3 * r3;</div></pre></td></tr></table></figure>
 <p>当代码出现有规律的重复的时候，你就需要当心了，每次写<code>3.14 * x * x</code>不仅很麻烦，而且，如果要把<code>3.14</code>改成<code>3.14159265359</code>的时候，得全部替换。</p>
 <p>有了函数，我们就不再每次写<code>s = 3.14 * x * x</code>，而是写成更有意义的函数调用<code>s = area_of_circle(x)</code>，而函数<code>area_of_circle</code>本身只需要写一次，就可以多次调用。</p>
 <p>基本上所有的高级语言都支持函数，JavaScript也不例外。JavaScript的函数不但是“头等公民”，而且可以像变量一样使用，具有非常强大的抽象能力。</p>
