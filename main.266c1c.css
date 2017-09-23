@@ -794,7 +794,8 @@ body {
 	min-height: 100%;
 	background: #eaeaea;
 	left: 300px;
-	width: auto
+	width: auto;
+	opacity: 0.8
 }
 
 .mid-col.show {
