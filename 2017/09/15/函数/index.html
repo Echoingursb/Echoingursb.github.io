@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="WHOAMI">
 <meta property="og:description" content="函数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-15T07:17:17.531Z">
+<meta property="og:updated_time" content="2017-09-23T17:46:33.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数">
 <meta name="twitter:description" content="函数">
@@ -214,8 +214,16 @@ var _hmt = _hmt || [];
         <script src="\assets\js\APlayer.min.js"> </script><p>函数</p>
 <a id="more"></a>
 <p>我们知道圆的面积计算公式为：</p>
-<p><code>$S = πr^2$</code></p>
-<p>当我们知道半径r的值时，就可以根据公式计算出面积。假设我们需要计算3个不同大小的圆的面积：</p>
+<p><code>S = πr^2</code></p>
+<p>当我们知道半径<code>r</code>的值时，就可以根据公式计算出面积。假设我们需要计算3个不同大小的圆的面积：</p>
+<p>var r1 = 12.34;<br>var r2 = 9.08;<br>var r3 = 73.1;<br>var s1 = 3.14 <em> r1 </em> r1;<br>var s2 = 3.14 <em> r2 </em> r2;<br>var s3 = 3.14 <em> r3 </em> r3;</p>
+<p>当代码出现有规律的重复的时候，你就需要当心了，每次写<code>3.14 * x * x</code>不仅很麻烦，而且，如果要把<code>3.14</code>改成<code>3.14159265359</code>的时候，得全部替换。</p>
+<p>有了函数，我们就不再每次写<code>s = 3.14 * x * x</code>，而是写成更有意义的函数调用<code>s = area_of_circle(x)</code>，而函数<code>area_of_circle</code>本身只需要写一次，就可以多次调用。</p>
+<p>基本上所有的高级语言都支持函数，JavaScript也不例外。JavaScript的函数不但是“头等公民”，而且可以像变量一样使用，具有非常强大的抽象能力。</p>
+<p>抽象</p>
+<p>抽象是数学中非常常见的概念。举个例子：</p>
+<p>计算数列的和，比如：<code>1 + 2 + 3 + ... + 100</code>，写起来十分不方便，于是数学家发明了求和符号<code>∑</code>，可以把<code>1 + 2 + 3 + ... + 100</code>记作：</p>
+<p>$\sum<em>1^n\frac{1}{x^2}$， $\prod</em>{i=0}^n\frac{1}{x^2}$</p>
 
       
 
@@ -330,7 +338,7 @@ var _hmt = _hmt || [];
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
     <p><span>发布时间:</span>2017年09月15日 - 15时14分</p>
-    <p><span>最后更新:</span>2017年09月15日 - 15时17分</p>
+    <p><span>最后更新:</span>2017年09月24日 - 01时46分</p>
     <p>
       <span>原始链接:</span><a class="post-url" href="/2017/09/15/函数/" title="函数">http://echoingursb.github.io/2017/09/15/函数/</a>
       <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/15/函数/　　作者: echo" title="点击复制文章链接">
@@ -628,11 +636,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
