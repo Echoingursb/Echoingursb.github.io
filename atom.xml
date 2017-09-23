@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-23T17:46:33.546Z</updated>
+  <updated>2017-09-23T17:52:10.636Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/09/15/%E5%87%BD%E6%95%B0/"/>
     <id>http://echoingursb.github.io/2017/09/15/函数/</id>
     <published>2017-09-15T07:14:21.000Z</published>
-    <updated>2017-09-23T17:46:33.546Z</updated>
+    <updated>2017-09-23T17:52:10.636Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数</p>
 <a id="more"></a>
@@ -34,7 +34,7 @@
 <p>抽象</p>
 <p>抽象是数学中非常常见的概念。举个例子：</p>
 <p>计算数列的和，比如：<code>1 + 2 + 3 + ... + 100</code>，写起来十分不方便，于是数学家发明了求和符号<code>∑</code>，可以把<code>1 + 2 + 3 + ... + 100</code>记作：</p>
-<p>$\sum<em>1^n\frac{1}{x^2}$， $\prod</em>{i=0}^n\frac{1}{x^2}$</p>
+<p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
 ]]></content>
     
     <summary type="html">
