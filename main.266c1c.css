@@ -773,7 +773,6 @@ body {
 #container {
 	position: relative;
 	min-height: 100%;
-	opacity: 0.8
 }
 
 #container .anm-canvas {
