@@ -268,11 +268,10 @@
         "url(/images/bg-18.jpg)",
     ];
     var background = Math.floor(Math.random() * backgroundList.length);
-    $("body").css({
+    $(".container").css({
         "background": backgroundList[background],
         "background-attachment": "fixed",
         "background-size": 'cover',
-        "z-index": '-1'
     });
     </script>
 </body>
