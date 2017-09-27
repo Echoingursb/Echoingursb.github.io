@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-25T05:52:43.173Z</updated>
+  <updated>2017-09-27T03:55:44.901Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数-(1)函数定义和调用</title>
+    <link href="http://echoingursb.github.io/2017/09/27/%E5%87%BD%E6%95%B0-1-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
+    <id>http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/</id>
+    <published>2017-09-27T03:39:25.000Z</published>
+    <updated>2017-09-27T03:55:44.901Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(1)函数定义和调用</p>
+<a id="more"></a>
+<p>在JavaScript中，定义函数的方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function abs(x) &#123;</div><div class="line">    if (x &gt;= 0) &#123;</div><div class="line">        return x;</div><div class="line">    &#125; else &#123;</div><div class="line">        return -x;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上述<code>abs()</code>函数的定义如下：</p>
+<ul>
+<li><code>function</code>指出这是一个函数定义；</li>
+<li><code>abs</code>是函数的名称；</li>
+<li><code>(x)</code>括号内列出函数的参数，多个参数以,分隔；</li>
+<li><code>{ ... }</code>之间的代码是函数体，可以包含若干语句，甚至可以没有任何语句。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;函数-(1)函数定义和调用&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="javascript" scheme="http://echoingursb.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>函数</title>
