@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="WHOAMI">
 <meta property="og:description" content="函数-(1)函数定义和调用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-27T05:54:06.591Z">
+<meta property="og:updated_time" content="2017-09-27T06:02:54.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数-(1)函数定义和调用">
 <meta name="twitter:description" content="函数-(1)函数定义和调用">
@@ -238,6 +238,41 @@ var _hmt = _hmt || [];
 <p>此时<code>abs(x)</code>函数的参数<code>x</code>将收到<code>undefined</code>，计算结果为<code>NaN</code>。</p>
 <p>要避免收到<code>undefined</code>，可以对参数进行检查：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function abs(x) &#123;</div><div class="line">    if (typeof x !== &apos;number&apos;) &#123;</div><div class="line">        throw &apos;Not a number&apos;;</div><div class="line">    &#125;</div><div class="line">    if (x &gt;= 0) &#123;</div><div class="line">        return x;</div><div class="line">    &#125; else &#123;</div><div class="line">        return -x;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>arguments</p>
+<p>JavaScript还有一个免费赠送的关键字<code>arguments</code>，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。<code>arguments</code>类似<code>Array</code>但它不是一个<code>Array</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function foo(x) &#123;</div><div class="line">    alert(x); // 10</div><div class="line">    for (var i=0; i&lt;arguments.length; i++) &#123;</div><div class="line">        alert(arguments[i]); // 10, 20, 30</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo(10, 20, 30);</div></pre></td></tr></table></figure>
+<p>利用<code>arguments</code>，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function abs() &#123;</div><div class="line">    if (arguments.length === 0) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    var x = arguments[0];</div><div class="line">    return x &gt;= 0 ? x : -x;</div><div class="line">&#125;</div><div class="line"></div><div class="line">abs(); // 0</div><div class="line">abs(10); // 10</div><div class="line">abs(-9); // 9</div></pre></td></tr></table></figure>
+<p>实际上<code>arguments</code>最常用于判断传入参数的个数。你可能会看到这样的写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// foo(a[, b], c)</div><div class="line">// 接收2~3个参数，b是可选参数，如果只传2个参数，b默认为null：</div><div class="line">function foo(a, b, c) &#123;</div><div class="line">    if (arguments.length === 2) &#123;</div><div class="line">        // 实际拿到的参数是a和b，c为undefined</div><div class="line">        c = b; // 把b赋给c</div><div class="line">        b = null; // b变为默认值</div><div class="line">    &#125;</div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>要把中间的参数<code>b</code>变为“可选”参数，就只能通过<code>arguments</code>判断，然后重新调整参数并赋值。</p>
+<p>rest参数</p>
+<p>由于JavaScript函数允许接收任意个参数，于是我们就不得不用<code>arguments</code>来获取所有参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function foo(a, b) &#123;</div><div class="line">    var i, rest = [];</div><div class="line">    if (arguments.length &gt; 2) &#123;</div><div class="line">        for (i = 2; i&lt;arguments.length; i++) &#123;</div><div class="line">            rest.push(arguments[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    console.log(&apos;a = &apos; + a);</div><div class="line">    console.log(&apos;b = &apos; + b);</div><div class="line">    console.log(rest);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>为了获取除了已定义参数<code>a</code>、<code>b</code>之外的参数，我们不得不用<code>arguments</code>，并且循环要从索引<code>2</code>开始以便排除前两个参数，这种写法很别扭，只是为了获得额外的<code>rest</code>参数，有没有更好的方法？</p>
+<p>ES6标准引入了<code>rest</code>参数，上面的函数可以改写为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function foo(a, b, ...rest) &#123;</div><div class="line">    console.log(&apos;a = &apos; + a);</div><div class="line">    console.log(&apos;b = &apos; + b);</div><div class="line">    console.log(rest);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(1, 2, 3, 4, 5);</div><div class="line">// 结果:</div><div class="line">// a = 1</div><div class="line">// b = 2</div><div class="line">// Array [ 3, 4, 5 ]</div><div class="line"></div><div class="line">foo(1);</div><div class="line">// 结果:</div><div class="line">// a = 1</div><div class="line">// b = undefined</div><div class="line">// Array []</div></pre></td></tr></table></figure>
+<p><code>rest</code>参数只能写在最后，前面用<code>...</code>标识，从运行结果可知，传入的参数先绑定<code>a</code>、<code>b</code>，多余的参数以数组形式交给变量<code>rest</code>，所以，不再需要<code>arguments</code>我们就获取了全部参数。</p>
+<p>如果传入的参数连正常定义的参数都没填满，也不要紧，<code>rest</code>参数会接收一个空数组（注意不是<code>undefined</code>）。</p>
+<p>因为<code>rest</code>参数是ES6新标准，所以你需要测试一下浏览器是否支持。请用<code>rest</code>参数编写一个<code>sum()</code>函数，接收任意个参数并返回它们的和：</p>
+<p>小心你的return语句</p>
+<p>前面我们讲到了JavaScript引擎有一个在行末自动添加分号的机制，这可能让你栽到<code>return</code>语句的一个大坑：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    return &#123; name: &apos;foo&apos; &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); // &#123; name: &apos;foo&apos; &#125;</div></pre></td></tr></table></figure>
+<p>如果把<code>return</code>语句拆成两行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    return</div><div class="line">        &#123; name: &apos;foo&apos; &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); // undefined</div></pre></td></tr></table></figure>
+<p>要小心了，由于JavaScript引擎在行末自动添加分号的机制，上面的代码实际上变成了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    return; // 自动添加了分号，相当于return undefined;</div><div class="line">        &#123; name: &apos;foo&apos; &#125;; // 这行语句已经没法执行到了</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>所以正确的多行写法是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    return &#123; // 这里不会自动加分号，因为&#123;表示语句尚未结束</div><div class="line">        name: &apos;foo&apos;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>练习</p>
+<p>定义一个计算圆面积的函数<code>area_of_circle()</code>，它有两个参数：</p>
+<ul>
+<li>r: 表示圆的半径；</li>
+<li>pi: 表示π的值，如果不传，则默认3.14</li>
+</ul>
+<p>Max是一个JavaScript新手，他写了一个<code>max()</code>函数，返回两个数中较大的那个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return</div><div class="line">                a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return</div><div class="line">                b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
+<p>但是Max抱怨他的浏览器出问题了，无论传入什么数，<code>max()</code>函数总是返回<code>undefined</code>。请帮他指出问题并修复。</p>
+
       
 
       
@@ -351,7 +386,7 @@ var _hmt = _hmt || [];
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
     <p><span>发布时间:</span>2017年09月27日 - 11时39分</p>
-    <p><span>最后更新:</span>2017年09月27日 - 13时54分</p>
+    <p><span>最后更新:</span>2017年09月27日 - 14时02分</p>
     <p>
       <span>原始链接:</span><a class="post-url" href="/2017/09/27/函数-1-函数定义和调用/" title="函数-(1)函数定义和调用">http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/</a>
       <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/　　作者: echo" title="点击复制文章链接">
