@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="WHOAMI">
 <meta property="og:description" content="函数-(1)函数定义和调用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-01T09:08:57.028Z">
+<meta property="og:updated_time" content="2017-10-01T09:51:07.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数-(1)函数定义和调用">
 <meta name="twitter:description" content="函数-(1)函数定义和调用">
@@ -269,10 +269,11 @@ var _hmt = _hmt || [];
 <p>定义一个计算圆面积的函数<code>area_of_circle()</code>，它有两个参数：</p>
 <ul>
 <li>r: 表示圆的半径；</li>
-<li>pi: 表示π的值，如果不传，则默认3.14</li>
+<li>pi: 表示π的值，如果不传，则默认3.14<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function area_of_circle(r, pi) &#123;</div><div class="line">    var temp = 3.14;</div><div class="line">    if (arguments.length &gt; 1) &#123;</div><div class="line">        temp = pi;</div><div class="line">    &#125;</div><div class="line">    return temp * r * r;</div><div class="line">&#125;</div><div class="line"></div><div class="line">if (area_of_circle(2) == 12.56 &amp;&amp; area_of_circle(2, 3.1416) == 12.5664) &#123;</div><div class="line">    console.log(&apos;测试通过&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">    console.log(&apos;测试失败&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <p>Max是一个JavaScript新手，他写了一个<code>max()</code>函数，返回两个数中较大的那个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return</div><div class="line">                a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return</div><div class="line">                b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
-<p><font color="#FF0000">但是Max抱怨他的浏览器出问题了，无论传入什么数，<code>max()</code>函数总是返回<code>undefined</code>。请帮他指出问题并修复。</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
+<p>但是Max抱怨他的浏览器出问题了，无论传入什么数，<font color="#FF0000"><code>max()</code></font>函数总是返回<font color="#FF0000"><code>undefined</code></font>。请帮他指出问题并修复。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
 
       
 
@@ -387,7 +388,7 @@ var _hmt = _hmt || [];
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
     <p><span>发布时间:</span>2017年09月27日 - 11时39分</p>
-    <p><span>最后更新:</span>2017年10月01日 - 17时08分</p>
+    <p><span>最后更新:</span>2017年10月01日 - 17时51分</p>
     <p>
       <span>原始链接:</span><a class="post-url" href="/2017/09/27/函数-1-函数定义和调用/" title="函数-(1)函数定义和调用">http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/</a>
       <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/　　作者: echo" title="点击复制文章链接">
