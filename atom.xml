@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-09-27T06:02:54.473Z</updated>
+  <updated>2017-10-01T07:04:42.911Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/09/27/%E5%87%BD%E6%95%B0-1-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
     <id>http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/</id>
     <published>2017-09-27T03:39:25.000Z</published>
-    <updated>2017-09-27T06:02:54.473Z</updated>
+    <updated>2017-10-01T07:04:42.911Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(1)函数定义和调用</p>
 <a id="more"></a>
@@ -66,6 +66,7 @@
 <p><code>rest</code>参数只能写在最后，前面用<code>...</code>标识，从运行结果可知，传入的参数先绑定<code>a</code>、<code>b</code>，多余的参数以数组形式交给变量<code>rest</code>，所以，不再需要<code>arguments</code>我们就获取了全部参数。</p>
 <p>如果传入的参数连正常定义的参数都没填满，也不要紧，<code>rest</code>参数会接收一个空数组（注意不是<code>undefined</code>）。</p>
 <p>因为<code>rest</code>参数是ES6新标准，所以你需要测试一下浏览器是否支持。请用<code>rest</code>参数编写一个<code>sum()</code>函数，接收任意个参数并返回它们的和：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function sum(...rest) &#123;</div><div class="line">    var result = 0;</div><div class="line">    for (value of rest) &#123;</div><div class="line">        result += value;</div><div class="line">    &#125;</div><div class="line">    return result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//测试：</div><div class="line">var i, args = [];</div><div class="line">for (i = 0; i &lt;= 100; i++) &#123;</div><div class="line">    args.push(i);</div><div class="line">&#125;</div><div class="line"></div><div class="line">if (sum() !== 0) &#123;</div><div class="line">    console.log(&apos;测试失败：sum()= &apos; + sum());</div><div class="line">&#125; else if (sum(1) !== 1) &#123;</div><div class="line">    console.log(&apos;测试失败：sum(1)= &apos; + sum(1));</div><div class="line">&#125; else if (sum(2, 3) !== 5) &#123;</div><div class="line">    console.log(&apos;测试失败：sum(2,3)= &apos; + sum(2, 3));</div><div class="line">&#125; else if (sum.apply(null, args) !== 5050) &#123;</div><div class="line">    console.log(&apos;测试失败：sum(1,2,3,...,100)&apos; + sum.apply(null, args));</div><div class="line">&#125; else &#123;</div><div class="line">    console.log(&apos;测试通过！&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>小心你的return语句</p>
 <p>前面我们讲到了JavaScript引擎有一个在行末自动添加分号的机制，这可能让你栽到<code>return</code>语句的一个大坑：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    return &#123; name: &apos;foo&apos; &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); // &#123; name: &apos;foo&apos; &#125;</div></pre></td></tr></table></figure>
@@ -82,7 +83,7 @@
 <li>pi: 表示π的值，如果不传，则默认3.14</li>
 </ul>
 <p>Max是一个JavaScript新手，他写了一个<code>max()</code>函数，返回两个数中较大的那个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return</div><div class="line">                a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return</div><div class="line">                b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
-<p>但是Max抱怨他的浏览器出问题了，无论传入什么数，<code>max()</code>函数总是返回<code>undefined</code>。请帮他指出问题并修复。</p>
+<p>但是Max抱怨他的浏览器出问题了，无论传入什么数，<code>max()</code>函数总是返回<code>undefined</code>。请帮他指出问题并修复。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
