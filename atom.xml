@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-01T07:04:42.911Z</updated>
+  <updated>2017-10-01T09:08:57.028Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/09/27/%E5%87%BD%E6%95%B0-1-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
     <id>http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/</id>
     <published>2017-09-27T03:39:25.000Z</published>
-    <updated>2017-10-01T07:04:42.911Z</updated>
+    <updated>2017-10-01T09:08:57.028Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(1)函数定义和调用</p>
 <a id="more"></a>
@@ -83,7 +83,7 @@
 <li>pi: 表示π的值，如果不传，则默认3.14</li>
 </ul>
 <p>Max是一个JavaScript新手，他写了一个<code>max()</code>函数，返回两个数中较大的那个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return</div><div class="line">                a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return</div><div class="line">                b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
-<p>但是Max抱怨他的浏览器出问题了，无论传入什么数，<code>max()</code>函数总是返回<code>undefined</code>。请帮他指出问题并修复。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
+<p><font color="#FF0000">但是Max抱怨他的浏览器出问题了，无论传入什么数，<code>max()</code>函数总是返回<code>undefined</code>。请帮他指出问题并修复。</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function max(a, b) &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return a;</div><div class="line">    &#125; else &#123;</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(15, 20));</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
