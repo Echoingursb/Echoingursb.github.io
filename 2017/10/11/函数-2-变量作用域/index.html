@@ -12,19 +12,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>Archives | WHOAMI</title>
+  <title>函数-(2)变量作用域 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <meta name="description" content="Web Java front-end">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WHOAMI">
-<meta property="og:url" content="http://echoingursb.github.io/archives/page/2/index.html">
+  <meta name="description" content="函数-(2)变量作用域">
+<meta name="keywords" content="技术,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数-(2)变量作用域">
+<meta property="og:url" content="http://echoingursb.github.io/2017/10/11/函数-2-变量作用域/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="Web Java front-end">
+<meta property="og:description" content="函数-(2)变量作用域">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-11T06:30:31.046Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WHOAMI">
-<meta name="twitter:description" content="Web Java front-end">
+<meta name="twitter:title" content="函数-(2)变量作用域">
+<meta name="twitter:description" content="函数-(2)变量作用域">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -189,36 +191,93 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-函数-2-变量作用域" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      函数-(2)变量作用域
+    </h1>
+  
+
+        
+        <a href="/2017/10/11/函数-2-变量作用域/" class="archive-article-date">
+  	<time datetime="2017-10-11T06:16:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-11</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script src="\assets\js\APlayer.min.js"> </script><p>函数-(2)变量作用域<br><a id="more"></a></p>
+<p>在JavaScript中，用<code>var</code>申明的变量实际上是有作用域的。</p>
+<p>如果一个变量在函数体内部申明，则该变量的作用域为整个函数体，在函数体外不可引用该变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = 1;</div><div class="line">    x = x + 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">x = x + 2; // ReferenceError! 无法在函数体外引用变量x</div></pre></td></tr></table></figure>
+<p>如果两个不同的函数各自申明了同一个变量，那么该变量只在各自的函数体内起作用。换句话说，不同函数内部的同名变量互相独立，互不影响：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = 1;</div><div class="line">    x = x + 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function bar() &#123;</div><div class="line">    var x = &apos;A&apos;;</div><div class="line">    x = x + &apos;B&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>由于JavaScript的函数可以嵌套，此时，内部函数可以访问外部函数定义的变量，反过来则不行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = 1;</div><div class="line">    function bar() &#123;</div><div class="line">        var y = x + 1; // bar可以访问foo的变量x!</div><div class="line">    &#125;</div><div class="line">    var z = y + 1; // ReferenceError! foo不可以访问bar的变量y!</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果内部函数和外部函数的变量名重名怎么办？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = 1;</div><div class="line">    function bar() &#123;</div><div class="line">        var x = &apos;A&apos;;</div><div class="line">        alert(&apos;x in bar() = &apos; + x); // &apos;A&apos;</div><div class="line">    &#125;</div><div class="line">    alert(&apos;x in foo() = &apos; + x); // 1</div><div class="line">    bar();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这说明JavaScript的函数在查找变量时从自身函数定义开始，从“内”向“外”查找。如果内部函数定义了与外部函数重名的变量，则内部函数的变量将“屏蔽”外部函数的变量。</p>
+<h6 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h6><p>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = &apos;Hello, &apos; + y;</div><div class="line">    alert(x);</div><div class="line">    var y = &apos;Bob&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo();</div></pre></td></tr></table></figure>
+<p>虽然是strict模式，但语句<code>var x = &#39;Hello, &#39; + y;</code>并不报错，原因是变量<code>y</code>在稍后申明了。但是<code>alert</code>显示<code>Hello, undefined</code>，说明变量<code>y</code>的值为<code>undefined</code>。这正是因为JavaScript引擎自动提升了变量<code>y</code>的声明，但不会提升变量<code>y</code>的赋值。</p>
+<p>对于上述<code>foo()</code>函数，JavaScript引擎看到的代码相当于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    var y; // 提升变量y的申明</div><div class="line">    var x = &apos;Hello, &apos; + y;</div><div class="line">    alert(x);</div><div class="line">    y = &apos;Bob&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>由于JavaScript的这一怪异的“特性”，我们在函数内部定义变量时，请严格遵守“在函数内部首先申明所有变量”这一规则。最常见的做法是用一个<code>var</code>申明函数内部用到的所有变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    var</div><div class="line">        x = 1, // x初始化为1</div><div class="line">        y = x + 1, // y初始化为2</div><div class="line">        z, i; // z和i为undefined</div><div class="line">    // 其他语句:</div><div class="line">    for (i=0; i&lt;100; i++) &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h6><p>不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象<code>window</code>，全局作用域的变量实际上被绑定到<code>window</code>的一个属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">var course = &apos;Learn JavaScript&apos;;</div><div class="line">alert(course); // &apos;Learn JavaScript&apos;</div><div class="line">alert(window.course); // &apos;Learn JavaScript&apos;</div></pre></td></tr></table></figure>
+<p>因此，直接访问全局变量<code>course</code>和访问<code>window.course</code>是完全一样的。</p>
+<p>你可能猜到了，由于函数定义有两种方式，以变量方式<code>var foo = function () {}</code>定义的函数实际上也是一个全局变量，因此，顶层函数的定义也被视为一个全局变量，并绑定到<code>window</code>对象：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    alert(&apos;foo&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); // 直接调用foo()</div><div class="line">window.foo(); // 通过window.foo()调用</div></pre></td></tr></table></figure>
+<p>进一步大胆地猜测，我们每次直接调用的<code>alert()</code>函数其实也是<code>window</code>的一个变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">window.alert(&apos;调用window.alert()&apos;);</div><div class="line">// 把alert保存到另一个变量:</div><div class="line">var old_alert = window.alert;</div><div class="line">// 给alert赋一个新函数:</div><div class="line">window.alert = function () &#123;&#125;</div><div class="line">alert(&apos;无法用alert()显示了!&apos;);</div><div class="line">// 恢复alert:</div><div class="line">window.alert = old_alert;</div><div class="line">alert(&apos;又可以用alert()了!&apos;);</div></pre></td></tr></table></figure>
+<p>这说明JavaScript实际上只有一个全局作用域。任何变量（函数也视为变量），如果没有在当前函数作用域中找到，就会继续往上查找，最后如果在全局作用域中也没有找到，则报<code>ReferenceError</code>错误。</p>
+<h6 id="名字空间"><a href="#名字空间" class="headerlink" title="名字空间"></a>名字空间</h6><p>全局变量会绑定到<code>window</code>上，不同的JavaScript文件如果使用了相同的全局变量，或者定义了相同名字的顶层函数，都会造成命名冲突，并且很难被发现。</p>
+<p>减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 唯一的全局变量MYAPP:</div><div class="line">var MYAPP = &#123;&#125;;</div><div class="line"></div><div class="line">// 其他变量:</div><div class="line">MYAPP.name = &apos;myapp&apos;;</div><div class="line">MYAPP.version = 1.0;</div><div class="line"></div><div class="line">// 其他函数:</div><div class="line">MYAPP.foo = function () &#123;</div><div class="line">    return &apos;foo&apos;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>把自己的代码全部放入唯一的名字空间<code>MYAPP</code>中，会大大减少全局变量冲突的可能。</p>
+<p>许多著名的JavaScript库都是这么干的：jQuery，YUI，underscore等等。</p>
+<h6 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h6><p>由于JavaScript的变量作用域实际上是函数内部，我们在<code>for</code>循环等语句块中是无法定义具有局部作用域的变量的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    for (var i=0; i&lt;100; i++) &#123;</div><div class="line">        //</div><div class="line">    &#125;</div><div class="line">    i += 100; // 仍然可以引用变量i</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>为了解决块级作用域，ES6引入了新的关键字<code>let</code>，用<code>let</code>替代<code>var</code>可以申明一个块级作用域的变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var sum = 0;</div><div class="line">    for (let i=0; i&lt;100; i++) &#123;</div><div class="line">        sum += i;</div><div class="line">    &#125;</div><div class="line">    i += 1; // SyntaxError</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h6><p>由于<code>var</code>和<code>let</code>申明的是变量，如果要申明一个常量，在ES6之前是不行的，我们通常用全部大写的变量来表示“这是一个常量，不要修改它的值”：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var PI = 3.14;</div></pre></td></tr></table></figure>
+<p>ES6标准引入了新的关键字<code>const</code>来定义常量，<code>const</code>与<code>let</code>都具有块级作用域：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">const PI = 3.14;</div><div class="line">PI = 3; // 某些浏览器不报错，但是无效果！</div><div class="line">PI; // 3.14</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门-(3)字符串/" class="archive-article-date">
-  	<time datetime="2017-09-03T08:43:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门-(3)字符串/">快速入门-(3)字符串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -234,343 +293,143 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/10/11/函数-2-变量作用域/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门-(2)数据类型和变量/" class="archive-article-date">
-  	<time datetime="2017-09-03T07:12:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门-(2)数据类型和变量/">快速入门-(2)数据类型和变量</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+  
+  
+  <div class="copyright">
+    <p><span>本文标题:</span><a href="/2017/10/11/函数-2-变量作用域/">函数-(2)变量作用域</a></p>
+    <p><span>文章作者:</span>
+      <a href="/" title="访问 echo 的个人博客">echo</a>
+      <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
+    </p>
+    <p><span>发布时间:</span>2017年10月11日 - 14时16分</p>
+    <p><span>最后更新:</span>2017年10月11日 - 14时30分</p>
+    <p>
+      <span>原始链接:</span><a class="post-url" href="/2017/10/11/函数-2-变量作用域/" title="函数-(2)变量作用域">http://echoingursb.github.io/2017/10/11/函数-2-变量作用域/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/10/11/函数-2-变量作用域/　　作者: echo" title="点击复制文章链接">
+          <i class="fa fa-clipboard"></i>
+      </span>
+    </p>
+    <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+    <script src="https://echoingursb.github.io/js/clipboard.min.js"></script>
+    <script> var clipboard = new Clipboard('.copy-path'); </script>
   </div>
-</article>
+  <!-- <iframe src="http://121.42.195.113/emps/like.html" class="like" frameborder="no" scrolling="no"></iframe> -->
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门-(1)基本语法/" class="archive-article-date">
-  	<time datetime="2017-09-03T05:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/01/What-Remains-of-Edith-Finch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">What Remains of Edith Finch</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门-(1)基本语法/">快速入门-(1)基本语法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门/" class="archive-article-date">
-  	<time datetime="2017-09-03T04:10:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门/">快速入门</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'Echoingursb'; // required: replace example with your forum shortname
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/JavaScript简介/" class="archive-article-date">
-  	<time datetime="2017-09-03T03:46:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/JavaScript简介/">JavaScript简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/【进阶版】有道云笔记Markdown指南/" class="archive-article-date">
-  	<time datetime="2017-09-03T03:34:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/【进阶版】有道云笔记Markdown指南/">【进阶版】有道云笔记Markdown指南</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Markdown语法(有道云笔记)</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/【简明版】有道云笔记Markdown指南 /" class="archive-article-date">
-  	<time datetime="2017-09-01T02:08:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/01/【简明版】有道云笔记Markdown指南 /">【简明版】有道云笔记Markdown指南</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Markdown语法(有道云笔记)</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/30/单词/" class="archive-article-date">
-  	<time datetime="2017-08-30T01:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/30/单词/">单词</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">单词</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/28/关于小熊/" class="archive-article-date">
-  	<time datetime="2017-08-28T05:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/28/关于小熊/">关于小熊</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -707,8 +566,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
