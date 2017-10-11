@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-11T06:30:31.046Z</updated>
+  <updated>2017-10-11T06:34:15.240Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/10/11/%E5%87%BD%E6%95%B0-2-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
     <id>http://echoingursb.github.io/2017/10/11/函数-2-变量作用域/</id>
     <published>2017-10-11T06:16:57.000Z</published>
-    <updated>2017-10-11T06:30:31.046Z</updated>
+    <updated>2017-10-11T06:34:15.240Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(2)变量作用域<br><a id="more"></a></p>
 <p>在JavaScript中，用<code>var</code>申明的变量实际上是有作用域的。</p>
@@ -33,7 +33,7 @@
 <p>如果内部函数和外部函数的变量名重名怎么办？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = 1;</div><div class="line">    function bar() &#123;</div><div class="line">        var x = &apos;A&apos;;</div><div class="line">        alert(&apos;x in bar() = &apos; + x); // &apos;A&apos;</div><div class="line">    &#125;</div><div class="line">    alert(&apos;x in foo() = &apos; + x); // 1</div><div class="line">    bar();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这说明JavaScript的函数在查找变量时从自身函数定义开始，从“内”向“外”查找。如果内部函数定义了与外部函数重名的变量，则内部函数的变量将“屏蔽”外部函数的变量。</p>
-<h6 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h6><p>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</p>
+<h5 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h5><p>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = &apos;Hello, &apos; + y;</div><div class="line">    alert(x);</div><div class="line">    var y = &apos;Bob&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo();</div></pre></td></tr></table></figure>
 <p>虽然是strict模式，但语句<code>var x = &#39;Hello, &#39; + y;</code>并不报错，原因是变量<code>y</code>在稍后申明了。但是<code>alert</code>显示<code>Hello, undefined</code>，说明变量<code>y</code>的值为<code>undefined</code>。这正是因为JavaScript引擎自动提升了变量<code>y</code>的声明，但不会提升变量<code>y</code>的赋值。</p>
 <p>对于上述<code>foo()</code>函数，JavaScript引擎看到的代码相当于：</p>
