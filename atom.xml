@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-11T06:36:56.293Z</updated>
+  <updated>2017-10-11T06:50:28.908Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/10/11/%E5%87%BD%E6%95%B0-2-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
     <id>http://echoingursb.github.io/2017/10/11/函数-2-变量作用域/</id>
     <published>2017-10-11T06:16:57.000Z</published>
-    <updated>2017-10-11T06:36:56.293Z</updated>
+    <updated>2017-10-11T06:50:28.908Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(2)变量作用域<br><a id="more"></a></p>
 <p>在JavaScript中，用<code>var</code>申明的变量实际上是有作用域的。</p>
@@ -33,14 +33,14 @@
 <p>如果内部函数和外部函数的变量名重名怎么办？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = 1;</div><div class="line">    function bar() &#123;</div><div class="line">        var x = &apos;A&apos;;</div><div class="line">        alert(&apos;x in bar() = &apos; + x); // &apos;A&apos;</div><div class="line">    &#125;</div><div class="line">    alert(&apos;x in foo() = &apos; + x); // 1</div><div class="line">    bar();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这说明JavaScript的函数在查找变量时从自身函数定义开始，从“内”向“外”查找。如果内部函数定义了与外部函数重名的变量，则内部函数的变量将“屏蔽”外部函数的变量。</p>
-<h5 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h5><p>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</p>
+<h1 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h1><p>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var x = &apos;Hello, &apos; + y;</div><div class="line">    alert(x);</div><div class="line">    var y = &apos;Bob&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo();</div></pre></td></tr></table></figure>
 <p>虽然是strict模式，但语句<code>var x = &#39;Hello, &#39; + y;</code>并不报错，原因是变量<code>y</code>在稍后申明了。但是<code>alert</code>显示<code>Hello, undefined</code>，说明变量<code>y</code>的值为<code>undefined</code>。这正是因为JavaScript引擎自动提升了变量<code>y</code>的声明，但不会提升变量<code>y</code>的赋值。</p>
 <p>对于上述<code>foo()</code>函数，JavaScript引擎看到的代码相当于：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    var y; // 提升变量y的申明</div><div class="line">    var x = &apos;Hello, &apos; + y;</div><div class="line">    alert(x);</div><div class="line">    y = &apos;Bob&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>由于JavaScript的这一怪异的“特性”，我们在函数内部定义变量时，请严格遵守“在函数内部首先申明所有变量”这一规则。最常见的做法是用一个<code>var</code>申明函数内部用到的所有变量：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    var</div><div class="line">        x = 1, // x初始化为1</div><div class="line">        y = x + 1, // y初始化为2</div><div class="line">        z, i; // z和i为undefined</div><div class="line">    // 其他语句:</div><div class="line">    for (i=0; i&lt;100; i++) &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h5><p>不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象<code>window</code>，全局作用域的变量实际上被绑定到<code>window</code>的一个属性：</p>
+<h1 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h1><p>不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象<code>window</code>，全局作用域的变量实际上被绑定到<code>window</code>的一个属性：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">var course = &apos;Learn JavaScript&apos;;</div><div class="line">alert(course); // &apos;Learn JavaScript&apos;</div><div class="line">alert(window.course); // &apos;Learn JavaScript&apos;</div></pre></td></tr></table></figure>
 <p>因此，直接访问全局变量<code>course</code>和访问<code>window.course</code>是完全一样的。</p>
 <p>你可能猜到了，由于函数定义有两种方式，以变量方式<code>var foo = function () {}</code>定义的函数实际上也是一个全局变量，因此，顶层函数的定义也被视为一个全局变量，并绑定到<code>window</code>对象：</p>
@@ -48,16 +48,16 @@
 <p>进一步大胆地猜测，我们每次直接调用的<code>alert()</code>函数其实也是<code>window</code>的一个变量：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">window.alert(&apos;调用window.alert()&apos;);</div><div class="line">// 把alert保存到另一个变量:</div><div class="line">var old_alert = window.alert;</div><div class="line">// 给alert赋一个新函数:</div><div class="line">window.alert = function () &#123;&#125;</div><div class="line">alert(&apos;无法用alert()显示了!&apos;);</div><div class="line">// 恢复alert:</div><div class="line">window.alert = old_alert;</div><div class="line">alert(&apos;又可以用alert()了!&apos;);</div></pre></td></tr></table></figure>
 <p>这说明JavaScript实际上只有一个全局作用域。任何变量（函数也视为变量），如果没有在当前函数作用域中找到，就会继续往上查找，最后如果在全局作用域中也没有找到，则报<code>ReferenceError</code>错误。</p>
-<h5 id="名字空间"><a href="#名字空间" class="headerlink" title="名字空间"></a>名字空间</h5><p>全局变量会绑定到<code>window</code>上，不同的JavaScript文件如果使用了相同的全局变量，或者定义了相同名字的顶层函数，都会造成命名冲突，并且很难被发现。</p>
+<h1 id="名字空间"><a href="#名字空间" class="headerlink" title="名字空间"></a>名字空间</h1><p>全局变量会绑定到<code>window</code>上，不同的JavaScript文件如果使用了相同的全局变量，或者定义了相同名字的顶层函数，都会造成命名冲突，并且很难被发现。</p>
 <p>减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中。例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 唯一的全局变量MYAPP:</div><div class="line">var MYAPP = &#123;&#125;;</div><div class="line"></div><div class="line">// 其他变量:</div><div class="line">MYAPP.name = &apos;myapp&apos;;</div><div class="line">MYAPP.version = 1.0;</div><div class="line"></div><div class="line">// 其他函数:</div><div class="line">MYAPP.foo = function () &#123;</div><div class="line">    return &apos;foo&apos;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>把自己的代码全部放入唯一的名字空间<code>MYAPP</code>中，会大大减少全局变量冲突的可能。</p>
 <p>许多著名的JavaScript库都是这么干的：jQuery，YUI，underscore等等。</p>
-<h5 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h5><p>由于JavaScript的变量作用域实际上是函数内部，我们在<code>for</code>循环等语句块中是无法定义具有局部作用域的变量的：</p>
+<h1 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h1><p>由于JavaScript的变量作用域实际上是函数内部，我们在<code>for</code>循环等语句块中是无法定义具有局部作用域的变量的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    for (var i=0; i&lt;100; i++) &#123;</div><div class="line">        //</div><div class="line">    &#125;</div><div class="line">    i += 100; // 仍然可以引用变量i</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>为了解决块级作用域，ES6引入了新的关键字<code>let</code>，用<code>let</code>替代<code>var</code>可以申明一个块级作用域的变量：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">function foo() &#123;</div><div class="line">    var sum = 0;</div><div class="line">    for (let i=0; i&lt;100; i++) &#123;</div><div class="line">        sum += i;</div><div class="line">    &#125;</div><div class="line">    i += 1; // SyntaxError</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h5><p>由于<code>var</code>和<code>let</code>申明的是变量，如果要申明一个常量，在ES6之前是不行的，我们通常用全部大写的变量来表示“这是一个常量，不要修改它的值”：</p>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p>由于<code>var</code>和<code>let</code>申明的是变量，如果要申明一个常量，在ES6之前是不行的，我们通常用全部大写的变量来表示“这是一个常量，不要修改它的值”：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var PI = 3.14;</div></pre></td></tr></table></figure>
 <p>ES6标准引入了新的关键字<code>const</code>来定义常量，<code>const</code>与<code>let</code>都具有块级作用域：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">const PI = 3.14;</div><div class="line">PI = 3; // 某些浏览器不报错，但是无效果！</div><div class="line">PI; // 3.14</div></pre></td></tr></table></figure>]]></content>
@@ -103,7 +103,7 @@
     <link href="http://echoingursb.github.io/2017/09/27/%E5%87%BD%E6%95%B0-1-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
     <id>http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/</id>
     <published>2017-09-27T03:39:25.000Z</published>
-    <updated>2017-10-01T09:51:07.962Z</updated>
+    <updated>2017-10-11T06:50:01.184Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(1)函数定义和调用</p>
 <a id="more"></a>
@@ -122,8 +122,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var abs = function (x) &#123;</div><div class="line">    if (x &gt;= 0) &#123;</div><div class="line">        return x;</div><div class="line">    &#125; else &#123;</div><div class="line">        return -x;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>在这种方式下，<code>function (x) { ... }</code>是一个匿名函数，它没有函数名。但是，这个匿名函数赋值给了变量<code>abs</code>，所以，通过变量<code>abs</code>就可以调用该函数。</p>
 <p>上述两种定义完全等价，注意第二种方式按照完整语法需要在函数体末尾加一个<code>;</code>，表示赋值语句结束。</p>
-<p>调用函数</p>
-<p>调用函数时，按顺序传入参数即可：</p>
+<h1 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h1><p>调用函数时，按顺序传入参数即可：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">abs(10); // 返回10</div><div class="line">abs(-9); // 返回9</div></pre></td></tr></table></figure>
 <p>由于JavaScript允许传入任意个参数而不影响调用，因此传入的参数比定义的参数多也没有问题，虽然函数内部并不需要这些参数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">abs(10, &apos;blablabla&apos;); // 返回10</div><div class="line">abs(-9, &apos;haha&apos;, &apos;hehe&apos;, null); // 返回9</div></pre></td></tr></table></figure>
@@ -132,16 +131,14 @@
 <p>此时<code>abs(x)</code>函数的参数<code>x</code>将收到<code>undefined</code>，计算结果为<code>NaN</code>。</p>
 <p>要避免收到<code>undefined</code>，可以对参数进行检查：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function abs(x) &#123;</div><div class="line">    if (typeof x !== &apos;number&apos;) &#123;</div><div class="line">        throw &apos;Not a number&apos;;</div><div class="line">    &#125;</div><div class="line">    if (x &gt;= 0) &#123;</div><div class="line">        return x;</div><div class="line">    &#125; else &#123;</div><div class="line">        return -x;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>arguments</p>
-<p>JavaScript还有一个免费赠送的关键字<code>arguments</code>，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。<code>arguments</code>类似<code>Array</code>但它不是一个<code>Array</code>：</p>
+<h1 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h1><p>JavaScript还有一个免费赠送的关键字<code>arguments</code>，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。<code>arguments</code>类似<code>Array</code>但它不是一个<code>Array</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function foo(x) &#123;</div><div class="line">    alert(x); // 10</div><div class="line">    for (var i=0; i&lt;arguments.length; i++) &#123;</div><div class="line">        alert(arguments[i]); // 10, 20, 30</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo(10, 20, 30);</div></pre></td></tr></table></figure>
 <p>利用<code>arguments</code>，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function abs() &#123;</div><div class="line">    if (arguments.length === 0) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    var x = arguments[0];</div><div class="line">    return x &gt;= 0 ? x : -x;</div><div class="line">&#125;</div><div class="line"></div><div class="line">abs(); // 0</div><div class="line">abs(10); // 10</div><div class="line">abs(-9); // 9</div></pre></td></tr></table></figure>
 <p>实际上<code>arguments</code>最常用于判断传入参数的个数。你可能会看到这样的写法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// foo(a[, b], c)</div><div class="line">// 接收2~3个参数，b是可选参数，如果只传2个参数，b默认为null：</div><div class="line">function foo(a, b, c) &#123;</div><div class="line">    if (arguments.length === 2) &#123;</div><div class="line">        // 实际拿到的参数是a和b，c为undefined</div><div class="line">        c = b; // 把b赋给c</div><div class="line">        b = null; // b变为默认值</div><div class="line">    &#125;</div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>要把中间的参数<code>b</code>变为“可选”参数，就只能通过<code>arguments</code>判断，然后重新调整参数并赋值。</p>
-<p>rest参数</p>
-<p>由于JavaScript函数允许接收任意个参数，于是我们就不得不用<code>arguments</code>来获取所有参数：</p>
+<h1 id="rest参数"><a href="#rest参数" class="headerlink" title="rest参数"></a>rest参数</h1><p>由于JavaScript函数允许接收任意个参数，于是我们就不得不用<code>arguments</code>来获取所有参数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function foo(a, b) &#123;</div><div class="line">    var i, rest = [];</div><div class="line">    if (arguments.length &gt; 2) &#123;</div><div class="line">        for (i = 2; i&lt;arguments.length; i++) &#123;</div><div class="line">            rest.push(arguments[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    console.log(&apos;a = &apos; + a);</div><div class="line">    console.log(&apos;b = &apos; + b);</div><div class="line">    console.log(rest);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>为了获取除了已定义参数<code>a</code>、<code>b</code>之外的参数，我们不得不用<code>arguments</code>，并且循环要从索引<code>2</code>开始以便排除前两个参数，这种写法很别扭，只是为了获得额外的<code>rest</code>参数，有没有更好的方法？</p>
 <p>ES6标准引入了<code>rest</code>参数，上面的函数可以改写为：</p>
@@ -274,7 +271,7 @@
     <link href="http://echoingursb.github.io/2017/09/13/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(8)Map%E5%92%8CSet/"/>
     <id>http://echoingursb.github.io/2017/09/13/快速入门-(8)Map和Set/</id>
     <published>2017-09-13T06:32:44.000Z</published>
-    <updated>2017-09-13T06:46:47.506Z</updated>
+    <updated>2017-10-11T06:49:07.995Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(8)Map和Set</p>
 <a id="more"></a>
@@ -282,8 +279,7 @@
 <p>但是JavaScript的对象有个小问题，就是键必须是字符串。但实际上Number或者其他数据类型作为键也是非常合理的。</p>
 <p>为了解决这个问题，最新的ES6规范引入了新的数据类型<code>Map</code>。要测试你的浏览器是否支持ES6规范，请执行以下代码，如果浏览器报ReferenceError错误，那么你需要换一个支持ES6的浏览器：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var m = new Map();</div><div class="line">var s = new Set();</div><div class="line">alert(&apos;你的浏览器支持Map和Set！&apos;);</div></pre></td></tr></table></figure>
-<p>Map</p>
-<p><code>Map</code>是一组键值对的结构，具有极快的查找速度。</p>
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p><code>Map</code>是一组键值对的结构，具有极快的查找速度。</p>
 <p>举个例子，假设要根据同学的名字查找对应的成绩，如果用<code>Array</code>实现，需要两个<code>Array</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var names = [&apos;Michael&apos;, &apos;Bob&apos;, &apos;Tracy&apos;];</div><div class="line">var scores = [95, 75, 85];</div></pre></td></tr></table></figure>
 <p>给定一个名字，要查找对应的成绩，就先要在<code>names</code>中找到对应的位置，再从<code>scores</code>取出对应的成绩，<code>Array</code>越长，耗时越长。</p>
@@ -293,8 +289,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var m = new Map(); // 空Map</div><div class="line">m.set(&apos;Adam&apos;, 67); // 添加新的key-value</div><div class="line">m.set(&apos;Bob&apos;, 59);</div><div class="line">m.has(&apos;Adam&apos;); // 是否存在key &apos;Adam&apos;: true</div><div class="line">m.get(&apos;Adam&apos;); // 67</div><div class="line">m.delete(&apos;Adam&apos;); // 删除key &apos;Adam&apos;</div><div class="line">m.get(&apos;Adam&apos;); // undefined</div></pre></td></tr></table></figure>
 <p>由于一个<code>key</code>只能对应一个<code>value</code>，所以，多次对一个<code>key</code>放入<code>value</code>，后面的值会把前面的值冲掉：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var m = new Map();</div><div class="line">m.set(&apos;Adam&apos;, 67);</div><div class="line">m.set(&apos;Adam&apos;, 88);</div><div class="line">m.get(&apos;Adam&apos;); // 88</div></pre></td></tr></table></figure>
-<p>Set</p>
-<p><code>Set</code>和<code>Map</code>类似，也是一组<code>key</code>的集合，但不存储<code>value</code>。由于<code>key</code>不能重复，所以，在<code>Set</code>中，没有重复的<code>key</code>。</p>
+<h1 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h1><p><code>Set</code>和<code>Map</code>类似，也是一组<code>key</code>的集合，但不存储<code>value</code>。由于<code>key</code>不能重复，所以，在<code>Set</code>中，没有重复的<code>key</code>。</p>
 <p>要创建一个<code>Set</code>，需要提供一个<code>Array</code>作为输入，或者直接创建一个空<code>Set</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var s1 = new Set(); // 空Set</div><div class="line">var s2 = new Set([1, 2, 3]); // 含1, 2, 3</div></pre></td></tr></table></figure>
 <p>重复元素在<code>Set</code>中自动被过滤：</p>
@@ -491,17 +486,22 @@
     <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(4)%E6%95%B0%E7%BB%84/"/>
     <id>http://echoingursb.github.io/2017/09/03/快速入门-(4)数组/</id>
     <published>2017-09-03T09:55:32.000Z</published>
-    <updated>2017-09-13T06:34:52.636Z</updated>
+    <updated>2017-10-11T06:48:28.480Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(4)数组</p>
 <a id="more"></a>
 <p>JavaScript的<code>Array</code>可以包含任意数据类型，并通过索引来访问每个元素。</p>
-<p>要取得<code>Array</code>的长度，直接访问<code>length</code>属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3.14, &apos;Hello&apos;, null, true];</div><div class="line">arr.length; // 6</div></pre></td></tr></table></figure></p>
-<p>请注意，直接给<code>Array</code>的<code>length</code>赋一个新的值会导致<code>Array</code>大小的变化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3];</div><div class="line">arr.length; // 3</div><div class="line">arr.length = 6;</div><div class="line">arr; // arr变为[1, 2, 3, undefined, undefined, undefined]</div><div class="line">arr.length = 2;</div><div class="line">arr; // arr变为[1, 2]</div></pre></td></tr></table></figure></p>
-<p><code>Array</code>可以通过索引把对应的元素修改为新的值，因此，对<code>Array</code>的索引进行赋值会直接修改这个<code>Array</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];</div><div class="line">arr[1] = 99;</div><div class="line">arr; // arr现在变为[&apos;A&apos;, 99, &apos;C&apos;]</div></pre></td></tr></table></figure></p>
-<p>请注意，如果通过索引赋值时，索引超过了范围，同样会引起<code>Array</code>大小的变化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3];</div><div class="line">arr[5] = &apos;x&apos;;</div><div class="line">arr; // arr变为[1, 2, 3, undefined, undefined, &apos;x&apos;]</div></pre></td></tr></table></figure></p>
+<p>要取得<code>Array</code>的长度，直接访问<code>length</code>属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3.14, &apos;Hello&apos;, null, true];</div><div class="line">arr.length; // 6</div></pre></td></tr></table></figure>
+<p>请注意，直接给<code>Array</code>的<code>length</code>赋一个新的值会导致<code>Array</code>大小的变化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3];</div><div class="line">arr.length; // 3</div><div class="line">arr.length = 6;</div><div class="line">arr; // arr变为[1, 2, 3, undefined, undefined, undefined]</div><div class="line">arr.length = 2;</div><div class="line">arr; // arr变为[1, 2]</div></pre></td></tr></table></figure>
+<p><code>Array</code>可以通过索引把对应的元素修改为新的值，因此，对<code>Array</code>的索引进行赋值会直接修改这个<code>Array</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];</div><div class="line">arr[1] = 99;</div><div class="line">arr; // arr现在变为[&apos;A&apos;, 99, &apos;C&apos;]</div></pre></td></tr></table></figure>
+<p>请注意，如果通过索引赋值时，索引超过了范围，同样会引起<code>Array</code>大小的变化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 2, 3];</div><div class="line">arr[5] = &apos;x&apos;;</div><div class="line">arr; // arr变为[1, 2, 3, undefined, undefined, &apos;x&apos;]</div></pre></td></tr></table></figure>
 <p>大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的<code>Array</code>却不会有任何错误。在编写代码时，不建议直接修改<code>Array</code>的大小，访问索引时要确保索引不会越界。</p>
-<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h3><p>与<code>String</code>类似，<code>Array</code>也可以通过<code>indexOf()</code>来搜索一个指定的元素的位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [10, 20, &apos;30&apos;, &apos;xyz&apos;];</div><div class="line">arr.indexOf(10); // 元素10的索引为0</div><div class="line">arr.indexOf(20); // 元素20的索引为1</div><div class="line">arr.indexOf(30); // 元素30没有找到，返回-1</div><div class="line">arr.indexOf(&apos;30&apos;); // 元素&apos;30&apos;的索引为2</div></pre></td></tr></table></figure></p>
+<h1 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h1><p>与<code>String</code>类似，<code>Array</code>也可以通过<code>indexOf()</code>来搜索一个指定的元素的位置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [10, 20, &apos;30&apos;, &apos;xyz&apos;];</div><div class="line">arr.indexOf(10); // 元素10的索引为0</div><div class="line">arr.indexOf(20); // 元素20的索引为1</div><div class="line">arr.indexOf(30); // 元素30没有找到，返回-1</div><div class="line">arr.indexOf(&apos;30&apos;); // 元素&apos;30&apos;的索引为2</div></pre></td></tr></table></figure>
 <p>注意了，数字<code>30</code>和字符串<code>&#39;30&#39;</code>是不同的元素。</p>
 <h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><p><code>slice()</code>就是对应<code>String</code>的<code>substring()</code>版本，它截取<code>Array</code>的部分元素，然后返回一个新的<code>Array</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;];</div><div class="line">arr.slice(0, 3); // 从索引0开始，到索引3结束，但不包括索引3: [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line">arr.slice(3); // 从索引3开始到结束: [&apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;]</div></pre></td></tr></table></figure></p>
 <p>注意到<code>slice()</code>的起止参数包括开始索引，不包括结束索引。</p>
@@ -516,9 +516,11 @@
 <h1 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h1><p><code>concat()</code>方法把当前的<code>Array</code>和另一个<code>Array</code>连接起来，并返回一个新的<code>Array</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];</div><div class="line">var added = arr.concat([1, 2, 3]);</div><div class="line">added; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3]</div><div class="line">arr; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div></pre></td></tr></table></figure></p>
 <p>请注意，<code>concat()</code>方法并没有修改当前<code>Array</code>，而是返回了一个新的<code>Array</code>。</p>
 <p>实际上，<code>concat()</code>方法可以接收任意个元素和<code>Array</code>，并且自动把<code>Array</code>拆开，然后全部添加到新的<code>Array</code>里：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];</div><div class="line">arr.concat(1, 2, [3, 4]); // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3, 4]</div></pre></td></tr></table></figure></p>
-<h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><p><code>join()</code>方法是一个非常实用的方法，它把当前<code>Array</code>的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3];</div><div class="line">arr.join(&apos;-&apos;); // &apos;A-B-C-1-2-3&apos;</div></pre></td></tr></table></figure></p>
+<h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><p><code>join()</code>方法是一个非常实用的方法，它把当前<code>Array</code>的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3];</div><div class="line">arr.join(&apos;-&apos;); // &apos;A-B-C-1-2-3&apos;</div></pre></td></tr></table></figure>
 <p>如果<code>Array</code>的元素不是字符串，将自动转换为字符串后再连接。</p>
-<h1 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h1><p>如果数组的某个元素又是一个<code>Array</code>，则可以形成多维数组，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = [[1, 2, 3], [400, 500, 600], &apos;-&apos;];</div></pre></td></tr></table></figure></p>
+<h1 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h1><p>如果数组的某个元素又是一个<code>Array</code>，则可以形成多维数组，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = [[1, 2, 3], [400, 500, 600], &apos;-&apos;];</div></pre></td></tr></table></figure>
 <p>上述<code>Array</code>包含3个元素，其中头两个元素本身也是<code>Array</code>。</p>
 <p>练习：如何通过索引取到500这个值：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var arr = [[1, 2, 3], [400, 500, 600], &apos;-&apos;];</div><div class="line">var x = ??;</div><div class="line">alert(x); // x应该为500</div></pre></td></tr></table></figure>
@@ -680,11 +682,11 @@
     <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(1)%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
     <id>http://echoingursb.github.io/2017/09/03/快速入门-(1)基本语法/</id>
     <published>2017-09-03T05:43:59.000Z</published>
-    <updated>2017-09-13T06:33:58.391Z</updated>
+    <updated>2017-10-11T06:47:04.965Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(1)基本语法</p>
 <a id="more"></a>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>JavaScript的语法和Java语言类似，每个语句以<code>;</code>结束，语句块用<code>{...}</code>。但是，JavaScript并不强制要求在每个语句的结尾加<code>;</code>，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上<code>;</code>。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>JavaScript的语法和Java语言类似，每个语句以<code>;</code>结束，语句块用<code>{...}</code>。但是，JavaScript并不强制要求在每个语句的结尾加<code>;</code>，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上<code>;</code>。</p>
 <p><em>注意：让JavaScript引擎自动加分号在某些情况下会改变程序的语义，导致运行结果与期望不一致。在本教程中，我们不会省略<code>;</code>，所有语句都会添加<code>;</code>。</em></p>
 <p>例如，下面的一行代码就是一个完整的赋值语句：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = 1;</div></pre></td></tr></table></figure>
@@ -697,7 +699,7 @@
 <p>注意花括号<code>{...}</code>内的语句具有缩进，通常是4个空格。缩进不是JavaScript语法要求必须的，但缩进有助于我们理解代码的层次，所以编写代码时要遵守缩进规则。很多文本编辑器具有“自动缩进”的功能，可以帮助整理代码。<br><code>{...}</code>还可以嵌套，形成层级结构：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">if (2 &gt; 1) &#123;</div><div class="line">    x = 1;</div><div class="line">    y = 2;</div><div class="line">    z = 3;</div><div class="line">    if (x &lt; y) &#123;</div><div class="line">        z = 4;</div><div class="line">    &#125;</div><div class="line">    if (x &gt; y) &#123;</div><div class="line">        z = 5;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>JavaScript本身对嵌套的层级没有限制，但是过多的嵌套无疑会大大增加看懂代码的难度。遇到这种情况，需要把部分代码抽出来，作为函数来调用，这样可以减少代码的复杂度。</p>
-<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>以<code>//</code>开头直到行末的字符被视为行注释，注释是给开发人员看到，JavaScript引擎会自动忽略：</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>以<code>//</code>开头直到行末的字符被视为行注释，注释是给开发人员看到，JavaScript引擎会自动忽略：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 这是一行注释</div><div class="line">alert(&apos;hello&apos;); // 这也是注释</div></pre></td></tr></table></figure>
 <p>另一种块注释是用<code>/*...*/</code>把多行字符包裹起来，把一大“块”视为一个注释：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/* 从这里开始是块注释</div><div class="line">仍然是注释</div><div class="line">仍然是注释</div><div class="line">注释结束 */</div></pre></td></tr></table></figure>]]></content>
