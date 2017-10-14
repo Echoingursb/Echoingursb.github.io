@@ -1,4 +1,4 @@
-<script src="\assets\js\APlayer.min.js"> </script>
+
 // Copyright 2010 William Malone (www.williammalone.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

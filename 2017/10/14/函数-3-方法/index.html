@@ -12,19 +12,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>Archives: 2017 | WHOAMI</title>
+  <title>函数-(3)方法 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <meta name="description" content="Web Java front-end">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WHOAMI">
-<meta property="og:url" content="http://echoingursb.github.io/archives/2017/page/2/index.html">
+  <meta name="description" content="函数-(3)方法">
+<meta name="keywords" content="技术,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数-(3)方法">
+<meta property="og:url" content="http://echoingursb.github.io/2017/10/14/函数-3-方法/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="Web Java front-end">
+<meta property="og:description" content="函数-(3)方法">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-14T09:05:17.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WHOAMI">
-<meta name="twitter:description" content="Web Java front-end">
+<meta name="twitter:title" content="函数-(3)方法">
+<meta name="twitter:description" content="函数-(3)方法">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -189,36 +191,101 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-函数-3-方法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      函数-(3)方法
+    </h1>
+  
+
+        
+        <a href="/2017/10/14/函数-3-方法/" class="archive-article-date">
+  	<time datetime="2017-10-14T08:57:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-14</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script src="\assets\js\APlayer.min.js"> </script><p>函数-(3)方法</p>
+<a id="more"></a>
+<p>在一个对象中绑定函数，称为这个对象的方法。</p>
+<p>在JavaScript中，对象的定义是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>但是，如果我们给<code>xiaoming</code>绑定一个函数，就可以做更多的事情。比如，写个<code>age()</code>方法，返回<code>xiaoming</code>的年龄：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var y = new Date().getFullYear();</div><div class="line">        return y - this.birth;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age; // function xiaoming.age()</div><div class="line">xiaoming.age(); // 今年调用是25,明年调用就变成26了</div></pre></td></tr></table></figure>
+<p>绑定到对象上的函数称为方法，和普通函数也没啥区别，但是它在内部使用了一个<code>this</code>关键字，这个东东是什么？</p>
+<p>在一个方法内部，<code>this</code>是一个特殊变量，它始终指向当前对象，也就是<code>xiaoming</code>这个变量。所以，<code>this.birth</code>可以拿到<code>xiaoming</code>的<code>birth</code>属性。</p>
+<p>让我们拆开写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function getAge() &#123;</div><div class="line">    var y = new Date().getFullYear();</div><div class="line">    return y - this.birth;</div><div class="line">&#125;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: getAge</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // 25, 正常结果</div><div class="line">getAge(); // NaN</div></pre></td></tr></table></figure>
+<p>单独调用函数<code>getAge()</code>怎么返回了<code>NaN</code>？请注意，我们已经进入到了JavaScript的一个大坑里。</p>
+<p>JavaScript的函数内部如果调用了<code>this</code>，那么这个<code>this</code>到底指向谁？</p>
+<p>答案是，视情况而定！</p>
+<p>如果以对象的方法形式调用，比如<code>xiaoming.age()</code>，该函数的<code>this</code>指向被调用的对象，也就是<code>xiaoming</code>，这是符合我们预期的。</p>
+<p>如果单独调用函数，比如<code>getAge()</code>，此时，该函数的<code>this</code>指向全局对象，也就是<code>window</code>。</p>
+<p>坑爹啊！</p>
+<p>更坑爹的是，如果这么写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var fn = xiaoming.age; // 先拿到xiaoming的age函数</div><div class="line">fn(); // NaN</div></pre></td></tr></table></figure>
+<p>也是不行的！要保证<code>this</code>指向正确，必须用<code>obj.xxx()</code>的形式调用！</p>
+<p>由于这是一个巨大的设计错误，要想纠正可没那么简单。ECMA决定，在strict模式下让函数的<code>this</code>指向<code>undefined</code>，因此，在strict模式下，你会得到一个错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var y = new Date().getFullYear();</div><div class="line">        return y - this.birth;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var fn = xiaoming.age;</div><div class="line">fn(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
+<p>这个决定只是让错误及时暴露出来，并没有解决<code>this</code>应该指向的正确位置。</p>
+<p>有些时候，喜欢重构的你把方法重构了一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">        function getAgeFromBirth() &#123;</div><div class="line">            var y = new Date().getFullYear();</div><div class="line">            return y - this.birth;</div><div class="line">        &#125;</div><div class="line">        return getAgeFromBirth();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
+<p>结果又报错了！原因是<code>this</code>指针只在<code>age</code>方法的函数内指向<code>xiaoming</code>，在函数内部定义的函数，<code>this</code>又指向<code>undefined</code>了！（在非strict模式下，它重新指向全局对象<code>window</code>！）</p>
+<p>修复的办法也不是没有，我们用一个<code>that</code>变量首先捕获<code>this</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var that = this; // 在方法内部一开始就捕获this</div><div class="line">        function getAgeFromBirth() &#123;</div><div class="line">            var y = new Date().getFullYear();</div><div class="line">            return y - that.birth; // 用that而不是this</div><div class="line">        &#125;</div><div class="line">        return getAgeFromBirth();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // 25</div></pre></td></tr></table></figure>
+<p>用<code>var that = this;</code>，你就可以放心地在方法内部定义其他函数，而不是把所有语句都堆到一个方法中。</p>
+<h1 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h1><p>虽然在一个独立的函数调用中，根据是否是strict模式，<code>this</code>指向<code>undefined</code>或<code>window</code>，不过，我们还是可以控制<code>this</code>的指向的！</p>
+<p>要指定函数的<code>this</code>指向哪个对象，可以用函数本身的<code>apply</code>方法，它接收两个参数，第一个参数就是需要绑定的<code>this</code>变量，第二个参数是<code>Array</code>，表示函数本身的参数。</p>
+<p>用<code>apply</code>修复<code>getAge()</code>调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function getAge() &#123;</div><div class="line">    var y = new Date().getFullYear();</div><div class="line">    return y - this.birth;</div><div class="line">&#125;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: getAge</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // 25</div><div class="line">getAge.apply(xiaoming, []); // 25, this指向xiaoming, 参数为空</div></pre></td></tr></table></figure>
+<p>另一个与<code>apply()</code>类似的方法是<code>call()</code>，唯一区别是：</p>
+<ul>
+<li><p><code>apply()</code>把参数打包成<code>Array</code>再传入；</p>
+</li>
+<li><p><code>call()</code>把参数按顺序传入。</p>
+</li>
+</ul>
+<p>比如调用<code>Math.max(3, 5, 4)</code>，分别用<code>apply()</code>和<code>call()</code>实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.apply(null, [3, 5, 4]); // 5</div><div class="line">Math.max.call(null, 3, 5, 4); // 5</div></pre></td></tr></table></figure>
+<p>对普通函数调用，我们通常把<code>this</code>绑定为<code>null</code>。</p>
+<h1 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h1><p>利用<code>apply()</code>，我们还可以动态改变函数的行为。</p>
+<p>JavaScript的所有对象都是动态的，即使内置的函数，我们也可以重新指向新的函数。</p>
+<p>现在假定我们想统计一下代码一共调用了多少次<code>parseInt()</code>，可以把所有的调用都找出来，然后手动加上<code>count += 1</code>，不过这样做太傻了。最佳方案是用我们自己的函数替换掉默认的<code>parseInt()</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var count = 0;</div><div class="line">var oldParseInt = parseInt; // 保存原函数</div><div class="line">window.parseInt = function () &#123;</div><div class="line">    count += 1;</div><div class="line">    return oldParseInt.apply(null, arguments); // 调用原函数</div><div class="line">&#125;;</div><div class="line">// 测试:</div><div class="line">parseInt(&apos;10&apos;);</div><div class="line">parseInt(&apos;20&apos;);</div><div class="line">parseInt(&apos;30&apos;);</div><div class="line">count; // 3</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门-(3)字符串/" class="archive-article-date">
-  	<time datetime="2017-09-03T08:43:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门-(3)字符串/">快速入门-(3)字符串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -234,343 +301,143 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/10/14/函数-3-方法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门-(2)数据类型和变量/" class="archive-article-date">
-  	<time datetime="2017-09-03T07:12:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门-(2)数据类型和变量/">快速入门-(2)数据类型和变量</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+  
+  
+  <div class="copyright">
+    <p><span>本文标题:</span><a href="/2017/10/14/函数-3-方法/">函数-(3)方法</a></p>
+    <p><span>文章作者:</span>
+      <a href="/" title="访问 echo 的个人博客">echo</a>
+      <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
+    </p>
+    <p><span>发布时间:</span>2017年10月14日 - 16时57分</p>
+    <p><span>最后更新:</span>2017年10月14日 - 17时05分</p>
+    <p>
+      <span>原始链接:</span><a class="post-url" href="/2017/10/14/函数-3-方法/" title="函数-(3)方法">http://echoingursb.github.io/2017/10/14/函数-3-方法/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/10/14/函数-3-方法/　　作者: echo" title="点击复制文章链接">
+          <i class="fa fa-clipboard"></i>
+      </span>
+    </p>
+    <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+    <script src="https://echoingursb.github.io/js/clipboard.min.js"></script>
+    <script> var clipboard = new Clipboard('.copy-path'); </script>
   </div>
-</article>
+  <!-- <iframe src="http://121.42.195.113/emps/like.html" class="like" frameborder="no" scrolling="no"></iframe> -->
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门-(1)基本语法/" class="archive-article-date">
-  	<time datetime="2017-09-03T05:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/11/函数-2-变量作用域/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数-(2)变量作用域</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门-(1)基本语法/">快速入门-(1)基本语法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/快速入门/" class="archive-article-date">
-  	<time datetime="2017-09-03T04:10:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/快速入门/">快速入门</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'Echoingursb'; // required: replace example with your forum shortname
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/JavaScript简介/" class="archive-article-date">
-  	<time datetime="2017-09-03T03:46:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/JavaScript简介/">JavaScript简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/03/【进阶版】有道云笔记Markdown指南/" class="archive-article-date">
-  	<time datetime="2017-09-03T03:34:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/03/【进阶版】有道云笔记Markdown指南/">【进阶版】有道云笔记Markdown指南</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Markdown语法(有道云笔记)</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/【简明版】有道云笔记Markdown指南 /" class="archive-article-date">
-  	<time datetime="2017-09-01T02:08:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/01/【简明版】有道云笔记Markdown指南 /">【简明版】有道云笔记Markdown指南</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Markdown语法(有道云笔记)</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/30/单词/" class="archive-article-date">
-  	<time datetime="2017-08-30T01:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/30/单词/">单词</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">单词</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/28/关于小熊/" class="archive-article-date">
-  	<time datetime="2017-08-28T05:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/28/关于小熊/">关于小熊</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-    </nav>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -707,8 +574,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

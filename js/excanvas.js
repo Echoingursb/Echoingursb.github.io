@@ -1,4 +1,4 @@
-<script src="\assets\js\APlayer.min.js"> </script>// Copyright 2006 Google Inc.
+// Copyright 2006 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -529,7 +529,10 @@ if (!document.createElement('canvas').getContext) {
     var H = 10;
 
     // For some reason that I've now forgotten, using divs didn't work
-    vmlStr.push(' <g_vml_:group', '="" coordsize="', Z * W, ',', Z * H, '" ',="" coordorigin="0,0" ,="" style="width:', W, 'px;height:', H, 'px;position:absolute;');
+    vmlStr.push(' <g_vml_:group',
+                ' coordsize="', Z * W, ',', Z * H, '"',
+                ' coordorigin="0,0"' ,
+                ' style="width:', W, 'px;height:', H, 'px;position:absolute;');
 
     // If filters are necessary (rotation exists), create them
     // filters are bog-slow, so only create them if abbsolutely necessary
@@ -559,10 +562,21 @@ if (!document.createElement('canvas').getContext) {
 
       vmlStr.push('padding:0 ', mr(max.x / Z), 'px ', mr(max.y / Z),
                   'px 0;filter:progid:DXImageTransform.Microsoft.Matrix(',
-                  filter.join(''), " sizingmethod="clip" );")="" }="" else="" {="" vmlstr.push('top:',="" mr(d.y="" z),="" 'px;left:',="" mr(d.x="" 'px;');="" vmlstr.push('="" "="">' ,
-                '<g_vml_:image src="', image.src, '" ',="" '="" style="width:', Z * dw, 'px;',
-                ' height:', Z * dh, 'px;" cropleft="', sx / w, '" croptop="', sy / h, '" cropright="', (w - sx - sw) / w, '" cropbottom="', (h - sy - sh) / h, '">',
-                '');
+                  filter.join(''), ", sizingmethod='clip');")
+    } else {
+      vmlStr.push('top:', mr(d.y / Z), 'px;left:', mr(d.x / Z), 'px;');
+    }
+
+    vmlStr.push(' ">' ,
+                '<g_vml_:image src="', image.src, '"',
+                ' style="width:', Z * dw, 'px;',
+                ' height:', Z * dh, 'px;"',
+                ' cropleft="', sx / w, '"',
+                ' croptop="', sy / h, '"',
+                ' cropright="', (w - sx - sw) / w, '"',
+                ' cropbottom="', (h - sy - sh) / h, '"',
+                ' />',
+                '</g_vml_:group>');
 
     this.element_.insertAdjacentHTML('BeforeEnd',
                                     vmlStr.join(''));
@@ -578,7 +592,12 @@ if (!document.createElement('canvas').getContext) {
     var W = 10;
     var H = 10;
 
-    lineStr.push('<g_vml_:shape', '="" filled="', !!aFill, '" ',="" style="position:absolute;width:', W, 'px;height:', H, 'px;" coordorigin="0 0" coordsize="', Z * W, ' ', Z * H, '" stroked="', !aFill, '" path="');
+    lineStr.push('<g_vml_:shape',
+                 ' filled="', !!aFill, '"',
+                 ' style="position:absolute;width:', W, 'px;height:', H, 'px;"',
+                 ' coordorigin="0 0" coordsize="', Z * W, ' ', Z * H, '"',
+                 ' stroked="', !aFill, '"',
+                 ' path="');
 
     var newSeq = false;
     var min = {x: null, y: null};
@@ -651,7 +670,13 @@ if (!document.createElement('canvas').getContext) {
       }
 
       lineStr.push(
-        '<g_vml_:stroke', '="" opacity="', opacity, '" ',="" joinstyle="', this.lineJoin, '" miterlimit="', this.miterLimit, '" endcap="', processLineCap(this.lineCap), '" weight="', lineWidth, 'px" color="', color, '">'
+        '<g_vml_:stroke',
+        ' opacity="', opacity, '"',
+        ' joinstyle="', this.lineJoin, '"',
+        ' miterlimit="', this.miterLimit, '"',
+        ' endcap="', processLineCap(this.lineCap), '"',
+        ' weight="', lineWidth, 'px"',
+        ' color="', color, '" />'
       );
     } else if (typeof this.fillStyle == 'object') {
       var fillStyle = this.fillStyle;
@@ -721,13 +746,21 @@ if (!document.createElement('canvas').getContext) {
 
       // When colors attribute is used, the meanings of opacity and o:opacity2
       // are reversed.
-      lineStr.push('<g_vml_:fill type="', fillStyle.type_, '" ',="" '="" method="none" focus="100%" color="', color1, '" color2="', color2, '" colors="', colors.join(','), '" opacity="', opacity2, '" g_o_:opacity2="', opacity1, '" angle="', angle, '" focusposition="', focus.x, ',', focus.y, '">');
+      lineStr.push('<g_vml_:fill type="', fillStyle.type_, '"',
+                   ' method="none" focus="100%"',
+                   ' color="', color1, '"',
+                   ' color2="', color2, '"',
+                   ' colors="', colors.join(','), '"',
+                   ' opacity="', opacity2, '"',
+                   ' g_o_:opacity2="', opacity1, '"',
+                   ' angle="', angle, '"',
+                   ' focusposition="', focus.x, ',', focus.y, '" />');
     } else {
       lineStr.push('<g_vml_:fill color="', color, '" opacity="', opacity,
-                   '">');
+                   '" />');
     }
 
-    lineStr.push('');
+    lineStr.push('</g_vml_:shape>');
 
     this.element_.insertAdjacentHTML('beforeEnd', lineStr.join(''));
   };
@@ -889,4 +922,3 @@ if (!document.createElement('canvas').getContext) {
 })();
 
 } // if
-</g_vml_:fill></g_vml_:fill></g_vml_:stroke',></g_vml_:shape',></g_vml_:image></g_vml_:group',></canvas>

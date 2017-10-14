@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-11T06:50:28.908Z</updated>
+  <updated>2017-10-14T09:05:17.945Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数-(3)方法</title>
+    <link href="http://echoingursb.github.io/2017/10/14/%E5%87%BD%E6%95%B0-3-%E6%96%B9%E6%B3%95/"/>
+    <id>http://echoingursb.github.io/2017/10/14/函数-3-方法/</id>
+    <published>2017-10-14T08:57:17.000Z</published>
+    <updated>2017-10-14T09:05:17.945Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(3)方法</p>
+<a id="more"></a>
+<p>在一个对象中绑定函数，称为这个对象的方法。</p>
+<p>在JavaScript中，对象的定义是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>但是，如果我们给<code>xiaoming</code>绑定一个函数，就可以做更多的事情。比如，写个<code>age()</code>方法，返回<code>xiaoming</code>的年龄：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var y = new Date().getFullYear();</div><div class="line">        return y - this.birth;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age; // function xiaoming.age()</div><div class="line">xiaoming.age(); // 今年调用是25,明年调用就变成26了</div></pre></td></tr></table></figure>
+<p>绑定到对象上的函数称为方法，和普通函数也没啥区别，但是它在内部使用了一个<code>this</code>关键字，这个东东是什么？</p>
+<p>在一个方法内部，<code>this</code>是一个特殊变量，它始终指向当前对象，也就是<code>xiaoming</code>这个变量。所以，<code>this.birth</code>可以拿到<code>xiaoming</code>的<code>birth</code>属性。</p>
+<p>让我们拆开写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function getAge() &#123;</div><div class="line">    var y = new Date().getFullYear();</div><div class="line">    return y - this.birth;</div><div class="line">&#125;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: getAge</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // 25, 正常结果</div><div class="line">getAge(); // NaN</div></pre></td></tr></table></figure>
+<p>单独调用函数<code>getAge()</code>怎么返回了<code>NaN</code>？请注意，我们已经进入到了JavaScript的一个大坑里。</p>
+<p>JavaScript的函数内部如果调用了<code>this</code>，那么这个<code>this</code>到底指向谁？</p>
+<p>答案是，视情况而定！</p>
+<p>如果以对象的方法形式调用，比如<code>xiaoming.age()</code>，该函数的<code>this</code>指向被调用的对象，也就是<code>xiaoming</code>，这是符合我们预期的。</p>
+<p>如果单独调用函数，比如<code>getAge()</code>，此时，该函数的<code>this</code>指向全局对象，也就是<code>window</code>。</p>
+<p>坑爹啊！</p>
+<p>更坑爹的是，如果这么写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var fn = xiaoming.age; // 先拿到xiaoming的age函数</div><div class="line">fn(); // NaN</div></pre></td></tr></table></figure>
+<p>也是不行的！要保证<code>this</code>指向正确，必须用<code>obj.xxx()</code>的形式调用！</p>
+<p>由于这是一个巨大的设计错误，要想纠正可没那么简单。ECMA决定，在strict模式下让函数的<code>this</code>指向<code>undefined</code>，因此，在strict模式下，你会得到一个错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var y = new Date().getFullYear();</div><div class="line">        return y - this.birth;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var fn = xiaoming.age;</div><div class="line">fn(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
+<p>这个决定只是让错误及时暴露出来，并没有解决<code>this</code>应该指向的正确位置。</p>
+<p>有些时候，喜欢重构的你把方法重构了一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">        function getAgeFromBirth() &#123;</div><div class="line">            var y = new Date().getFullYear();</div><div class="line">            return y - this.birth;</div><div class="line">        &#125;</div><div class="line">        return getAgeFromBirth();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
+<p>结果又报错了！原因是<code>this</code>指针只在<code>age</code>方法的函数内指向<code>xiaoming</code>，在函数内部定义的函数，<code>this</code>又指向<code>undefined</code>了！（在非strict模式下，它重新指向全局对象<code>window</code>！）</p>
+<p>修复的办法也不是没有，我们用一个<code>that</code>变量首先捕获<code>this</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var that = this; // 在方法内部一开始就捕获this</div><div class="line">        function getAgeFromBirth() &#123;</div><div class="line">            var y = new Date().getFullYear();</div><div class="line">            return y - that.birth; // 用that而不是this</div><div class="line">        &#125;</div><div class="line">        return getAgeFromBirth();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // 25</div></pre></td></tr></table></figure>
+<p>用<code>var that = this;</code>，你就可以放心地在方法内部定义其他函数，而不是把所有语句都堆到一个方法中。</p>
+<h1 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h1><p>虽然在一个独立的函数调用中，根据是否是strict模式，<code>this</code>指向<code>undefined</code>或<code>window</code>，不过，我们还是可以控制<code>this</code>的指向的！</p>
+<p>要指定函数的<code>this</code>指向哪个对象，可以用函数本身的<code>apply</code>方法，它接收两个参数，第一个参数就是需要绑定的<code>this</code>变量，第二个参数是<code>Array</code>，表示函数本身的参数。</p>
+<p>用<code>apply</code>修复<code>getAge()</code>调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function getAge() &#123;</div><div class="line">    var y = new Date().getFullYear();</div><div class="line">    return y - this.birth;</div><div class="line">&#125;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: getAge</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // 25</div><div class="line">getAge.apply(xiaoming, []); // 25, this指向xiaoming, 参数为空</div></pre></td></tr></table></figure>
+<p>另一个与<code>apply()</code>类似的方法是<code>call()</code>，唯一区别是：</p>
+<ul>
+<li><p><code>apply()</code>把参数打包成<code>Array</code>再传入；</p>
+</li>
+<li><p><code>call()</code>把参数按顺序传入。</p>
+</li>
+</ul>
+<p>比如调用<code>Math.max(3, 5, 4)</code>，分别用<code>apply()</code>和<code>call()</code>实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.apply(null, [3, 5, 4]); // 5</div><div class="line">Math.max.call(null, 3, 5, 4); // 5</div></pre></td></tr></table></figure>
+<p>对普通函数调用，我们通常把<code>this</code>绑定为<code>null</code>。</p>
+<h1 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h1><p>利用<code>apply()</code>，我们还可以动态改变函数的行为。</p>
+<p>JavaScript的所有对象都是动态的，即使内置的函数，我们也可以重新指向新的函数。</p>
+<p>现在假定我们想统计一下代码一共调用了多少次<code>parseInt()</code>，可以把所有的调用都找出来，然后手动加上<code>count += 1</code>，不过这样做太傻了。最佳方案是用我们自己的函数替换掉默认的<code>parseInt()</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var count = 0;</div><div class="line">var oldParseInt = parseInt; // 保存原函数</div><div class="line">window.parseInt = function () &#123;</div><div class="line">    count += 1;</div><div class="line">    return oldParseInt.apply(null, arguments); // 调用原函数</div><div class="line">&#125;;</div><div class="line">// 测试:</div><div class="line">parseInt(&apos;10&apos;);</div><div class="line">parseInt(&apos;20&apos;);</div><div class="line">parseInt(&apos;30&apos;);</div><div class="line">count; // 3</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;函数-(3)方法&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="javascript" scheme="http://echoingursb.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>函数-(2)变量作用域</title>
