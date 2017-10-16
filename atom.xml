@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-14T09:05:17.945Z</updated>
+  <updated>2017-10-16T06:31:25.374Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>函数-(3)方法</title>
-    <link href="http://echoingursb.github.io/2017/10/14/%E5%87%BD%E6%95%B0-3-%E6%96%B9%E6%B3%95/"/>
-    <id>http://echoingursb.github.io/2017/10/14/函数-3-方法/</id>
+    <link href="http://echoingursb.github.io/2017/10/14/%E5%87%BD%E6%95%B0-(3)%E6%96%B9%E6%B3%95/"/>
+    <id>http://echoingursb.github.io/2017/10/14/函数-(3)方法/</id>
     <published>2017-10-14T08:57:17.000Z</published>
-    <updated>2017-10-14T09:05:17.945Z</updated>
+    <updated>2017-10-16T06:31:25.374Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(3)方法</p>
 <a id="more"></a>
@@ -43,10 +43,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var fn = xiaoming.age; // 先拿到xiaoming的age函数</div><div class="line">fn(); // NaN</div></pre></td></tr></table></figure>
 <p>也是不行的！要保证<code>this</code>指向正确，必须用<code>obj.xxx()</code>的形式调用！</p>
 <p>由于这是一个巨大的设计错误，要想纠正可没那么简单。ECMA决定，在strict模式下让函数的<code>this</code>指向<code>undefined</code>，因此，在strict模式下，你会得到一个错误：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var y = new Date().getFullYear();</div><div class="line">        return y - this.birth;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var fn = xiaoming.age;</div><div class="line">fn(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var y = new Date().getFullYear();</div><div class="line">        return y - this.birth;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var fn = xiaoming.age;</div><div class="line">fn(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
 <p>这个决定只是让错误及时暴露出来，并没有解决<code>this</code>应该指向的正确位置。</p>
 <p>有些时候，喜欢重构的你把方法重构了一下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">        function getAgeFromBirth() &#123;</div><div class="line">            var y = new Date().getFullYear();</div><div class="line">            return y - this.birth;</div><div class="line">        &#125;</div><div class="line">        return getAgeFromBirth();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        function getAgeFromBirth() &#123;</div><div class="line">            var y = new Date().getFullYear();</div><div class="line">            return y - this.birth;</div><div class="line">        &#125;</div><div class="line">        return getAgeFromBirth();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xiaoming.age(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</div></pre></td></tr></table></figure>
 <p>结果又报错了！原因是<code>this</code>指针只在<code>age</code>方法的函数内指向<code>xiaoming</code>，在函数内部定义的函数，<code>this</code>又指向<code>undefined</code>了！（在非strict模式下，它重新指向全局对象<code>window</code>！）</p>
 <p>修复的办法也不是没有，我们用一个<code>that</code>变量首先捕获<code>this</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var xiaoming = &#123;</div><div class="line">    name: &apos;小明&apos;,</div><div class="line">    birth: 1990,</div><div class="line">    age: function () &#123;</div><div class="line">        var that = this; // 在方法内部一开始就捕获this</div><div class="line">        function getAgeFromBirth() &#123;</div><div class="line">            var y = new Date().getFullYear();</div><div class="line">            return y - that.birth; // 用that而不是this</div><div class="line">        &#125;</div><div class="line">        return getAgeFromBirth();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xiaoming.age(); // 25</div></pre></td></tr></table></figure>
@@ -85,8 +85,8 @@
   
   <entry>
     <title>函数-(2)变量作用域</title>
-    <link href="http://echoingursb.github.io/2017/10/11/%E5%87%BD%E6%95%B0-2-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>http://echoingursb.github.io/2017/10/11/函数-2-变量作用域/</id>
+    <link href="http://echoingursb.github.io/2017/10/11/%E5%87%BD%E6%95%B0-(2)%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://echoingursb.github.io/2017/10/11/函数-(2)变量作用域/</id>
     <published>2017-10-11T06:16:57.000Z</published>
     <updated>2017-10-11T06:50:28.908Z</updated>
     
@@ -145,8 +145,8 @@
   
   <entry>
     <title>函数-(1)函数定义和调用</title>
-    <link href="http://echoingursb.github.io/2017/09/27/%E5%87%BD%E6%95%B0-1-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
-    <id>http://echoingursb.github.io/2017/09/27/函数-1-函数定义和调用/</id>
+    <link href="http://echoingursb.github.io/2017/09/27/%E5%87%BD%E6%95%B0-(1)%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
+    <id>http://echoingursb.github.io/2017/09/27/函数-(1)函数定义和调用/</id>
     <published>2017-09-27T03:39:25.000Z</published>
     <updated>2017-10-11T06:50:01.184Z</updated>
     
