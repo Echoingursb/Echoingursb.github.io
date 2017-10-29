@@ -2012,6 +2012,36 @@ pre .css~* .id,pre .id {
 	color: #fffdd8;
 	text-shadow: 1px 1px rgba(77,77,77,.45)
 }
+#back-to-top {
+	cursor: pointer;
+	position: fixed;
+	right: 50px;
+	top: -900px;
+	z-index: 9;
+	width: 70px;
+	height: 900px;
+	background: url("/img/scroll.png");
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+  }
+  
+  #back-to-top #rocket {
+	margin: 8px;
+  }
+  #back-to-top #rocket path {
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	-o-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+  }
+  #back-to-top.red:hover #rocket path {
+	fill: #92c0ef;
+  }
 
 .body-wrap>article {
 	position: relative
