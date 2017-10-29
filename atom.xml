@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-29T10:17:37.643Z</updated>
+  <updated>2017-10-29T11:07:54.114Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://echoingursb.github.io/2017/10/29/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://echoingursb.github.io/2017/10/29/Git使用教程/</id>
     <published>2017-10-29T08:54:26.000Z</published>
-    <updated>2017-10-29T10:17:37.643Z</updated>
+    <updated>2017-10-29T11:07:54.114Z</updated>
     
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>Git使用教程<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/avatar/ks4n3vs2yqzwkqgpc4btvj.png" alt="image"><br><a id="more"></a></p>
 <h1 id="一：Git介绍"><a href="#一：Git介绍" class="headerlink" title="一：Git介绍"></a>一：Git介绍</h1><p><strong>一：Git是什么？</strong></p>
 <p>Git是目前世界上最先进的分布式版本控制系统。</p>
 <p><strong>二：SVN与Git的最主要的区别？</strong></p>
@@ -34,7 +34,7 @@
 <p>会弹出一个类似的命令窗口的东西，就说明Git安装成功。如下：</p>
 <p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/63nrs23ub6w2sq4qj0tnjs.png" alt="image"></p>
 <p>安装完成后，还需要最后一步设置，在命令行输入如下：</p>
-<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/3zad7itsak98mfil7txdnu.png" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/3zad7itsak98mfil7txdnm.png" alt="image"></p>
 <p>因为Git是分布式版本控制系统，所以需要填写用户名和邮箱作为一个标识。</p>
 <p>   注意：<code>git config  --global</code> 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。</p>
 <p><strong>四：如何操作？</strong></p>
@@ -48,7 +48,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;Git使用教程&lt;br&gt;
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Echoingursb/gallery/master/avatar/ks4n3vs2yqzwkqgpc4btvj.png&quot; alt=&quot;image&quot;&gt;&lt;br&gt;
     
     </summary>
     
