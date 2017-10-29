@@ -756,7 +756,8 @@ body,button,input,select,textarea {
 
 body {
     overflow-y: hidden;
-	background: #eaeaea
+	background: #eaeaea;
+	opacity: 0.9
 }
 
 #container,body,html {
