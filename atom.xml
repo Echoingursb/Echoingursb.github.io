@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-19T07:01:08.526Z</updated>
+  <updated>2017-10-29T10:17:37.643Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git使用教程</title>
+    <link href="http://echoingursb.github.io/2017/10/29/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>http://echoingursb.github.io/2017/10/29/Git使用教程/</id>
+    <published>2017-10-29T08:54:26.000Z</published>
+    <updated>2017-10-29T10:17:37.643Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>Git使用教程<br><a id="more"></a></p>
+<h1 id="一：Git介绍"><a href="#一：Git介绍" class="headerlink" title="一：Git介绍"></a>一：Git介绍</h1><p><strong>一：Git是什么？</strong></p>
+<p>Git是目前世界上最先进的分布式版本控制系统。</p>
+<p><strong>二：SVN与Git的最主要的区别？</strong></p>
+<p>SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如果在互联网下，如果网速慢的话，就纳闷了。</p>
+<p>Git是分布式版本控制系统，那么它就没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
+<p><strong>三：在windows上如何安装Git？</strong></p>
+<p>需要从网上下载一个<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a>，然后进行默认安装即可。安装完成后，直接点击Git Bash,如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/5n1di0f5197w4fpsf41tgz.png" alt="image"></p>
+<p>会弹出一个类似的命令窗口的东西，就说明Git安装成功。如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/63nrs23ub6w2sq4qj0tnjs.png" alt="image"></p>
+<p>安装完成后，还需要最后一步设置，在命令行输入如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/3zad7itsak98mfil7txdnu.png" alt="image"></p>
+<p>因为Git是分布式版本控制系统，所以需要填写用户名和邮箱作为一个标识。</p>
+<p>   注意：<code>git config  --global</code> 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。</p>
+<p><strong>四：如何操作？</strong></p>
+<p> 一：创建版本库。</p>
+<p>什么是版本库？版本库又名仓库，英文名repository,你可以简单的理解一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改，删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻还可以将文件”还原”。</p>
+<p>所以创建一个版本库也非常简单，如下我是E盘 –&gt; ada下 目录下新建一个testgit版本库。</p>
+<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p><code>pwd</code>命令是用于显示当前的目录。</p>
+<p>1.通过命令 <code>git init</code> 把这个目录变成git可以管理的仓库，如下：</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git使用教程&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Git" scheme="http://echoingursb.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>希腊字母常用指代意义及其中文读音</title>
@@ -1397,67 +1441,6 @@
       <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="单词" scheme="http://echoingursb.github.io/tags/%E5%8D%95%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于小猫OwO</title>
-    <link href="http://echoingursb.github.io/2017/08/28/%E5%85%B3%E4%BA%8E%E5%B0%8F%E7%8C%ABOwO/"/>
-    <id>http://echoingursb.github.io/2017/08/28/关于小猫OwO/</id>
-    <published>2017-08-28T05:14:46.000Z</published>
-    <updated>2017-10-29T04:01:22.875Z</updated>
-    
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><blockquote>
-<p>属性面板</p>
-</blockquote>
-<ul>
-<li>专业：电子信息工程</li>
-<li>爱好：动漫、编程</li>
-</ul>
-<blockquote>
-<p>职业天赋</p>
-</blockquote>
-<ul>
-<li>写作：</li>
-<li>开发：</li>
-<li>爬虫：</li>
-</ul>
-<blockquote>
-<p>技能加点</p>
-</blockquote>
-<ul>
-<li>Java：Structs、Hibernate、Spring</li>
-<li>Web：HTML5、CSS3、Javascript、Jquery、Vue.js</li>
-</ul>
-<blockquote>
-<p>通关副本</p>
-</blockquote>
-<ul>
-<li><p>1</p>
-</li>
-<li><p>2</p>
-<blockquote>
-<p>社交方式</p>
-</blockquote>
-</li>
-<li><p>Github：<a href="https://github.com/Echoingursb" target="_blank" rel="external">Echoingursb</a></p>
-</li>
-</ul>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">               ,</div><div class="line">             _/((</div><div class="line">    _.---. .<span class="comment">'   `\</span></div><div class="line">  .<span class="comment">'      `     ^ T=</span></div><div class="line"> /     \       .--<span class="comment">'</span></div><div class="line">|      /       )<span class="comment">'-.</span></div><div class="line">; ,   &lt;__..-(   <span class="comment">'-.)</span></div><div class="line"> \ \-.__)    ``--._)</div><div class="line">  <span class="comment">'.'-.__.-.</span></div><div class="line">    <span class="comment">'-...-'</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;\assets\js\APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;blockquote&gt;
-&lt;p&gt;属性面板&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;专业：电子信息工程&lt;/li&gt;
-&lt;li&gt;爱好：动漫、编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;bl
-    
-    </summary>
-    
     
   </entry>
   
