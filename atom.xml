@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-10-29T11:07:54.114Z</updated>
+  <updated>2017-10-31T12:50:48.572Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/10/29/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://echoingursb.github.io/2017/10/29/Git使用教程/</id>
     <published>2017-10-29T08:54:26.000Z</published>
-    <updated>2017-10-29T11:07:54.114Z</updated>
+    <updated>2017-10-31T12:50:48.572Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/avatar/ks4n3vs2yqzwkqgpc4btvj.png" alt="image"><br><a id="more"></a></p>
 <h1 id="一：Git介绍"><a href="#一：Git介绍" class="headerlink" title="一：Git介绍"></a>一：Git介绍</h1><p><strong>一：Git是什么？</strong></p>
@@ -41,9 +41,55 @@
 <p> 一：创建版本库。</p>
 <p>什么是版本库？版本库又名仓库，英文名repository,你可以简单的理解一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改，删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻还可以将文件”还原”。</p>
 <p>所以创建一个版本库也非常简单，如下我是E盘 –&gt; ada下 目录下新建一个testgit版本库。</p>
-<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/8bayni1ziexxyzfva1n54l.png" alt="image"></p>
 <p><code>pwd</code>命令是用于显示当前的目录。</p>
 <p>1.通过命令 <code>git init</code> 把这个目录变成git可以管理的仓库，如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/vf8orm52pv5oiaax181hxg.png" alt="image"></p>
+<p>这时候你当前testgit目录下会多了一个<code>.git</code>的目录，这个目录是Git来跟踪管理版本的，没事千万不要手动乱改这个目录里面的文件，否则，会把git仓库给破坏了。如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/9x8h4bcd7y4z7nc8p66a4k.png" alt="image"></p>
+<p>2.把文件添加到版本库中。</p>
+<p>首先要明确下，所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码等，Git也不列外，版本控制系统可以告诉你每次的改动，但是图片，视频这些二进制文件，虽能也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是知道图片从1kb变成2kb，但是到底改了啥，版本控制也不知道。</p>
+<p><strong>下面先看下demo如下演示：</strong></p>
+<p>我在版本库testgit目录下新建一个记事本文件 <code>readme.txt</code> 内容如下：<code>11111111</code></p>
+<p>第一步：使用命令 <code>git add readme.txt</code>添加到暂存区里面去。如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/4jk4d5z574ay9f2u48t45e.png" alt="image"></p>
+<p>如果和上面一样，没有任何提示，说明已经添加成功了。</p>
+<p>第二步：用命令 <code>git commit</code>告诉Git，把文件提交到仓库。</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/h2hh6q9ka18ihzh5l0x1om.png" alt="image"></p>
+<p>现在我们已经提交了一个<code>readme.txt</code>文件了，我们下面可以通过命令<code>git status</code>来查看是否还有文件未提交，如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/881xh8upykraadl43397r1.png" alt="image"></p>
+<p>说明没有任何文件未提交，但是我现在继续来改下<code>readme.txt</code>内容，比如我在下面添加一行<code>22222222</code>内容，继续使用<code>git status</code>来查看下结果，如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/2y25a361qx16u6rnoff9wc.png" alt="image"></p>
+<p>上面的命令告诉我们 <code>readme.txt</code>文件已被修改，但是未被提交的修改。</p>
+<p>接下来我想看下<code>readme.txt</code>文件到底改了什么内容，如何查看呢？可以使用如下命令：</p>
+<p><code>git diff readme.txt</code>如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/hjy9n1k8n6zwm4ia2r5bvx.png" alt="image"></p>
+<p>如上可以看到，<code>readme.txt</code>文件内容从一行<code>11111111</code>改成 二行 添加了一行<code>22222222</code>内容。</p>
+<p>知道了对<code>readme.txt</code>文件做了什么修改后，我们可以放心的提交到仓库了，提交修改和提交文件是一样的2步(第一步是<code>git add</code> 第二步是：<code>git commit</code>)。</p>
+<p>如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/89zecuqx59p265qd7s801w.png" alt="image"></p>
+<h1 id="二：版本回退"><a href="#二：版本回退" class="headerlink" title="二：版本回退"></a>二：版本回退</h1><p>如上，我们已经学会了修改文件，现在我继续对<code>readme.txt</code>文件进行修改，再增加一行</p>
+<p>内容为<code>33333333</code>，继续执行命令如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/s4ibcvgdarzz5k76ldi1ay.png" alt="image"></p>
+<p>现在我已经对<code>readme.txt</code>文件做了三次修改了，那么我现在想查看下历史记录，如何查呢？我们现在可以使用命令<code>git log</code>演示如下所示：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/l58hhkefc13qlbw7j9pb54.png" alt="image"></p>
+<p><code>git log</code>命令显示从最近到最远的显示日志，我们可以看到最近三次提交，最近的一次是,增加内容为<code>33333333</code>.上一次是添加内容<code>22222222</code>，第一次默认是 <code>11111111</code>.如果嫌上面显示的信息太多的话，我们可以使用命令 <code>git log –-pretty=oneline</code>演示如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/pw96r7ehwqcbj6wsz8s386.png" alt="image"></p>
+<p>现在我想使用版本回退操作，我想把当前的版本回退到上一个版本，要使用什么命令呢？可以使用如下2种命令，第一种是：<code>git reset  --hard HEAD^</code> 那么如果要回退到上上个版本只需把<code>HEAD^</code> 改成 <code>HEAD^^</code>以此类推。那如果要回退到前100个版本的话，使用上面的方法肯定不方便，我们可以使用下面的简便命令操作：<code>git reset  --hard HEAD~100</code> 即可。未回退之前的<code>readme.txt</code>内容如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/mbu7u9ccetyke0mmmnh76h.png" alt="image"></p>
+<p>如果想回退到上一个版本的命令如下操作：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/pup4qh51gn1jq513cdr6fp.png" alt="image"></p>
+<p>再来查看下 <code>readme.txt</code>内容如下：通过命令<code>cat readme.txt</code>查看</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/wekuuwff5s39u3jjd246ld.png" alt="image"></p>
+<p>可以看到，内容已经回退到上一个版本了。我们可以继续使用<code>git log</code> 来查看下历史记录信息，如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/ruabe039a0yifta6vf1q3x.png" alt="image"></p>
+<p>我们看到 增加<code>33333333</code> 内容我们没有看到了，但是现在我想回退到最新的版本，如：有<code>33333333</code>的内容要如何恢复呢？我们可以通过版本号回退，使用命令方法如下：</p>
+<p><code>git reset  --hard 版本号</code> ，但是现在的问题假如我已经关掉过一次命令行或者<code>33333333</code>内容的版本号我并不知道呢？要如何知道增加<code>33333333</code>内容的版本号呢？可以通过如下命令即可获取到版本号：<code>git reflog</code>  演示如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/b9so254yb24egbu20pihqj.png" alt="image"></p>
+<p>通过上面的显示我们可以知道，增加内容<code>33333333</code>的版本号是 b2e31af.我们现在可以命令</p>
+<p><code>git reset  --hard b2e31af</code>来恢复了。演示如下：</p>
+<p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/z03agdel6p2djmdz4uy9tw.png" alt="image"></p>
+<p>可以看到 目前已经是最新的版本了。</p>
 ]]></content>
     
     <summary type="html">
@@ -1316,7 +1362,7 @@
     <link href="http://echoingursb.github.io/2017/08/30/%E5%8D%95%E8%AF%8D/"/>
     <id>http://echoingursb.github.io/2017/08/30/单词/</id>
     <published>2017-08-30T01:07:30.000Z</published>
-    <updated>2017-09-18T07:13:41.271Z</updated>
+    <updated>2017-10-31T07:02:26.942Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
 <ul>
@@ -1345,6 +1391,11 @@
 <td>avatar</td>
 <td>英 [ˈævətɑ:(r)]   美 [‘ævətɑ:r]</td>
 <td>n.阿凡达;化身;头像</td>
+</tr>
+<tr>
+<td>awash</td>
+<td>英 [əˈwɒʃ]   美 [əˈwɑ:ʃ]</td>
+<td>adj.泛滥的;与水面齐平的，刚被水覆盖的;被淹没的</td>
 </tr>
 </tbody>
 </table>
@@ -1399,9 +1450,28 @@
 </thead>
 <tbody>
 <tr>
-<td>BMI</td>
-<td></td>
-<td>n.Body Mass Index （体质指数）</td>
+<td>delicate</td>
+<td>英 [ˈdelɪkət]   美 [ˈdɛlɪkɪt]</td>
+<td>adj.精致的;微妙的;熟练的;纤弱的;易损的</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>E</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>发音</th>
+<th>释义 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ephemeral</td>
+<td>英 [ɪˈfemərəl]   美 [ɪˈfɛmərəl]</td>
+<td>adj.朝生暮死;短暂的，瞬息的;朝露;一年生</td>
 </tr>
 </tbody>
 </table>
