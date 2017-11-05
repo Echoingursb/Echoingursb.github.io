@@ -1,4 +1,4 @@
-var gulp        = require('gulp');
+<script src="\assets\js\APlayer.min.js"> </script>var gulp        = require('gulp');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var minifyCSS   = require('gulp-minify-css');
