@@ -12,20 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>JavaScript简介 | WHOAMI</title>
+  <title>快速入门-(8)Map和Set | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript简介">
+  <meta name="description" content="快速入门-(8)Map和Set">
 <meta name="keywords" content="技术,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript简介">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/03/JavaScript简介/index.html">
+<meta property="og:title" content="快速入门-(8)Map和Set">
+<meta property="og:url" content="http://echoingursb.github.io/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="JavaScript简介">
+<meta property="og:description" content="快速入门-(8)Map和Set">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-03T07:38:29.734Z">
+<meta property="og:updated_time" content="2017-11-05T06:25:44.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript简介">
-<meta name="twitter:description" content="JavaScript简介">
+<meta name="twitter:title" content="快速入门-(8)Map和Set">
+<meta name="twitter:description" content="快速入门-(8)Map和Set">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -191,39 +191,54 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript简介" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript教程(10)-快速入门-(8)Map和Set" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript简介
+      快速入门-(8)Map和Set
     </h1>
   
 
         
-        <a href="/2017/09/03/JavaScript简介/" class="archive-article-date">
-  	<time datetime="2017-09-03T03:46:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
+        <a href="/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/" class="archive-article-date">
+  	<time datetime="2017-09-13T06:32:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>JavaScript简介<br><a id="more"></a></p>
-<h1 id="JavaScript历史"><a href="#JavaScript历史" class="headerlink" title="JavaScript历史"></a>JavaScript历史</h1><p>要了解JavaScript，我们首先要回顾一下JavaScript的诞生。</p>
-<p>在上个世纪的1995年，当时的网景公司正凭借其Navigator浏览器成为Web时代开启时最著名的第一代互联网公司。</p>
-<p>由于网景公司希望能在静态HTML页面上添加一些动态效果，于是叫<a href="https://baike.baidu.com/item/Brendan%20Eich/561441?fr=aladdin" target="_blank" rel="external">Brendan Eich</a>这哥们在两周之内设计出了JavaScript语言。你没看错，这哥们只用了10天时间。</p>
-<p>为什么起名叫JavaScript？原因是当时Java语言非常红火，所以网景公司希望借Java的名气来推广，但事实上JavaScript除了语法上有点像Java，其他部分基本上没啥关系。</p>
-<h1 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h1><p>因为网景开发了JavaScript，一年后微软又模仿JavaScript开发了JScript，为了让JavaScript成为全球标准，几个公司联合ECMA（European Computer Manufacturers Association）组织定制了JavaScript语言的标准，被称为ECMAScript标准。</p>
-<p>所以简单说来就是，ECMAScript是一种语言标准，而JavaScript是网景公司对ECMAScript标准的一种实现。</p>
-<p>那为什么不直接把JavaScript定为标准呢？因为JavaScript是网景的注册商标。</p>
-<p>不过大多数时候，我们还是用JavaScript这个词。如果你遇到ECMAScript这个词，简单把它替换为JavaScript就行了。</p>
-<h1 id="JavaScript版本"><a href="#JavaScript版本" class="headerlink" title="JavaScript版本"></a>JavaScript版本</h1><p>JavaScript语言是在10天时间内设计出来的，虽然语言的设计者水平非常NB，但谁也架不住“时间紧，任务重”，所以，JavaScript有很多设计缺陷，我们后面会慢慢讲到。</p>
-<p>此外，由于JavaScript的标准——ECMAScript在不断发展，最新版ECMAScript 6标准（简称ES6）已经在2015年6月正式发布了，所以，讲到JavaScript的版本，实际上就是说它实现了ECMAScript标准的哪个版本。</p>
-<p>由于浏览器在发布时就确定了JavaScript的版本，加上很多用户还在使用IE6这种古老的浏览器，这就导致你在写JavaScript的时候，要照顾一下老用户，不能一上来就用最新的ES6标准写，否则，老用户的浏览器是无法运行新版本的JavaScript代码的。</p>
-<p>不过，JavaScript的核心语法并没有多大变化。我们的教程会先讲JavaScript最核心的用法，然后，针对ES6讲解新增特性。</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(8)Map和Set</p>
+<a id="more"></a>
+<p>JavaScript的默认对象表示方式<code>{}</code>可以视为其他语言中的<code>Map</code>或<code>Dictionary</code>的数据结构，即一组键值对。</p>
+<p>但是JavaScript的对象有个小问题，就是键必须是字符串。但实际上Number或者其他数据类型作为键也是非常合理的。</p>
+<p>为了解决这个问题，最新的ES6规范引入了新的数据类型<code>Map</code>。要测试你的浏览器是否支持ES6规范，请执行以下代码，如果浏览器报ReferenceError错误，那么你需要换一个支持ES6的浏览器：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</div><div class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>();</div><div class="line">alert(<span class="string">'你的浏览器支持Map和Set！'</span>);</div></pre></td></tr></table></figure>
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p><code>Map</code>是一组键值对的结构，具有极快的查找速度。</p>
+<p>举个例子，假设要根据同学的名字查找对应的成绩，如果用<code>Array</code>实现，需要两个<code>Array</code>：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var names</span> = [<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>];</div><div class="line"><span class="attribute">var scores</span> = [95, 75, 85];</div></pre></td></tr></table></figure>
+<p>给定一个名字，要查找对应的成绩，就先要在<code>names</code>中找到对应的位置，再从<code>scores</code>取出对应的成绩，<code>Array</code>越长，耗时越长。</p>
+<p>如果用<code>Map</code>实现，只需要一个<code>“名字”-“成绩”</code>的对照表，直接根据名字查找成绩，无论这个表有多大，查找速度都不会变慢。用JavaScript写一个<code>Map</code>如下：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="string">'Michael'</span>, <span class="number">95</span>], [<span class="string">'Bob'</span>, <span class="number">75</span>], [<span class="string">'Tracy'</span>, <span class="number">85</span>]]);</div><div class="line">m.<span class="keyword">get</span>(<span class="string">'Michael'</span>); <span class="comment">// 95</span></div></pre></td></tr></table></figure>
+<p>初始化<code>Map</code>需要一个二维数组，或者直接初始化一个空<code>Map</code>。<code>Map</code>具有以下方法：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>(); <span class="comment">// 空Map</span></div><div class="line">m.<span class="keyword">set</span>(<span class="string">'Adam'</span>, <span class="number">67</span>); <span class="comment">// 添加新的key-value</span></div><div class="line">m.<span class="keyword">set</span>(<span class="string">'Bob'</span>, <span class="number">59</span>);</div><div class="line">m.has(<span class="string">'Adam'</span>); <span class="comment">// 是否存在key 'Adam': true</span></div><div class="line">m.<span class="keyword">get</span>(<span class="string">'Adam'</span>); <span class="comment">// 67</span></div><div class="line">m.delete(<span class="string">'Adam'</span>); <span class="comment">// 删除key 'Adam'</span></div><div class="line">m.<span class="keyword">get</span>(<span class="string">'Adam'</span>); <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
+<p>由于一个<code>key</code>只能对应一个<code>value</code>，所以，多次对一个<code>key</code>放入<code>value</code>，后面的值会把前面的值冲掉：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</div><div class="line">m.<span class="keyword">set</span>(<span class="string">'Adam'</span>, <span class="number">67</span>);</div><div class="line">m.<span class="keyword">set</span>(<span class="string">'Adam'</span>, <span class="number">88</span>);</div><div class="line">m.<span class="keyword">get</span>(<span class="string">'Adam'</span>); <span class="comment">// 88</span></div></pre></td></tr></table></figure>
+<h1 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h1><p><code>Set</code>和<code>Map</code>类似，也是一组<code>key</code>的集合，但不存储<code>value</code>。由于<code>key</code>不能重复，所以，在<code>Set</code>中，没有重复的<code>key</code>。</p>
+<p>要创建一个<code>Set</code>，需要提供一个<code>Array</code>作为输入，或者直接创建一个空<code>Set</code>：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">Set</span>(); <span class="comment">// 空Set</span></div><div class="line"><span class="keyword">var</span> s2 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]); <span class="comment">// 含1, 2, 3</span></div></pre></td></tr></table></figure>
+<p>重复元素在<code>Set</code>中自动被过滤：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var s = new Set([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, '<span class="number">3</span>']);</div><div class="line">s; <span class="comment">// Set &#123;1, 2, 3, "3"&#125;</span></div></pre></td></tr></table></figure>
+<p>注意数字<code>3</code>和字符串<code>&#39;3&#39;</code>是不同的元素。</p>
+<p>通过<code>add(key)</code>方法可以添加元素到<code>Set</code>中，可以重复添加，但不会有效果：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; s.add(<span class="number">4</span>)</div><div class="line">&gt;&gt;&gt; s</div><div class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</div><div class="line">&gt;&gt;&gt; s.add(<span class="number">4</span>)</div><div class="line">&gt;&gt;&gt; s</div><div class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</div></pre></td></tr></table></figure>
+<p>通过<code>delete(key)</code>方法可以删除元素：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var s = new Set([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</div><div class="line">s; <span class="comment">// Set &#123;1, 2, 3&#125;</span></div><div class="line">s.delete(<span class="number">3</span>);</div><div class="line">s; <span class="comment">// Set &#123;1, 2&#125;</span></div></pre></td></tr></table></figure>
+<p>小结</p>
+<p><code>Map</code>和<code>Set</code>是ES6标准新增的数据类型，请根据浏览器的支持情况决定是否要使用。</p>
 
       
 
@@ -323,7 +338,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/03/JavaScript简介/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -337,16 +352,16 @@ var _hmt = _hmt || [];
   
   
   <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/03/JavaScript简介/">JavaScript简介</a></p>
+    <p><span>本文标题:</span><a href="/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/">快速入门-(8)Map和Set</a></p>
     <p><span>文章作者:</span>
       <a href="/" title="访问 echo 的个人博客">echo</a>
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
-    <p><span>发布时间:</span>2017年09月03日 - 11时46分</p>
-    <p><span>最后更新:</span>2017年09月03日 - 15时38分</p>
+    <p><span>发布时间:</span>2017年09月13日 - 14时32分</p>
+    <p><span>最后更新:</span>2017年11月05日 - 14时25分</p>
     <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/03/JavaScript简介/" title="JavaScript简介">http://echoingursb.github.io/2017/09/03/JavaScript简介/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/03/JavaScript简介/　　作者: echo" title="点击复制文章链接">
+      <span>原始链接:</span><a class="post-url" href="/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/" title="快速入门-(8)Map和Set">http://echoingursb.github.io/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/　　作者: echo" title="点击复制文章链接">
           <i class="fa fa-clipboard"></i>
       </span>
     </p>
@@ -361,18 +376,18 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2017/09/03/快速入门/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          快速入门
+          快速入门-(9)iterable
         
       </div>
     </a>
   
   
-    <a href="/2017/09/03/【进阶版】有道云笔记Markdown指南/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">【进阶版】有道云笔记Markdown指南</div>
+    <a href="/2017/09/12/JavaScript教程(9)-快速入门-(7)循环/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速入门-(7)循环</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -411,7 +426,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://echoingursb.github.io/2017/09/03/JavaScript简介/",
+  id: "http://echoingursb.github.io/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/",
   owner: 'echoingursb',
   repo: 'echoingursb.github.io',
   oauth: {
@@ -652,7 +667,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -660,15 +675,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">单词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
             
             <div class="clearfix"></div>

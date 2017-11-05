@@ -12,20 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>快速入门-(5)对象 | WHOAMI</title>
+  <title>快速入门-(9)iterable | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速入门-(5)对象">
+  <meta name="description" content="快速入门-(9)iterable">
 <meta name="keywords" content="技术,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速入门-(5)对象">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/10/快速入门-(5)对象/index.html">
+<meta property="og:title" content="快速入门-(9)iterable">
+<meta property="og:url" content="http://echoingursb.github.io/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-(5)对象">
+<meta property="og:description" content="快速入门-(9)iterable">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-13T06:35:07.794Z">
+<meta property="og:updated_time" content="2017-11-05T06:25:49.931Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速入门-(5)对象">
-<meta name="twitter:description" content="快速入门-(5)对象">
+<meta name="twitter:title" content="快速入门-(9)iterable">
+<meta name="twitter:description" content="快速入门-(9)iterable">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -191,51 +191,51 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-快速入门-(5)对象" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript教程(11)-快速入门-(9)iterable" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      快速入门-(5)对象
+      快速入门-(9)iterable
     </h1>
   
 
         
-        <a href="/2017/09/10/快速入门-(5)对象/" class="archive-article-date">
-  	<time datetime="2017-09-10T12:29:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-10</time>
+        <a href="/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/" class="archive-article-date">
+  	<time datetime="2017-09-14T05:46:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(5)对象</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(9)iterable</p>
 <a id="more"></a>
-<p>JavaScript的对象是一种无序的集合数据类型，它由若干键值对组成。</p>
-<p>JavaScript的对象用于描述现实世界中的某个对象。例如，为了描述“小明”这个淘气的小朋友，我们可以用若干键值对来描述他：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">var</span> <span class="string">xiaoming</span> <span class="string">=</span> <span class="string">&#123;</span></div><div class="line"><span class="attr">    name:</span> <span class="string">'小明'</span><span class="string">,</span></div><div class="line"><span class="attr">    birth:</span> <span class="number">1990</span><span class="string">,</span></div><div class="line"><span class="attr">    school:</span> <span class="string">'No.1 Middle School'</span><span class="string">,</span></div><div class="line"><span class="attr">    height:</span> <span class="number">1.70</span><span class="string">,</span></div><div class="line"><span class="attr">    weight:</span> <span class="number">65</span><span class="string">,</span></div><div class="line"><span class="attr">    score:</span> <span class="literal">null</span></div><div class="line"><span class="string">&#125;;</span></div></pre></td></tr></table></figure>
-<p>JavaScript用一个<code>{...}</code>表示一个对象，键值对以<code>xxx: xxx</code>形式申明，用<code>,</code>隔开。注意，最后一个键值对不需要在末尾加<code>,</code>，如果加了<code>，</code>有的浏览器（如低版本的IE）将报错。</p>
-<p>上述对象申明了一个<code>name</code>属性，值是<code>&#39;小明&#39;</code>，<code>birth</code>属性，值是<code>1990</code>，以及其他一些属性。最后，把这个对象赋值给变量<code>xiaoming</code>后，就可以通过变量<code>xiaoming</code>来获取小明的属性了：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xiaoming.name; <span class="regexp">//</span> <span class="string">'小明'</span></div><div class="line">xiaoming.birth; <span class="regexp">//</span> <span class="number">1990</span></div></pre></td></tr></table></figure>
-<p>访问属性是通过<code>.</code>操作符完成的，但这要求属性名必须是一个有效的变量名。如果属性名包含特殊字符，就必须用<code>&#39;&#39;</code>括起来：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var xiaohong</span> = &#123;</div><div class="line">    name: <span class="string">'小红'</span>,</div><div class="line">    <span class="string">'middle-school'</span>: <span class="string">'No.1 Middle School'</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p><code>xiaohong</code>的属性名<code>middle-school</code>不是一个有效的变量，就需要用<code>&#39;&#39;</code>括起来。访问这个属性也无法使用<code>.</code>操作符，必须用<code>[&#39;xxx&#39;]</code>来访问：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xiaohong[<span class="string">'middle-school'</span>]; <span class="regexp">//</span> <span class="string">'No.1 Middle School'</span></div><div class="line">xiaohong[<span class="string">'name'</span>]; <span class="regexp">//</span> <span class="string">'小红'</span></div><div class="line">xiaohong.name; <span class="regexp">//</span> <span class="string">'小红'</span></div></pre></td></tr></table></figure>
-<p>也可以用<code>xiaohong[&#39;name&#39;]</code>来访问<code>xiaohong</code>的<code>name</code>属性，不过<code>xiaohong.name</code>的写法更简洁。我们在编写JavaScript代码的时候，属性名尽量使用标准的变量名，这样就可以直接通过<code>object.prop</code>的形式访问一个属性了。</p>
-<p>实际上JavaScript对象的所有属性都是字符串，不过属性对应的值可以是任意数据类型。</p>
-<p>如果访问一个不存在的属性会返回什么呢？JavaScript规定，访问不存在的属性不报错，而是返回<code>undefined</code>：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xiaoming = &#123;</div><div class="line">    name: <span class="string">'小明'</span></div><div class="line">&#125;;</div><div class="line">xiaoming.age; <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
-<p>由于JavaScript的对象是动态类型，你可以自由地给一个对象添加或删除属性：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xiaoming = &#123;</div><div class="line">    name: <span class="string">'小明'</span></div><div class="line">&#125;;</div><div class="line">xiaoming.age; <span class="comment">// undefined</span></div><div class="line">xiaoming.age = <span class="number">18</span>; <span class="comment">// 新增一个age属性</span></div><div class="line">xiaoming.age; <span class="comment">// 18</span></div><div class="line"><span class="keyword">delete</span> xiaoming.age; <span class="comment">// 删除age属性</span></div><div class="line">xiaoming.age; <span class="comment">// undefined</span></div><div class="line"><span class="keyword">delete</span> xiaoming[<span class="string">'name'</span>]; <span class="comment">// 删除name属性</span></div><div class="line">xiaoming.name; <span class="comment">// undefined</span></div><div class="line"><span class="keyword">delete</span> xiaoming.school; <span class="comment">// 删除一个不存在的school属性也不会报错</span></div></pre></td></tr></table></figure>
-<p>如果我们要检测<code>xiaoming</code>是否拥有某一属性，可以用<code>in</code>操作符：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="string">var</span> <span class="string">xiaoming</span> <span class="string">=</span> <span class="string">&#123;</span></div><div class="line"><span class="attr">    name:</span> <span class="string">'小明'</span><span class="string">,</span></div><div class="line"><span class="attr">    birth:</span> <span class="number">1990</span><span class="string">,</span></div><div class="line"><span class="attr">    school:</span> <span class="string">'No.1 Middle School'</span><span class="string">,</span></div><div class="line"><span class="attr">    height:</span> <span class="number">1.70</span><span class="string">,</span></div><div class="line"><span class="attr">    weight:</span> <span class="number">65</span><span class="string">,</span></div><div class="line"><span class="attr">    score:</span> <span class="literal">null</span></div><div class="line"><span class="string">&#125;;</span></div><div class="line"><span class="string">'name'</span> <span class="string">in</span> <span class="string">xiaoming;</span> <span class="string">//</span> <span class="literal">true</span></div><div class="line"><span class="string">'grade'</span> <span class="string">in</span> <span class="string">xiaoming;</span> <span class="string">//</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
-<p>不过要小心，如果<code>in</code>判断一个属性存在，这个属性不一定是<code>xiaoming</code>的，它可能是<code>xiaoming</code>继承得到的：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'toString'</span> <span class="keyword">in</span> xiaoming; <span class="regexp">//</span> <span class="keyword">true</span></div></pre></td></tr></table></figure>
-<p>因为<code>toString</code>定义在<code>object</code>对象中，而所有对象最终都会在原型链上指向<code>object</code>，所以<code>xiaoming</code>也拥有<code>toString</code>属性。</p>
-<p>要判断一个属性是否是<code>xiaoming</code>自身拥有的，而不是继承得到的，可以用<code>hasOwnProperty()</code>方法：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var xiaoming = &#123;</div><div class="line">    <span class="symbol">name:</span> <span class="string">'小明'</span></div><div class="line">&#125;;</div><div class="line">xiaoming.hasOwnProperty(<span class="string">'name'</span>); <span class="regexp">//</span> <span class="keyword">true</span></div><div class="line">xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="regexp">//</span> <span class="keyword">false</span></div></pre></td></tr></table></figure>
+<p>遍历<code>Array</code>可以采用下标循环，遍历<code>Map</code>和<code>Set</code>就无法使用下标。为了统一集合类型，ES6标准引入了新的<code>iterable</code>类型，<code>Array</code>、<code>Map</code>和<code>Set</code>都属于<code>iterable</code>类型。</p>
+<p>具有<code>iterable</code>类型的集合可以通过新的<code>for ... of</code>循环来遍历。</p>
+<p><code>for ... of</code>循环是ES6引入的新的语法，请测试你的浏览器是否支持：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword">of</span> a) &#123;</div><div class="line">&#125;</div><div class="line">alert(<span class="string">'你的浏览器支持for ... of'</span>);</div></pre></td></tr></table></figure>
+<p>用<code>for ... of</code>循环遍历集合，用法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]);</div><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="number">1</span>, <span class="string">'x'</span>], [<span class="number">2</span>, <span class="string">'y'</span>], [<span class="number">3</span>, <span class="string">'z'</span>]]);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword">of</span> a) &#123; <span class="comment">// 遍历Array</span></div><div class="line">    alert(x); <span class="comment">// A,B,C</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword">of</span> s) &#123; <span class="comment">// 遍历Set</span></div><div class="line">    alert(x); <span class="comment">// A,B,C</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword">of</span> m) &#123; <span class="comment">// 遍历Map</span></div><div class="line">    alert(x[<span class="number">0</span>] + <span class="string">'='</span> + x[<span class="number">1</span>]); <span class="comment">// 1=x,2=y,3=z</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>你可能会有疑问，<code>for ... of</code>循环和<code>for ... in</code>循环有何区别？</p>
+<p><code>for ... in</code>循环由于历史遗留问题，它遍历的实际上是对象的属性名称。一个<code>Array</code>数组实际上也是一个对象，它的每个元素的索引被视为一个属性。</p>
+<p>当我们手动给Array对象添加了额外的属性后，for … in循环将带来意想不到的意外效果：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line">a.name = <span class="string">'Hello'</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword">in</span> a) &#123;</div><div class="line">    alert(x); <span class="comment">// 0,1,2,name (遍历的实际上是对象的属性名称)</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>for ... in</code>循环将把<code>name</code>包括在内，但<code>Array</code>的<code>length</code>属性却不包括在内。</p>
+<p><code>for ... of</code>循环则完全修复了这些问题，它只循环集合本身的元素：</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line">a.<span class="keyword">name</span> = <span class="string">'Hello'</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword">of</span> a) <span class="comment">&#123;</span></div><div class="line"><span class="comment">    alert(x); // A,B,C (循环集合本身的元素)</span></div><div class="line"><span class="comment">&#125;</span></div></pre></td></tr></table></figure>
+<p>这就是为什么要引入新的<code>for ... of</code>循环。</p>
+<p>然而，更好的方式是直接使用<code>iterable</code>内置的<code>forEach</code>方法，它接收一个函数，每次迭代就自动回调该函数。以<code>Array</code>为例：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line">a.<span class="keyword">forEach</span>(<span class="function"><span class="keyword">function</span> <span class="params">(element, index, array)</span> </span>&#123;</div><div class="line">    <span class="comment">// element: 指向当前元素的值 // A,B,C</span></div><div class="line">    <span class="comment">// index: 指向当前索引 // 0,1,2</span></div><div class="line">    <span class="comment">// array: 指向Array对象本身 // A,B,C  A,B,C  A,B,C</span></div><div class="line">    alert(element);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><em>注意</em>，<code>forEach()</code>方法是ES5.1标准引入的，你需要测试浏览器是否支持。</p>
+<p><code>Set</code>与<code>Array</code>类似，但<code>Set</code>没有索引，因此回调函数的前两个参数都是元素本身：</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="keyword">Set</span>([<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]);</div><div class="line">s.forEach(<span class="function"><span class="keyword">function</span> <span class="params">(element, sameElement, <span class="keyword">set</span>)</span> <span class="comment">&#123;</span></span></div><div class="line"><span class="function"><span class="comment">    alert(element); // A,B,C</span></span></div><div class="line"><span class="function"><span class="comment">&#125;</span>);</span></div></pre></td></tr></table></figure>
+<p><code>Map</code>的回调函数参数依次为<code>value</code>、<code>key</code>和<code>map</code>本身：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="number">1</span>, <span class="string">'x'</span>], [<span class="number">2</span>, <span class="string">'y'</span>], [<span class="number">3</span>, <span class="string">'z'</span>]]);</div><div class="line">m.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">value, key, map</span>) </span>&#123;</div><div class="line">    alert(value); <span class="comment">// x,y,z</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>如果对某些参数不感兴趣，由于JavaScript的函数调用不要求参数必须一致，因此可以忽略它们。例如，只需要获得<code>Array</code>的<code>element</code>：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line">a.<span class="keyword">forEach</span>(<span class="function"><span class="keyword">function</span> <span class="params">(element)</span> </span>&#123;</div><div class="line">    alert(element); <span class="comment">// A,B,C</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
       
 
       <div id="back-to-top" data-scroll="body">
@@ -334,7 +334,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/10/快速入门-(5)对象/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -348,16 +348,16 @@ var _hmt = _hmt || [];
   
   
   <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/10/快速入门-(5)对象/">快速入门-(5)对象</a></p>
+    <p><span>本文标题:</span><a href="/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/">快速入门-(9)iterable</a></p>
     <p><span>文章作者:</span>
       <a href="/" title="访问 echo 的个人博客">echo</a>
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
-    <p><span>发布时间:</span>2017年09月10日 - 20时29分</p>
-    <p><span>最后更新:</span>2017年09月13日 - 14时35分</p>
+    <p><span>发布时间:</span>2017年09月14日 - 13时46分</p>
+    <p><span>最后更新:</span>2017年11月05日 - 14时25分</p>
     <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/10/快速入门-(5)对象/" title="快速入门-(5)对象">http://echoingursb.github.io/2017/09/10/快速入门-(5)对象/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/10/快速入门-(5)对象/　　作者: echo" title="点击复制文章链接">
+      <span>原始链接:</span><a class="post-url" href="/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/" title="快速入门-(9)iterable">http://echoingursb.github.io/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/　　作者: echo" title="点击复制文章链接">
           <i class="fa fa-clipboard"></i>
       </span>
     </p>
@@ -372,18 +372,18 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2017/09/12/快速入门-(6)条件判断/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/15/JavaScript教程(12)-函数/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          快速入门-(6)条件判断
+          函数
         
       </div>
     </a>
   
   
-    <a href="/2017/09/03/快速入门-(4)数组/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">快速入门-(4)数组</div>
+    <a href="/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速入门-(8)Map和Set</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -422,7 +422,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://echoingursb.github.io/2017/09/10/快速入门-(5)对象/",
+  id: "http://echoingursb.github.io/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/",
   owner: 'echoingursb',
   repo: 'echoingursb.github.io',
   oauth: {
@@ -663,7 +663,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -671,15 +671,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">单词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
             
             <div class="clearfix"></div>

@@ -12,20 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>快速入门-(7)循环 | WHOAMI</title>
+  <title>函数-(1)函数定义和调用 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速入门-(7)循环">
+  <meta name="description" content="函数-(1)函数定义和调用">
 <meta name="keywords" content="技术,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速入门-(7)循环">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/index.html">
+<meta property="og:title" content="函数-(1)函数定义和调用">
+<meta property="og:url" content="http://echoingursb.github.io/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-(7)循环">
+<meta property="og:description" content="函数-(1)函数定义和调用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-13T06:35:45.755Z">
+<meta property="og:updated_time" content="2017-11-05T06:26:26.832Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速入门-(7)循环">
-<meta name="twitter:description" content="快速入门-(7)循环">
+<meta name="twitter:title" content="函数-(1)函数定义和调用">
+<meta name="twitter:description" content="函数-(1)函数定义和调用">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -191,68 +191,87 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-快速入门-(7)循环" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript教程(13)-函数-(1)函数定义和调用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      快速入门-(7)循环
+      函数-(1)函数定义和调用
     </h1>
   
 
         
-        <a href="/2017/09/12/快速入门-(7)循环/" class="archive-article-date">
-  	<time datetime="2017-09-12T03:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
+        <a href="/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/" class="archive-article-date">
+  	<time datetime="2017-09-27T03:39:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(7)循环</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>函数-(1)函数定义和调用</p>
 <a id="more"></a>
-<p>要计算<code>1+2+3</code>，我们可以直接写表达式：</p>
-<figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">1 </span>+ <span class="number">2</span> + <span class="number">3</span>; // <span class="number">6</span></div></pre></td></tr></table></figure>
-<p>要计算<code>1+2+3+...+10</code>，勉强也能写出来。</p>
-<p>但是，要计算<code>1+2+3+...+10000</code>，直接写表达式就不可能了。</p>
-<p>为了让计算机能计算成千上万次的重复运算，我们就需要循环语句。</p>
-<p>JavaScript的循环有两种，一种是<code>for</code>循环，通过初始条件、结束条件和递增条件来循环执行语句块：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var x = <span class="number">0</span><span class="comment">;</span></div><div class="line">var i<span class="comment">;</span></div><div class="line">for (i=<span class="number">1</span><span class="comment">; i&lt;=10000; i++) &#123;</span></div><div class="line">    x = x + i<span class="comment">;</span></div><div class="line">&#125;</div><div class="line">x<span class="comment">; // 50005000</span></div></pre></td></tr></table></figure>
-<p>让我们来分析一下for循环的控制条件：</p>
+<p>在JavaScript中，定义函数的方式如下：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">abs</span><span class="params">(x)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (x &gt;= <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> x;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> -x;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上述<code>abs()</code>函数的定义如下：</p>
 <ul>
-<li><code>i=1</code> 这是初始条件，将变量i置为1；</li>
-<li><code>i&lt;=10000</code> 这是判断条件，满足时就继续循环，不满足就退出循环；</li>
-<li><code>i++</code> 这是每次循环后的递增条件，由于每次循环后变量<code>i</code>都会加<code>1</code>，因此它终将在若干次循环后不满足判断条件<code>i&lt;=10000</code>而退出循环。</li>
+<li><code>function</code>指出这是一个函数定义；</li>
+<li><code>abs</code>是函数的名称；</li>
+<li><code>(x)</code>括号内列出函数的参数，多个参数以,分隔；</li>
+<li><code>{ ... }</code>之间的代码是函数体，可以包含若干语句，甚至可以没有任何语句。</li>
 </ul>
+<p>请注意，函数体内部的语句在执行时，一旦执行到<code>return</code>时，函数就执行完毕，并将结果返回。因此，函数内部通过条件判断和循环可以实现非常复杂的逻辑。</p>
+<p>如果没有<code>return</code>语句，函数执行完毕后也会返回结果，只是结果为<code>undefined</code>。</p>
+<p>由于JavaScript的函数也是一个对象，上述定义的<code>abs()</code>函数实际上是一个函数对象，而函数名<code>abs</code>可以视为指向该函数的变量。</p>
+<p>因此，第二种定义函数的方式如下：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> abs = <span class="function"><span class="keyword">function</span> <span class="params">(x)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (x &gt;= <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> x;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> -x;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>在这种方式下，<code>function (x) { ... }</code>是一个匿名函数，它没有函数名。但是，这个匿名函数赋值给了变量<code>abs</code>，所以，通过变量<code>abs</code>就可以调用该函数。</p>
+<p>上述两种定义完全等价，注意第二种方式按照完整语法需要在函数体末尾加一个<code>;</code>，表示赋值语句结束。</p>
+<h1 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h1><p>调用函数时，按顺序传入参数即可：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">abs</span>(<span class="number">10</span>); <span class="comment">// 返回10</span></div><div class="line"><span class="built_in">abs</span>(<span class="number">-9</span>); <span class="comment">// 返回9</span></div></pre></td></tr></table></figure>
+<p>由于JavaScript允许传入任意个参数而不影响调用，因此传入的参数比定义的参数多也没有问题，虽然函数内部并不需要这些参数：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">abs</span>(<span class="number">10</span>, <span class="string">'blablabla'</span>); <span class="comment">// 返回10</span></div><div class="line"><span class="keyword">abs</span>(-<span class="number">9</span>, <span class="string">'haha'</span>, <span class="string">'hehe'</span>, <span class="keyword">null</span>); <span class="comment">// 返回9</span></div></pre></td></tr></table></figure>
+<p>传入的参数比定义的少也没有问题：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">abs</span>(); <span class="comment">// 返回NaN</span></div></pre></td></tr></table></figure>
+<p>此时<code>abs(x)</code>函数的参数<code>x</code>将收到<code>undefined</code>，计算结果为<code>NaN</code>。</p>
+<p>要避免收到<code>undefined</code>，可以对参数进行检查：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">abs</span><span class="params">(x)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> x !== <span class="string">'number'</span>) &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="string">'Not a number'</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (x &gt;= <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> x;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> -x;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h1><p>JavaScript还有一个免费赠送的关键字<code>arguments</code>，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。<code>arguments</code>类似<code>Array</code>但它不是一个<code>Array</code>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">    alert(x); <span class="comment">// 10</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="built_in">arguments</span>.length; i++) &#123;</div><div class="line">        alert(<span class="built_in">arguments</span>[i]); <span class="comment">// 10, 20, 30</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>);</div></pre></td></tr></table></figure>
+<p>利用<code>arguments</code>，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值：</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">abs</span><span class="params">()</span> &#123;</span></div><div class="line">    <span class="keyword">if</span> (arguments.<span class="built_in">length</span> === <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    var x = arguments[<span class="number">0</span>];</div><div class="line">    <span class="keyword">return</span> x &gt;= <span class="number">0</span> ? x : -x;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">abs</span>(); <span class="comment">// 0</span></div><div class="line"><span class="built_in">abs</span>(<span class="number">10</span>); <span class="comment">// 10</span></div><div class="line"><span class="built_in">abs</span>(<span class="number">-9</span>); <span class="comment">// 9</span></div></pre></td></tr></table></figure>
+<p>实际上<code>arguments</code>最常用于判断传入参数的个数。你可能会看到这样的写法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// foo(a[, b], c)</span></div><div class="line"><span class="comment">// 接收2~3个参数，b是可选参数，如果只传2个参数，b默认为null：</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a, b, c</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">arguments</span>.length === <span class="number">2</span>) &#123;</div><div class="line">        <span class="comment">// 实际拿到的参数是a和b，c为undefined</span></div><div class="line">        c = b; <span class="comment">// 把b赋给c</span></div><div class="line">        b = <span class="literal">null</span>; <span class="comment">// b变为默认值</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>要把中间的参数<code>b</code>变为“可选”参数，就只能通过<code>arguments</code>判断，然后重新调整参数并赋值。</p>
+<h1 id="rest参数"><a href="#rest参数" class="headerlink" title="rest参数"></a>rest参数</h1><p>由于JavaScript函数允许接收任意个参数，于是我们就不得不用<code>arguments</code>来获取所有参数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> i, rest = [];</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">arguments</span>.length &gt; <span class="number">2</span>) &#123;</div><div class="line">        <span class="keyword">for</span> (i = <span class="number">2</span>; i&lt;<span class="built_in">arguments</span>.length; i++) &#123;</div><div class="line">            rest.push(<span class="built_in">arguments</span>[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'a = '</span> + a);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'b = '</span> + b);</div><div class="line">    <span class="built_in">console</span>.log(rest);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>为了获取除了已定义参数<code>a</code>、<code>b</code>之外的参数，我们不得不用<code>arguments</code>，并且循环要从索引<code>2</code>开始以便排除前两个参数，这种写法很别扭，只是为了获得额外的<code>rest</code>参数，有没有更好的方法？</p>
+<p>ES6标准引入了<code>rest</code>参数，上面的函数可以改写为：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">(a, b, <span class="rest_arg">...rest</span>)</span> </span>&#123;</div><div class="line">    console.log(<span class="string">'a = '</span> + a);</div><div class="line">    console.log(<span class="string">'b = '</span> + b);</div><div class="line">    console.log(rest);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</div><div class="line"><span class="comment">// 结果:</span></div><div class="line"><span class="comment">// a = 1</span></div><div class="line"><span class="comment">// b = 2</span></div><div class="line"><span class="comment">// Array [ 3, 4, 5 ]</span></div><div class="line"></div><div class="line">foo(<span class="number">1</span>);</div><div class="line"><span class="comment">// 结果:</span></div><div class="line"><span class="comment">// a = 1</span></div><div class="line"><span class="comment">// b = undefined</span></div><div class="line"><span class="comment">// Array []</span></div></pre></td></tr></table></figure>
+<p><code>rest</code>参数只能写在最后，前面用<code>...</code>标识，从运行结果可知，传入的参数先绑定<code>a</code>、<code>b</code>，多余的参数以数组形式交给变量<code>rest</code>，所以，不再需要<code>arguments</code>我们就获取了全部参数。</p>
+<p>如果传入的参数连正常定义的参数都没填满，也不要紧，<code>rest</code>参数会接收一个空数组（注意不是<code>undefined</code>）。</p>
+<p>因为<code>rest</code>参数是ES6新标准，所以你需要测试一下浏览器是否支持。请用<code>rest</code>参数编写一个<code>sum()</code>函数，接收任意个参数并返回它们的和：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function <span class="built_in">sum</span>(...<span class="built_in">rest</span>) &#123;</div><div class="line">    <span class="built_in">var</span> result = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (value of <span class="built_in">rest</span>) &#123;</div><div class="line">        result += value;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//测试：</div><div class="line"><span class="built_in">var</span> i, <span class="built_in">args</span> = [];</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i++) &#123;</div><div class="line">    <span class="built_in">args</span>.<span class="built_in">push</span>(i);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="built_in">sum</span>() !== <span class="number">0</span>) &#123;</div><div class="line">    console.<span class="built_in">log</span>('测试失败：<span class="built_in">sum</span>()= ' + <span class="built_in">sum</span>());</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">sum</span>(<span class="number">1</span>) !== <span class="number">1</span>) &#123;</div><div class="line">    console.<span class="built_in">log</span>('测试失败：<span class="built_in">sum</span>(<span class="number">1</span>)= ' + <span class="built_in">sum</span>(<span class="number">1</span>));</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">sum</span>(<span class="number">2</span>, <span class="number">3</span>) !== <span class="number">5</span>) &#123;</div><div class="line">    console.<span class="built_in">log</span>('测试失败：<span class="built_in">sum</span>(<span class="number">2</span>,<span class="number">3</span>)= ' + <span class="built_in">sum</span>(<span class="number">2</span>, <span class="number">3</span>));</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">sum</span>.<span class="built_in">apply</span>(null, <span class="built_in">args</span>) !== <span class="number">5050</span>) &#123;</div><div class="line">    console.<span class="built_in">log</span>('测试失败：<span class="built_in">sum</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,...,<span class="number">100</span>)' + <span class="built_in">sum</span>.<span class="built_in">apply</span>(null, <span class="built_in">args</span>));</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    console.<span class="built_in">log</span>('测试通过！');</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>小心你的return语句</p>
+<p>前面我们讲到了JavaScript引擎有一个在行末自动添加分号的机制，这可能让你栽到<code>return</code>语句的一个大坑：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="title">foo</span>() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="type">&#123;</span> name: <span class="symbol">'foo</span>' &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); // &#123; name: <span class="symbol">'foo</span>' &#125;</div></pre></td></tr></table></figure>
+<p>如果把<code>return</code>语句拆成两行：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span></div><div class="line">        &#123; name: <span class="string">'foo'</span> &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
+<p>要小心了，由于JavaScript引擎在行末自动添加分号的机制，上面的代码实际上变成了：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span>; <span class="comment">// 自动添加了分号，相当于return undefined;</span></div><div class="line">        &#123; name: <span class="string">'foo'</span> &#125;; <span class="comment">// 这行语句已经没法执行到了</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>所以正确的多行写法是：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123; <span class="comment">// 这里不会自动加分号，因为&#123;表示语句尚未结束</span></div><div class="line">        name: <span class="string">'foo'</span></div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>练习</p>
-<p>利用<code>for</code>循环计算<code>1 * 2 * 3 * ... * 10</code>的结果：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> <span class="string">'strict'</span>;</div><div class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">1</span>; i&lt;=<span class="number">10</span>; i++) &#123;</div><div class="line">    x = x * i;</div><div class="line">&#125;</div><div class="line">alert(x);</div><div class="line"><span class="keyword">if</span> (x===<span class="number">3628800</span>) &#123;</div><div class="line">    alert(<span class="string">'1 * 2 * 3 * ... * 10 = '</span>+ x);</div><div class="line">&#125;<span class="keyword">else</span> &#123;</div><div class="line">    alert(<span class="string">'计算错误'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>for</code>循环最常用的地方是利用索引来遍历数组：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'Apple'</span>,<span class="string">'Google'</span>,<span class="string">'Microsoft'</span>];</div><div class="line">var x;</div><div class="line"><span class="keyword">for</span> (var <span class="built_in">i</span> =<span class="number">0</span>;<span class="built_in">i</span>&lt;arr.<span class="built_in">length</span>;<span class="built_in">i</span>++) &#123;</div><div class="line">    x = arr[i];</div><div class="line">    alert(x);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>for</code>循环的3个条件都是可以省略的，如果没有退出循环的判断条件，就必须使用<code>break</code>语句退出循环，否则就是死循环：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</div><div class="line"><span class="keyword">for</span> (;;) &#123; <span class="comment">// 将无限循环下去</span></div><div class="line">    <span class="keyword">if</span> (x &gt; <span class="number">100</span>) &#123;</div><div class="line">        <span class="keyword">break</span>; <span class="comment">// 通过if判断来退出循环</span></div><div class="line">    &#125;</div><div class="line">    x ++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>for … in</p>
-<p><code>for</code>循环的一个变体是<code>for ... in</code>循环，它可以把一个对象的所有属性依次循环出来：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">    name: <span class="string">'Jack'</span>,</div><div class="line">    age: <span class="number">20</span>,</div><div class="line">    city: <span class="string">'Beijing'</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> o) &#123;</div><div class="line">    alert(key); <span class="comment">// name, age, city</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>要过滤掉对象继承的属性，用<code>hasOwnProperty()</code>来实现：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">    name: <span class="string">'Jack'</span>,</div><div class="line">    age: <span class="number">20</span>,</div><div class="line">    city: <span class="string">'Beijing'</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> o) &#123;</div><div class="line">    <span class="keyword">if</span> (o.hasOwnProperty(key)) &#123;</div><div class="line">        alert(key); <span class="comment">// name, age, city</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>由于<code>Array</code>也是对象，而它的每个元素的索引被视为对象的属性，因此，<code>for ... in</code>循环可以直接循环出<code>Array</code>的索引：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> a) &#123;</div><div class="line">    alert(i); <span class="comment">// 0,1,2</span></div><div class="line">    alert(arr[i]); <span class="comment">// A,B,C</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><em>请注意</em>，<code>for ... in</code>对<code>Array</code>的循环得到的是<code>String</code>而不是<code>Number</code>。</p>
-<p>while</p>
-<p><code>for</code>循环在已知循环的初始和结束条件时非常有用。而上述忽略了条件的<code>for</code>循环容易让人看不清循环的逻辑，此时用<code>while</code>循环更佳。</p>
-<p><code>while</code>循环只有一个判断条件，条件满足，就不断循环，条件不满足时则退出循环。比如我们要计算100以内所有奇数之和，可以用<code>while</code>循环实现：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1.for循环</span></div><div class="line">var x = <span class="number">0</span>;</div><div class="line">for (var i =<span class="number">1</span>;i&lt;=<span class="number">100</span>;i+=<span class="number">2</span>) &#123;</div><div class="line">    x = x + i;</div><div class="line">&#125;</div><div class="line">alert(x); <span class="comment">// 2500</span></div><div class="line"></div><div class="line"><span class="comment">//2.while循环(循环条件自增)</span></div><div class="line">var y = <span class="number">0</span>;</div><div class="line">var m = <span class="number">1</span>;</div><div class="line">while (m&lt;=<span class="number">100</span>) &#123;</div><div class="line">    y = y + m;</div><div class="line">    m += <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line">alert(y); <span class="comment">// 2500</span></div><div class="line"></div><div class="line"><span class="comment">//3.whille循环(循环条件自减)</span></div><div class="line">var z =<span class="number">0</span>;</div><div class="line">var n = <span class="number">99</span>;</div><div class="line">while ( n&gt;=<span class="number">0</span>) &#123;</div><div class="line">    z = z + n;</div><div class="line">    n -= <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line">alert(z);<span class="comment">// 2500</span></div></pre></td></tr></table></figure>
-<p>在循环内部变量<code>n</code>不断自减，直到变为<code>-1</code>时，不再满足<code>while</code>条件，循环退出。</p>
-<p>do … while</p>
-<p>最后一种循环是<code>do { ... } while()</code>循环，它和<code>while</code>循环的唯一区别在于，不是在每次循环开始的时候判断条件，而是在每次循环完成的时候判断条件：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> <span class="built_in">n</span> = <span class="number">0</span>;</div><div class="line">do &#123;</div><div class="line">    <span class="built_in">n</span> = <span class="built_in">n</span> + <span class="number">1</span>;</div><div class="line">&#125; while (<span class="built_in">n</span> &lt; <span class="number">100</span>);</div><div class="line"><span class="built_in">n</span>; // <span class="number">100</span></div></pre></td></tr></table></figure>
-<p>用<code>do { ... } while()</code>循环要小心，循环体会至少执行<code>1</code>次，而<code>for</code>和<code>while</code>循环则可能一次都不执行。</p>
-<p>练习</p>
-<p>请利用循环遍历数组中的每个名字，并显示<code>Hello, xxx!</code>：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">use <span class="string">'strict'</span>;</div><div class="line">var arr = [<span class="string">'Bart'</span>,<span class="string">'Lisa'</span>,<span class="string">'Adam'</span>];</div><div class="line"><span class="keyword">for</span> (var <span class="built_in">i</span>=<span class="number">0</span>;<span class="built_in">i</span>&lt;arr.<span class="built_in">length</span>;<span class="built_in">i</span>++) &#123;</div><div class="line">    alert(<span class="string">'Hello,'</span> + arr[i]+ <span class="string">'!'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>定义一个计算圆面积的函数<code>area_of_circle()</code>，它有两个参数：</p>
+<ul>
+<li>r: 表示圆的半径；</li>
+<li>pi: 表示π的值，如果不传，则默认3.14<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">area_of_circle</span>(<span class="params">r, pi</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> temp = <span class="number">3.14</span>;</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">arguments</span>.length &gt; <span class="number">1</span>) &#123;</div><div class="line">        temp = pi;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> temp * r * r;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (area_of_circle(<span class="number">2</span>) == <span class="number">12.56</span> &amp;&amp; area_of_circle(<span class="number">2</span>, <span class="number">3.1416</span>) == <span class="number">12.5664</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'测试通过'</span>);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'测试失败'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Max是一个JavaScript新手，他写了一个<code>max()</code>函数，返回两个数中较大的那个：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">max</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (a &gt; b) &#123;</div><div class="line">        <span class="keyword">return</span></div><div class="line">                a;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span></div><div class="line">                b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(<span class="number">15</span>, <span class="number">20</span>));</div></pre></td></tr></table></figure></p>
+<p>但是Max抱怨他的浏览器出问题了，无论传入什么数，<font color="#FF0000"><code>max()</code></font>函数总是返回<font color="#FF0000"><code>undefined</code></font>。请帮他指出问题并修复。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">max</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (a &gt; b) &#123;</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> b;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">alert(max(<span class="number">15</span>, <span class="number">20</span>));</div></pre></td></tr></table></figure></p>
+
       
 
       <div id="back-to-top" data-scroll="body">
@@ -351,7 +370,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -365,16 +384,16 @@ var _hmt = _hmt || [];
   
   
   <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/12/快速入门-(7)循环/">快速入门-(7)循环</a></p>
+    <p><span>本文标题:</span><a href="/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/">函数-(1)函数定义和调用</a></p>
     <p><span>文章作者:</span>
       <a href="/" title="访问 echo 的个人博客">echo</a>
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
-    <p><span>发布时间:</span>2017年09月12日 - 11时18分</p>
-    <p><span>最后更新:</span>2017年09月13日 - 14时35分</p>
+    <p><span>发布时间:</span>2017年09月27日 - 11时39分</p>
+    <p><span>最后更新:</span>2017年11月05日 - 14时26分</p>
     <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/12/快速入门-(7)循环/" title="快速入门-(7)循环">http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/　　作者: echo" title="点击复制文章链接">
+      <span>原始链接:</span><a class="post-url" href="/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/" title="函数-(1)函数定义和调用">http://echoingursb.github.io/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/　　作者: echo" title="点击复制文章链接">
           <i class="fa fa-clipboard"></i>
       </span>
     </p>
@@ -389,18 +408,18 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2017/09/13/快速入门-(8)Map和Set/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/11/JavaScript教程(14)-函数-(2)变量作用域/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          快速入门-(8)Map和Set
+          函数-(2)变量作用域
         
       </div>
     </a>
   
   
-    <a href="/2017/09/12/快速入门-(6)条件判断/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">快速入门-(6)条件判断</div>
+    <a href="/2017/09/15/JavaScript教程(12)-函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -439,7 +458,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/",
+  id: "http://echoingursb.github.io/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/",
   owner: 'echoingursb',
   repo: 'echoingursb.github.io',
   oauth: {
@@ -680,7 +699,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -688,15 +707,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">单词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
             
             <div class="clearfix"></div>

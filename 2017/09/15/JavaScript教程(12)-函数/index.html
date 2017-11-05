@@ -12,20 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>快速入门-(3)字符串 | WHOAMI</title>
+  <title>函数 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速入门-(3)字符串">
+  <meta name="description" content="函数">
 <meta name="keywords" content="技术,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速入门-(3)字符串">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/03/快速入门-(3)字符串/index.html">
+<meta property="og:title" content="函数">
+<meta property="og:url" content="http://echoingursb.github.io/2017/09/15/JavaScript教程(12)-函数/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-(3)字符串">
+<meta property="og:description" content="函数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-13T06:34:35.285Z">
+<meta property="og:updated_time" content="2017-11-05T06:26:19.805Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速入门-(3)字符串">
-<meta name="twitter:description" content="快速入门-(3)字符串">
+<meta name="twitter:title" content="函数">
+<meta name="twitter:description" content="函数">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -191,56 +191,44 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-快速入门-(3)字符串" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript教程(12)-函数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      快速入门-(3)字符串
+      函数
     </h1>
   
 
         
-        <a href="/2017/09/03/快速入门-(3)字符串/" class="archive-article-date">
-  	<time datetime="2017-09-03T08:43:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
+        <a href="/2017/09/15/JavaScript教程(12)-函数/" class="archive-article-date">
+  	<time datetime="2017-09-15T07:14:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(3)字符串</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>函数</p>
 <a id="more"></a>
-<p>JavaScript的字符串就是用<code>&#39;&#39;</code>或<code>&quot;&quot;</code>括起来的字符表示。</p>
-<p>如果<code>&#39;</code>本身也是一个字符，那就可以用<code>&quot;&quot;</code>括起来，比如<code>&quot;I&#39;m OK&quot;</code>包含的字符是<code>I</code>，<code>&#39;</code>，<code>m</code>，<code>空格</code>，<code>O</code>，<code>K</code>这6个字符。</p>
-<p>如果字符串内部既包含<code>&#39;</code>又包含<code>&quot;</code>怎么办？可以用转义字符<code>\</code>来标识，比如：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">'I</span>\<span class="symbol">'m</span> \<span class="string">"OK\"</span>!';</div></pre></td></tr></table></figure></p>
-<p>表示的字符串内容是：<code>I&#39;m &quot;OK&quot;!</code></p>
-<p>转义字符<code>\</code>可以转义很多字符，比如<code>\n</code>表示换行，<code>\t</code>表示制表符，字符<code>\</code>本身也要转义，所以<code>\\</code>表示的字符就是<code>\</code>。</p>
-<p>ASCII字符可以以<code>\x##</code>形式的十六进制表示，例如：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'\x41'; <span class="comment">// 完全等同于 'A'</span></div></pre></td></tr></table></figure></p>
-<p>还可以用<code>\u####</code>表示一个Unicode字符：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'\u4e2d\u<span class="number">6587</span>'; <span class="comment">// 完全等同于 '中文'</span></div></pre></td></tr></table></figure></p>
-<h1 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h1><p>由于多行字符串用<code>\n</code>写起来比较费事，所以最新的ES6标准新增了一种多行字符串的表示方法，用反引号表示：</p>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//`...`</div><div class="line">`这是一个</div><div class="line">多行</div><div class="line">字符串`;</div></pre></td></tr></table></figure>
-<p><em>注意：反引号在键盘的ESC下方，数字键1的左边：</em></p>
-<p>练习：测试你的浏览器是否支持ES6标准，如果不支持，请把多行字符串用<code>\n</code>重新表示出来：</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 如果浏览器不支持ES6，将报SyntaxError错误:</span></div><div class="line">alert(`多行</div><div class="line">字符串</div><div class="line">测试`);</div></pre></td></tr></table></figure>
-<h1 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h1><p>要把多个字符串连接起来，可以用<code>+</code>号连接：<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="keyword">name</span> = <span class="string">'小明'</span>;</div><div class="line"><span class="keyword">var</span> age = <span class="number">20</span>;</div><div class="line"><span class="keyword">var</span> <span class="keyword">message</span> = <span class="string">'你好, '</span> + <span class="keyword">name</span> + <span class="string">', 你今年'</span> + age + <span class="string">'岁了!'</span>;</div><div class="line">alert(<span class="keyword">message</span>);</div></pre></td></tr></table></figure></p>
-<p>如果有很多变量需要连接，用<code>+</code>号就比较麻烦。ES6新增了一种模板字符串，表示方法和上面的多行字符串一样，但是它会自动替换字符串中的变量：<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="keyword">name</span> = <span class="string">'小明'</span>;</div><div class="line"><span class="keyword">var</span> age = <span class="number">20</span>;</div><div class="line"><span class="keyword">var</span> <span class="keyword">message</span> = `你好, $<span class="comment">&#123;name&#125;</span>, 你今年$<span class="comment">&#123;age&#125;</span>岁了!`;</div><div class="line">alert(<span class="keyword">message</span>);</div></pre></td></tr></table></figure></p>
-<p>练习：测试你的浏览器是否支持ES6模板字符串，如果不支持，请把模板字符串改为<code>+</code>连接的普通字符串：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 如果浏览器支持模板字符串，将会替换字符串内部的变量:</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">'小明'</span>;</div><div class="line"><span class="keyword">var</span> age = <span class="number">20</span>;</div><div class="line">alert(<span class="string">`你好, <span class="subst">$&#123;name&#125;</span>, 你今年<span class="subst">$&#123;age&#125;</span>岁了!`</span>);</div></pre></td></tr></table></figure>
-<h1 id="操作字符串"><a href="#操作字符串" class="headerlink" title="操作字符串"></a>操作字符串</h1><p>字符串常见的操作如下：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">'Hello, world!'</span>;</div><div class="line">s.length; <span class="comment">// 13</span></div></pre></td></tr></table></figure></p>
-<p>要获取字符串某个指定位置的字符，使用类似Array的下标操作，索引号从0开始：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var s = <span class="string">'Hello, world!'</span>;</div><div class="line"></div><div class="line">s[<span class="number">0</span>]; <span class="regexp">//</span> <span class="string">'H'</span></div><div class="line">s[<span class="number">6</span>]; <span class="regexp">//</span> <span class="string">' '</span></div><div class="line">s[<span class="number">7</span>]; <span class="regexp">//</span> <span class="string">'w'</span></div><div class="line">s[<span class="number">12</span>]; <span class="regexp">//</span> <span class="string">'!'</span></div><div class="line">s[<span class="number">13</span>]; <span class="regexp">//</span> undefined 超出范围的索引不会报错，但一律返回undefined</div></pre></td></tr></table></figure></p>
-<p>需要特别注意的是，字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">'Test'</span>;</div><div class="line">s[<span class="number">0</span>] = <span class="string">'X'</span>;</div><div class="line">alert(s); <span class="comment">// s仍然为'Test'</span></div></pre></td></tr></table></figure></p>
-<p>JavaScript为字符串提供了一些常用方法，注意，调用这些方法本身不会改变原有字符串的内容，而是返回一个新字符串：</p>
-<p>toUpperCase</p>
-<p><code>toUpperCase()</code>把一个字符串全部变为大写：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">'Hello'</span>;</div><div class="line">s.toUpperCase(); <span class="comment">// 返回'HELLO'</span></div></pre></td></tr></table></figure></p>
-<p>toLowerCase</p>
-<p><code>toLowerCase()</code>把一个字符串全部变为小写：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var s = <span class="string">'Hello'</span>;</div><div class="line">var <span class="built_in">lower</span> = s.toLowerCase(); // 返回<span class="string">'hello'</span>并赋值给变量<span class="built_in">lower</span></div><div class="line"><span class="built_in">lower</span>; // <span class="string">'hello'</span></div></pre></td></tr></table></figure></p>
-<p>indexOf</p>
-<p><code>indexOf()</code>会搜索指定字符串出现的位置：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">'hello, world'</span>;</div><div class="line">s.indexOf(<span class="string">'world'</span>); <span class="comment">// 返回7</span></div><div class="line">s.indexOf(<span class="string">'World'</span>); <span class="comment">// 没有找到指定的子串，返回-1</span></div></pre></td></tr></table></figure></p>
-<p>substring</p>
-<p><code>substring()</code>返回指定索引区间的子串：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var s = <span class="string">'hello, world'</span></div><div class="line">s.substring(<span class="number">0</span>, <span class="number">5</span>); <span class="regexp">//</span> 从索引<span class="number">0</span>开始到<span class="number">5</span>（不包括<span class="number">5</span>），返回<span class="string">'hello'</span></div><div class="line">s.substring(<span class="number">7</span>); <span class="regexp">//</span> 从索引<span class="number">7</span>开始到结束，返回<span class="string">'world'</span></div></pre></td></tr></table></figure></p>
+<p>我们知道圆的面积计算公式为：</p>
+<p><code>S = πr^2</code></p>
+<p>当我们知道半径<code>r</code>的值时，就可以根据公式计算出面积。假设我们需要计算3个不同大小的圆的面积：</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">var</span> <span class="built_in">r1</span> = <span class="number">12</span>.<span class="number">34</span><span class="comment">;</span></div><div class="line"><span class="symbol">var</span> <span class="built_in">r2</span> = <span class="number">9</span>.<span class="number">08</span><span class="comment">;</span></div><div class="line"><span class="symbol">var</span> <span class="built_in">r3</span> = <span class="number">73</span>.<span class="number">1</span><span class="comment">;</span></div><div class="line"><span class="symbol">var</span> <span class="built_in">s1</span> = <span class="number">3</span>.<span class="number">14</span> * <span class="built_in">r1</span> * <span class="built_in">r1</span><span class="comment">;</span></div><div class="line"><span class="symbol">var</span> <span class="built_in">s2</span> = <span class="number">3</span>.<span class="number">14</span> * <span class="built_in">r2</span> * <span class="built_in">r2</span><span class="comment">;</span></div><div class="line"><span class="symbol">var</span> <span class="built_in">s3</span> = <span class="number">3</span>.<span class="number">14</span> * <span class="built_in">r3</span> * <span class="built_in">r3</span><span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>当代码出现有规律的重复的时候，你就需要当心了，每次写<code>3.14 * x * x</code>不仅很麻烦，而且，如果要把<code>3.14</code>改成<code>3.14159265359</code>的时候，得全部替换。</p>
+<p>有了函数，我们就不再每次写<code>s = 3.14 * x * x</code>，而是写成更有意义的函数调用<code>s = area_of_circle(x)</code>，而函数<code>area_of_circle</code>本身只需要写一次，就可以多次调用。</p>
+<p>基本上所有的高级语言都支持函数，JavaScript也不例外。JavaScript的函数不但是“头等公民”，而且可以像变量一样使用，具有非常强大的抽象能力。</p>
+<p>抽象</p>
+<p>抽象是数学中非常常见的概念。举个例子：</p>
+<p>计算数列的和，比如：<code>1 + 2 + 3 + ... + 100</code>，写起来十分不方便，于是数学家发明了求和符号<code>∑</code>，可以把<code>1 + 2 + 3 + ... + 100</code>记作：</p>
+<p>这种抽象记法非常强大，因为我们看到 <code>∑</code>就可以理解成求和，而不是还原成低级的加法运算。</p>
+<p>而且，这种抽象记法是可扩展的，比如：</p>
+<p>还原成加法运算就变成了：</p>
+<p><code>(1 x 1 + 1) + (2 x 2 + 1) + (3 x 3 + 1) + ... + (100 x 100 + 1)</code></p>
+<p>可见，借助抽象，我们才能不关心底层的具体计算过程，而直接在更高的层次上思考问题。</p>
+<p>写计算机程序也是一样，函数就是最基本的一种代码抽象的方式。</p>
 
       
 
@@ -340,7 +328,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/03/快速入门-(3)字符串/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/15/JavaScript教程(12)-函数/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,16 +342,16 @@ var _hmt = _hmt || [];
   
   
   <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/03/快速入门-(3)字符串/">快速入门-(3)字符串</a></p>
+    <p><span>本文标题:</span><a href="/2017/09/15/JavaScript教程(12)-函数/">函数</a></p>
     <p><span>文章作者:</span>
       <a href="/" title="访问 echo 的个人博客">echo</a>
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
-    <p><span>发布时间:</span>2017年09月03日 - 16时43分</p>
-    <p><span>最后更新:</span>2017年09月13日 - 14时34分</p>
+    <p><span>发布时间:</span>2017年09月15日 - 15时14分</p>
+    <p><span>最后更新:</span>2017年11月05日 - 14时26分</p>
     <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/03/快速入门-(3)字符串/" title="快速入门-(3)字符串">http://echoingursb.github.io/2017/09/03/快速入门-(3)字符串/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/03/快速入门-(3)字符串/　　作者: echo" title="点击复制文章链接">
+      <span>原始链接:</span><a class="post-url" href="/2017/09/15/JavaScript教程(12)-函数/" title="函数">http://echoingursb.github.io/2017/09/15/JavaScript教程(12)-函数/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/15/JavaScript教程(12)-函数/　　作者: echo" title="点击复制文章链接">
           <i class="fa fa-clipboard"></i>
       </span>
     </p>
@@ -378,18 +366,18 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2017/09/03/快速入门-(4)数组/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          快速入门-(4)数组
+          函数-(1)函数定义和调用
         
       </div>
     </a>
   
   
-    <a href="/2017/09/03/快速入门-(2)数据类型和变量/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">快速入门-(2)数据类型和变量</div>
+    <a href="/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速入门-(9)iterable</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -428,7 +416,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://echoingursb.github.io/2017/09/03/快速入门-(3)字符串/",
+  id: "http://echoingursb.github.io/2017/09/15/JavaScript教程(12)-函数/",
   owner: 'echoingursb',
   repo: 'echoingursb.github.io',
   oauth: {
@@ -669,7 +657,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -677,15 +665,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">单词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
             
             <div class="clearfix"></div>

@@ -360,10 +360,10 @@
   
   <entry>
     <title>函数-(3)方法</title>
-    <link href="http://echoingursb.github.io/2017/10/14/%E5%87%BD%E6%95%B0-(3)%E6%96%B9%E6%B3%95/"/>
-    <id>http://echoingursb.github.io/2017/10/14/函数-(3)方法/</id>
+    <link href="http://echoingursb.github.io/2017/10/14/JavaScript%E6%95%99%E7%A8%8B(15)-%E5%87%BD%E6%95%B0-(3)%E6%96%B9%E6%B3%95/"/>
+    <id>http://echoingursb.github.io/2017/10/14/JavaScript教程(15)-函数-(3)方法/</id>
     <published>2017-10-14T08:57:17.000Z</published>
-    <updated>2017-10-16T06:31:25.374Z</updated>
+    <updated>2017-11-05T06:26:39.602Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(3)方法</p>
 <a id="more"></a>
@@ -428,10 +428,10 @@
   
   <entry>
     <title>函数-(2)变量作用域</title>
-    <link href="http://echoingursb.github.io/2017/10/11/%E5%87%BD%E6%95%B0-(2)%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>http://echoingursb.github.io/2017/10/11/函数-(2)变量作用域/</id>
+    <link href="http://echoingursb.github.io/2017/10/11/JavaScript%E6%95%99%E7%A8%8B(14)-%E5%87%BD%E6%95%B0-(2)%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://echoingursb.github.io/2017/10/11/JavaScript教程(14)-函数-(2)变量作用域/</id>
     <published>2017-10-11T06:16:57.000Z</published>
-    <updated>2017-10-11T06:50:28.908Z</updated>
+    <updated>2017-11-05T06:26:34.448Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(2)变量作用域<br><a id="more"></a></p>
 <p>在JavaScript中，用<code>var</code>申明的变量实际上是有作用域的。</p>
@@ -488,10 +488,10 @@
   
   <entry>
     <title>函数-(1)函数定义和调用</title>
-    <link href="http://echoingursb.github.io/2017/09/27/%E5%87%BD%E6%95%B0-(1)%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
-    <id>http://echoingursb.github.io/2017/09/27/函数-(1)函数定义和调用/</id>
+    <link href="http://echoingursb.github.io/2017/09/27/JavaScript%E6%95%99%E7%A8%8B(13)-%E5%87%BD%E6%95%B0-(1)%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/"/>
+    <id>http://echoingursb.github.io/2017/09/27/JavaScript教程(13)-函数-(1)函数定义和调用/</id>
     <published>2017-09-27T03:39:25.000Z</published>
-    <updated>2017-10-11T06:50:01.184Z</updated>
+    <updated>2017-11-05T06:26:26.832Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数-(1)函数定义和调用</p>
 <a id="more"></a>
@@ -570,10 +570,10 @@
   
   <entry>
     <title>函数</title>
-    <link href="http://echoingursb.github.io/2017/09/15/%E5%87%BD%E6%95%B0/"/>
-    <id>http://echoingursb.github.io/2017/09/15/函数/</id>
+    <link href="http://echoingursb.github.io/2017/09/15/JavaScript%E6%95%99%E7%A8%8B(12)-%E5%87%BD%E6%95%B0/"/>
+    <id>http://echoingursb.github.io/2017/09/15/JavaScript教程(12)-函数/</id>
     <published>2017-09-15T07:14:21.000Z</published>
-    <updated>2017-09-25T05:52:43.173Z</updated>
+    <updated>2017-11-05T06:26:19.805Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>函数</p>
 <a id="more"></a>
@@ -610,10 +610,10 @@
   
   <entry>
     <title>快速入门-(9)iterable</title>
-    <link href="http://echoingursb.github.io/2017/09/14/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(9)iterable/"/>
-    <id>http://echoingursb.github.io/2017/09/14/快速入门-(9)iterable/</id>
+    <link href="http://echoingursb.github.io/2017/09/14/JavaScript%E6%95%99%E7%A8%8B(11)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(9)iterable/"/>
+    <id>http://echoingursb.github.io/2017/09/14/JavaScript教程(11)-快速入门-(9)iterable/</id>
     <published>2017-09-14T05:46:39.000Z</published>
-    <updated>2017-09-14T06:19:49.420Z</updated>
+    <updated>2017-11-05T06:25:49.931Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(9)iterable</p>
 <a id="more"></a>
@@ -656,10 +656,10 @@
   
   <entry>
     <title>快速入门-(8)Map和Set</title>
-    <link href="http://echoingursb.github.io/2017/09/13/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(8)Map%E5%92%8CSet/"/>
-    <id>http://echoingursb.github.io/2017/09/13/快速入门-(8)Map和Set/</id>
+    <link href="http://echoingursb.github.io/2017/09/13/JavaScript%E6%95%99%E7%A8%8B(10)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(8)Map%E5%92%8CSet/"/>
+    <id>http://echoingursb.github.io/2017/09/13/JavaScript教程(10)-快速入门-(8)Map和Set/</id>
     <published>2017-09-13T06:32:44.000Z</published>
-    <updated>2017-10-11T06:49:07.995Z</updated>
+    <updated>2017-11-05T06:25:44.661Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(8)Map和Set</p>
 <a id="more"></a>
@@ -706,10 +706,10 @@
   
   <entry>
     <title>快速入门-(7)循环</title>
-    <link href="http://echoingursb.github.io/2017/09/12/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(7)%E5%BE%AA%E7%8E%AF/"/>
-    <id>http://echoingursb.github.io/2017/09/12/快速入门-(7)循环/</id>
+    <link href="http://echoingursb.github.io/2017/09/12/JavaScript%E6%95%99%E7%A8%8B(9)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(7)%E5%BE%AA%E7%8E%AF/"/>
+    <id>http://echoingursb.github.io/2017/09/12/JavaScript教程(9)-快速入门-(7)循环/</id>
     <published>2017-09-12T03:18:03.000Z</published>
-    <updated>2017-09-13T06:35:45.755Z</updated>
+    <updated>2017-11-05T06:25:37.560Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(7)循环</p>
 <a id="more"></a>
@@ -769,10 +769,10 @@
   
   <entry>
     <title>快速入门-(6)条件判断</title>
-    <link href="http://echoingursb.github.io/2017/09/12/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(6)%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/"/>
-    <id>http://echoingursb.github.io/2017/09/12/快速入门-(6)条件判断/</id>
+    <link href="http://echoingursb.github.io/2017/09/12/JavaScript%E6%95%99%E7%A8%8B(8)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(6)%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/"/>
+    <id>http://echoingursb.github.io/2017/09/12/JavaScript教程(8)-快速入门-(6)条件判断/</id>
     <published>2017-09-12T02:44:12.000Z</published>
-    <updated>2017-09-13T06:35:29.804Z</updated>
+    <updated>2017-11-05T06:25:29.223Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(6)条件判断</p>
 <a id="more"></a>
@@ -825,10 +825,10 @@
   
   <entry>
     <title>快速入门-(5)对象</title>
-    <link href="http://echoingursb.github.io/2017/09/10/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(5)%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://echoingursb.github.io/2017/09/10/快速入门-(5)对象/</id>
+    <link href="http://echoingursb.github.io/2017/09/10/JavaScript%E6%95%99%E7%A8%8B(7)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(5)%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://echoingursb.github.io/2017/09/10/JavaScript教程(7)-快速入门-(5)对象/</id>
     <published>2017-09-10T12:29:41.000Z</published>
-    <updated>2017-09-13T06:35:07.794Z</updated>
+    <updated>2017-11-05T06:25:18.533Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(5)对象</p>
 <a id="more"></a>
@@ -871,10 +871,10 @@
   
   <entry>
     <title>快速入门-(4)数组</title>
-    <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(4)%E6%95%B0%E7%BB%84/"/>
-    <id>http://echoingursb.github.io/2017/09/03/快速入门-(4)数组/</id>
+    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E6%95%99%E7%A8%8B(6)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(4)%E6%95%B0%E7%BB%84/"/>
+    <id>http://echoingursb.github.io/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/</id>
     <published>2017-09-03T09:55:32.000Z</published>
-    <updated>2017-10-11T06:48:28.480Z</updated>
+    <updated>2017-11-05T06:24:59.632Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(4)数组</p>
 <a id="more"></a>
@@ -931,10 +931,10 @@
   
   <entry>
     <title>快速入门-(3)字符串</title>
-    <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(3)%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://echoingursb.github.io/2017/09/03/快速入门-(3)字符串/</id>
+    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E6%95%99%E7%A8%8B(5)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(3)%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://echoingursb.github.io/2017/09/03/JavaScript教程(5)-快速入门-(3)字符串/</id>
     <published>2017-09-03T08:43:39.000Z</published>
-    <updated>2017-09-13T06:34:35.285Z</updated>
+    <updated>2017-11-05T06:24:40.135Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(3)字符串</p>
 <a id="more"></a>
@@ -983,10 +983,10 @@
   
   <entry>
     <title>快速入门-(2)数据类型和变量</title>
-    <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(2)%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/"/>
-    <id>http://echoingursb.github.io/2017/09/03/快速入门-(2)数据类型和变量/</id>
+    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E6%95%99%E7%A8%8B(4)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(2)%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/"/>
+    <id>http://echoingursb.github.io/2017/09/03/JavaScript教程(4)-快速入门-(2)数据类型和变量/</id>
     <published>2017-09-03T07:12:08.000Z</published>
-    <updated>2017-09-13T06:34:18.285Z</updated>
+    <updated>2017-11-05T06:24:07.611Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(2)数据类型和变量</p>
 <a id="more"></a>
@@ -1067,10 +1067,10 @@
   
   <entry>
     <title>快速入门-(1)基本语法</title>
-    <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(1)%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
-    <id>http://echoingursb.github.io/2017/09/03/快速入门-(1)基本语法/</id>
+    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E6%95%99%E7%A8%8B(3)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-(1)%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    <id>http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/</id>
     <published>2017-09-03T05:43:59.000Z</published>
-    <updated>2017-10-11T06:47:04.965Z</updated>
+    <updated>2017-11-05T06:22:48.346Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(1)基本语法</p>
 <a id="more"></a>
@@ -1107,10 +1107,10 @@
   
   <entry>
     <title>快速入门</title>
-    <link href="http://echoingursb.github.io/2017/09/03/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>http://echoingursb.github.io/2017/09/03/快速入门/</id>
+    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E6%95%99%E7%A8%8B(2)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <id>http://echoingursb.github.io/2017/09/03/JavaScript教程(2)-快速入门/</id>
     <published>2017-09-03T04:10:04.000Z</published>
-    <updated>2017-09-03T07:52:18.466Z</updated>
+    <updated>2017-11-05T06:22:08.246Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门</p>
 <a id="more"></a>
@@ -1165,10 +1165,10 @@
   
   <entry>
     <title>JavaScript简介</title>
-    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E7%AE%80%E4%BB%8B/"/>
-    <id>http://echoingursb.github.io/2017/09/03/JavaScript简介/</id>
+    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E6%95%99%E7%A8%8B(1)-JavaScript%E7%AE%80%E4%BB%8B/"/>
+    <id>http://echoingursb.github.io/2017/09/03/JavaScript教程(1)-JavaScript简介/</id>
     <published>2017-09-03T03:46:53.000Z</published>
-    <updated>2017-09-03T07:38:29.734Z</updated>
+    <updated>2017-11-05T06:21:31.305Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>JavaScript简介<br><a id="more"></a></p>
 <h1 id="JavaScript历史"><a href="#JavaScript历史" class="headerlink" title="JavaScript历史"></a>JavaScript历史</h1><p>要了解JavaScript，我们首先要回顾一下JavaScript的诞生。</p>
