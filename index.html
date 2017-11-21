@@ -185,6 +185,120 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java算法-求最大公约数和最小公倍数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/Java算法-求最大公约数和最小公倍数/">Java算法-求最大公约数和最小公倍数</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/21/Java算法-求最大公约数和最小公倍数/" class="archive-article-date">
+  	<time datetime="2017-11-21T03:05:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script src="\assets\js\APlayer.min.js"> </script><h1 id="最大公约数-Greatest-Common-Divisor-GCD"><a href="#最大公约数-Greatest-Common-Divisor-GCD" class="headerlink" title="最大公约数(Greatest Common Divisor(GCD))"></a><a href="https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/869308?fr=aladdin" target="_blank" rel="external">最大公约数(Greatest Common Divisor(GCD))</a></h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>最大公因数，也称最大公约数、最大公因子，指两个或多个整数共有约数中最大的一个。a，b的最大公约数记为（a，b），同样的，a，b，c的最大公约数记为（a，b，c），多个整数的最大公约数也有同样的记号。求最大公约数有多种方法，常见的有质因数分解法、短除法、辗转相除法、更相减损法。与最大公约数相对应的概念是最小公倍数，a，b的最小公倍数记为[a，b]。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p><strong>辗转相除法</strong></p>
+<p>辗转相除法：辗转相除法是求两个自然数的最大公约数的一种方法，也叫欧几里德算法。</p>
+<p>例如，求（319，377）：</p>
+<p>∵ 319÷377=0（余319）</p>
+<p>∴（319，377）=（377，319）；</p>
+<p>∵ 377÷319=1（余58）</p>
+<p>∴（377，319）=（319，58）；</p>
+<p>∵ 319÷58=5（余29）</p>
+<p>∴ （319，58）=（58，29）；</p>
+<p>∵ 58÷29=2（余0）</p>
+<p>∴ （58，29）= 29；</p>
+<p>∴ （319，377）=29。</p>
+<p>可以写成右边的格式。</p>
+<p>用辗转相除法求几个数的最大公约数，可以先求出其中任意两个数的最大公约数，再求这个最大公约数与第三个数的最大公约数，依次求下去，直到最后一个数为止。最后所得的那个最大公约数，就是所有这些数的最大公约数。</p>
+<h1 id="最小公倍数-Least-Common-Multiple-LCM"><a href="#最小公倍数-Least-Common-Multiple-LCM" class="headerlink" title="最小公倍数(Least Common Multiple(LCM))"></a><a href="https://baike.baidu.com/item/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0/6192375?fr=aladdin" target="_blank" rel="external">最小公倍数(Least Common Multiple(LCM))</a></h1><h2 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h2><p>两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。整数a，b的最小公倍数记为[a，b]，同样的，a，b，c的最小公倍数记为[a，b，c]，多个整数的最小公倍数也有同样的记号。</p>
+<p>与最小公倍数相对应的概念是最大公约数，a，b的最大公约数记为（a，b）。关于最小公倍数与最大公约数，我们有这样的定理：(a,b)[a,b]=ab(a,b均为整数)</p>
+<h2 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h2><p><strong>公式法</strong></p>
+<p>由于两个数的乘积等于这两个数的最大公约数与最小公倍数的积。即（a，b）×[a，b]=a×b。所以，求两个数的最小公倍数，就可以先求出它们的最大公约数，然后用上述公式求出它们的最小公倍数。</p>
+<p>Java语言实现求最大公约数(GCD)和最小公倍数(LCM)</p>
+<ul>
+<li>程序一</li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.echo;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class GCDLCM &#123;</div><div class="line">	<span class="comment">// 最大公约数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> max_num(<span class="built_in">int</span> a, <span class="built_in">int</span> b) &#123;</div><div class="line">		<span class="built_in">int</span> <span class="built_in">max</span>, <span class="built_in">min</span>;</div><div class="line">		<span class="built_in">max</span> = (a &gt; b) ? a : b;</div><div class="line">		<span class="built_in">min</span> = (a &lt; b) ? a : b;</div><div class="line"></div><div class="line">		<span class="keyword">if</span> (<span class="built_in">max</span> % <span class="built_in">min</span> != <span class="number">0</span>) &#123;</div><div class="line">			<span class="keyword">return</span> max_num(<span class="built_in">min</span>, <span class="built_in">max</span> % <span class="built_in">min</span>);</div><div class="line">		&#125; <span class="keyword">else</span></div><div class="line">			<span class="keyword">return</span> <span class="built_in">min</span>;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 最小公倍数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> min_num(<span class="built_in">int</span> a, <span class="built_in">int</span> b) &#123;</div><div class="line">		<span class="keyword">return</span> a * b / max_num(a, b);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="built_in">int</span> n1 = input.nextInt();</div><div class="line">		<span class="built_in">int</span> n2 = input.nextInt();</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"("</span> + n1 + <span class="string">","</span> + n2 + <span class="string">")"</span> + <span class="string">"="</span> + max_num(n1, n2));</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"["</span> + n1 + <span class="string">","</span> + n2 + <span class="string">"]"</span> + <span class="string">"="</span> + min_num(n1, n2));</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>程序二</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">package com.echo;</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GreatestCommonDivisorAndLeastCommonMultiple</span> &#123;</div><div class="line">	<span class="comment">// 最大公约数</span></div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Getgcd</span>(<span class="params"><span class="keyword">int</span> n1, <span class="keyword">int</span> n2</span>) </span>&#123;</div><div class="line">		<span class="keyword">int</span> gcd = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (n1 &lt; n2) &#123;<span class="comment">// 交换n1、n2的值</span></div><div class="line">			n1 = n1 + n2;</div><div class="line">			n2 = n1 - n2;</div><div class="line">			n1 = n1 - n2;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">if</span> (n1 % n2 == <span class="number">0</span>) &#123;</div><div class="line">			gcd = n2;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">while</span> (n1 % n2 &gt; <span class="number">0</span>) &#123;</div><div class="line">			n1 = n1 % n2;</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (n1 &lt; n2) &#123;</div><div class="line">				n1 = n1 + n2;</div><div class="line">				n2 = n1 - n2;</div><div class="line">				n1 = n1 - n2;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (n1 % n2 == <span class="number">0</span>) &#123;</div><div class="line">				gcd = n2;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> gcd;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 最小公倍数</span></div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Getlcm</span>(<span class="params"><span class="keyword">int</span> n1, <span class="keyword">int</span> n2</span>) </span>&#123;</div><div class="line">		<span class="keyword">return</span> n1 * n2 / Getgcd(n1, n2);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String[] args</span>) </span>&#123;</div><div class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.<span class="keyword">in</span>);</div><div class="line">		System.<span class="keyword">out</span>.print(<span class="string">"请输入第一个整数："</span>);</div><div class="line">		<span class="keyword">int</span> n1 = input.nextInt();</div><div class="line">		System.<span class="keyword">out</span>.print(<span class="string">"请输入第二个整数："</span>);</div><div class="line">		<span class="keyword">int</span> n2 = input.nextInt();</div><div class="line">		System.<span class="keyword">out</span>.println(<span class="string">"("</span> + n1 + <span class="string">","</span> + n2 + <span class="string">")"</span> + <span class="string">"="</span> + Getgcd(n1, n2));</div><div class="line">		System.<span class="keyword">out</span>.println(<span class="string">"["</span> + n1 + <span class="string">","</span> + n2 + <span class="string">"]"</span> + <span class="string">"="</span> + Getlcm(n1, n2));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      <div id="back-to-top" data-scroll="body">
+        <a href="#top" style="color:white"></a>
+      </div>
+
+      
+
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">algroithm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/21/Java算法-求最大公约数和最小公倍数/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git使用教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -946,91 +1060,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-JavaScript教程(8)-快速入门-(6)条件判断" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/12/JavaScript教程(8)-快速入门-(6)条件判断/">JavaScript教程(8)-快速入门-(6)条件判断</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/12/JavaScript教程(8)-快速入门-(6)条件判断/" class="archive-article-date">
-  	<time datetime="2017-09-12T02:44:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>快速入门-(6)条件判断</p>
-        
-          <a class="article-more-a" href="/2017/09/12/JavaScript教程(8)-快速入门-(6)条件判断/#more">more >></a>
-        
-      
-
-      <div id="back-to-top" data-scroll="body">
-        <a href="#top" style="color:white"></a>
-      </div>
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/12/JavaScript教程(8)-快速入门-(6)条件判断/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1274,15 +1303,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algroithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Markdown语法(有道云笔记)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">单词</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">单词</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
             
             <div class="clearfix"></div>

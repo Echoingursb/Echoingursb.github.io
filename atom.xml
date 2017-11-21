@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-11-01T03:50:52.369Z</updated>
+  <updated>2017-11-21T03:45:06.142Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java算法-求最大公约数和最小公倍数</title>
+    <link href="http://echoingursb.github.io/2017/11/21/Java%E7%AE%97%E6%B3%95-%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0/"/>
+    <id>http://echoingursb.github.io/2017/11/21/Java算法-求最大公约数和最小公倍数/</id>
+    <published>2017-11-21T03:05:34.000Z</published>
+    <updated>2017-11-21T03:45:06.142Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><h1 id="最大公约数-Greatest-Common-Divisor-GCD"><a href="#最大公约数-Greatest-Common-Divisor-GCD" class="headerlink" title="最大公约数(Greatest Common Divisor(GCD))"></a><a href="https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/869308?fr=aladdin" target="_blank" rel="external">最大公约数(Greatest Common Divisor(GCD))</a></h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>最大公因数，也称最大公约数、最大公因子，指两个或多个整数共有约数中最大的一个。a，b的最大公约数记为（a，b），同样的，a，b，c的最大公约数记为（a，b，c），多个整数的最大公约数也有同样的记号。求最大公约数有多种方法，常见的有质因数分解法、短除法、辗转相除法、更相减损法。与最大公约数相对应的概念是最小公倍数，a，b的最小公倍数记为[a，b]。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p><strong>辗转相除法</strong></p>
+<p>辗转相除法：辗转相除法是求两个自然数的最大公约数的一种方法，也叫欧几里德算法。</p>
+<p>例如，求（319，377）：</p>
+<p>∵ 319÷377=0（余319）</p>
+<p>∴（319，377）=（377，319）；</p>
+<p>∵ 377÷319=1（余58）</p>
+<p>∴（377，319）=（319，58）；</p>
+<p>∵ 319÷58=5（余29）</p>
+<p>∴ （319，58）=（58，29）；</p>
+<p>∵ 58÷29=2（余0）</p>
+<p>∴ （58，29）= 29；</p>
+<p>∴ （319，377）=29。</p>
+<p>可以写成右边的格式。</p>
+<p>用辗转相除法求几个数的最大公约数，可以先求出其中任意两个数的最大公约数，再求这个最大公约数与第三个数的最大公约数，依次求下去，直到最后一个数为止。最后所得的那个最大公约数，就是所有这些数的最大公约数。</p>
+<h1 id="最小公倍数-Least-Common-Multiple-LCM"><a href="#最小公倍数-Least-Common-Multiple-LCM" class="headerlink" title="最小公倍数(Least Common Multiple(LCM))"></a><a href="https://baike.baidu.com/item/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0/6192375?fr=aladdin" target="_blank" rel="external">最小公倍数(Least Common Multiple(LCM))</a></h1><h2 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h2><p>两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。整数a，b的最小公倍数记为[a，b]，同样的，a，b，c的最小公倍数记为[a，b，c]，多个整数的最小公倍数也有同样的记号。</p>
+<p>与最小公倍数相对应的概念是最大公约数，a，b的最大公约数记为（a，b）。关于最小公倍数与最大公约数，我们有这样的定理：(a,b)[a,b]=ab(a,b均为整数)</p>
+<h2 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h2><p><strong>公式法</strong></p>
+<p>由于两个数的乘积等于这两个数的最大公约数与最小公倍数的积。即（a，b）×[a，b]=a×b。所以，求两个数的最小公倍数，就可以先求出它们的最大公约数，然后用上述公式求出它们的最小公倍数。</p>
+<p>Java语言实现求最大公约数(GCD)和最小公倍数(LCM)</p>
+<ul>
+<li>程序一</li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.echo;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class GCDLCM &#123;</div><div class="line">	<span class="comment">// 最大公约数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> max_num(<span class="built_in">int</span> a, <span class="built_in">int</span> b) &#123;</div><div class="line">		<span class="built_in">int</span> <span class="built_in">max</span>, <span class="built_in">min</span>;</div><div class="line">		<span class="built_in">max</span> = (a &gt; b) ? a : b;</div><div class="line">		<span class="built_in">min</span> = (a &lt; b) ? a : b;</div><div class="line"></div><div class="line">		<span class="keyword">if</span> (<span class="built_in">max</span> % <span class="built_in">min</span> != <span class="number">0</span>) &#123;</div><div class="line">			<span class="keyword">return</span> max_num(<span class="built_in">min</span>, <span class="built_in">max</span> % <span class="built_in">min</span>);</div><div class="line">		&#125; <span class="keyword">else</span></div><div class="line">			<span class="keyword">return</span> <span class="built_in">min</span>;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 最小公倍数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> min_num(<span class="built_in">int</span> a, <span class="built_in">int</span> b) &#123;</div><div class="line">		<span class="keyword">return</span> a * b / max_num(a, b);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="built_in">int</span> n1 = input.nextInt();</div><div class="line">		<span class="built_in">int</span> n2 = input.nextInt();</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"("</span> + n1 + <span class="string">","</span> + n2 + <span class="string">")"</span> + <span class="string">"="</span> + max_num(n1, n2));</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"["</span> + n1 + <span class="string">","</span> + n2 + <span class="string">"]"</span> + <span class="string">"="</span> + min_num(n1, n2));</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>程序二</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">package com.echo;</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GreatestCommonDivisorAndLeastCommonMultiple</span> &#123;</div><div class="line">	<span class="comment">// 最大公约数</span></div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Getgcd</span>(<span class="params"><span class="keyword">int</span> n1, <span class="keyword">int</span> n2</span>) </span>&#123;</div><div class="line">		<span class="keyword">int</span> gcd = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (n1 &lt; n2) &#123;<span class="comment">// 交换n1、n2的值</span></div><div class="line">			n1 = n1 + n2;</div><div class="line">			n2 = n1 - n2;</div><div class="line">			n1 = n1 - n2;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">if</span> (n1 % n2 == <span class="number">0</span>) &#123;</div><div class="line">			gcd = n2;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">while</span> (n1 % n2 &gt; <span class="number">0</span>) &#123;</div><div class="line">			n1 = n1 % n2;</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (n1 &lt; n2) &#123;</div><div class="line">				n1 = n1 + n2;</div><div class="line">				n2 = n1 - n2;</div><div class="line">				n1 = n1 - n2;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (n1 % n2 == <span class="number">0</span>) &#123;</div><div class="line">				gcd = n2;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> gcd;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 最小公倍数</span></div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Getlcm</span>(<span class="params"><span class="keyword">int</span> n1, <span class="keyword">int</span> n2</span>) </span>&#123;</div><div class="line">		<span class="keyword">return</span> n1 * n2 / Getgcd(n1, n2);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String[] args</span>) </span>&#123;</div><div class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.<span class="keyword">in</span>);</div><div class="line">		System.<span class="keyword">out</span>.print(<span class="string">"请输入第一个整数："</span>);</div><div class="line">		<span class="keyword">int</span> n1 = input.nextInt();</div><div class="line">		System.<span class="keyword">out</span>.print(<span class="string">"请输入第二个整数："</span>);</div><div class="line">		<span class="keyword">int</span> n2 = input.nextInt();</div><div class="line">		System.<span class="keyword">out</span>.println(<span class="string">"("</span> + n1 + <span class="string">","</span> + n2 + <span class="string">")"</span> + <span class="string">"="</span> + Getgcd(n1, n2));</div><div class="line">		System.<span class="keyword">out</span>.println(<span class="string">"["</span> + n1 + <span class="string">","</span> + n2 + <span class="string">"]"</span> + <span class="string">"="</span> + Getlcm(n1, n2));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;\assets\js\APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h1 id=&quot;最大公约数-Greatest-Common-Divisor-GCD&quot;&gt;&lt;a href=&quot;#最大公约数-Greatest-Common-Divisor-GCD&quot; cl
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Java" scheme="http://echoingursb.github.io/tags/Java/"/>
+    
+      <category term="algroithm" scheme="http://echoingursb.github.io/tags/algroithm/"/>
+    
+  </entry>
   
   <entry>
     <title>Git使用教程</title>
@@ -1354,163 +1406,6 @@
       <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="Markdown语法(有道云笔记)" scheme="http://echoingursb.github.io/tags/Markdown%E8%AF%AD%E6%B3%95-%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单词</title>
-    <link href="http://echoingursb.github.io/2017/08/30/%E5%8D%95%E8%AF%8D/"/>
-    <id>http://echoingursb.github.io/2017/08/30/单词/</id>
-    <published>2017-08-30T01:07:30.000Z</published>
-    <updated>2017-10-31T07:02:26.942Z</updated>
-    
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>在这里总结一下遇到的单词，方便自己学习和查阅。<br><a id="more"></a></p>
-<ul>
-<li>A</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th>发音</th>
-<th>释义 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>asynchronous</td>
-<td>英 [eɪˈsɪŋkrənəs]   美 [e’sɪŋkrənəs]</td>
-<td>adj.异步的</td>
-</tr>
-<tr>
-<td>annotation</td>
-<td>英 [ˌænə’teɪʃn]   美 [ˌænə’teɪʃn]</td>
-<td>n.注释</td>
-</tr>
-<tr>
-<td>avatar</td>
-<td>英 [ˈævətɑ:(r)]   美 [‘ævətɑ:r]</td>
-<td>n.阿凡达;化身;头像</td>
-</tr>
-<tr>
-<td>awash</td>
-<td>英 [əˈwɒʃ]   美 [əˈwɑ:ʃ]</td>
-<td>adj.泛滥的;与水面齐平的，刚被水覆盖的;被淹没的</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>B</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th>发音</th>
-<th>释义 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>BMI</td>
-<td></td>
-<td>n.Body Mass Index （体质指数）</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>C</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th>发音</th>
-<th>释义 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>concatenate</td>
-<td>英 [kɒn’kætɪneɪt]   美 [kɑnˈkæt(ə)ˌneɪt]</td>
-<td>vt.把 （一系列事件、事情等）联系起来；连接   adj. 连接的，联系在一起的</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>D</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th>发音</th>
-<th>释义 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>delicate</td>
-<td>英 [ˈdelɪkət]   美 [ˈdɛlɪkɪt]</td>
-<td>adj.精致的;微妙的;熟练的;纤弱的;易损的</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>E</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th>发音</th>
-<th>释义 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ephemeral</td>
-<td>英 [ɪˈfemərəl]   美 [ɪˈfɛmərəl]</td>
-<td>adj.朝生暮死;短暂的，瞬息的;朝露;一年生</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>I</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th>发音</th>
-<th>释义 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iterator</td>
-<td>英 [ɪtə’reɪtə]   美 [ɪtə’reɪtə]</td>
-<td>[计] 迭代器，迭代程序</td>
-</tr>
-<tr>
-<td>instantiation</td>
-<td>英 [ɪnstænʃɪ’eɪʃən]   美 [ɪnstænʃɪ’eɪʃən]</td>
-<td>n.实例化，例示</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在这里总结一下遇到的单词，方便自己学习和查阅。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="单词" scheme="http://echoingursb.github.io/tags/%E5%8D%95%E8%AF%8D/"/>
     
   </entry>
   
