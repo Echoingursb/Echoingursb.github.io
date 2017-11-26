@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-11-26T08:25:15.424Z</updated>
+  <updated>2017-11-26T08:35:14.024Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/11/26/%E4%BD%BF%E7%94%A8zxing%E7%94%9F%E6%88%90%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
     <id>http://echoingursb.github.io/2017/11/26/使用zxing生成解析二维码/</id>
     <published>2017-11-26T08:04:30.000Z</published>
-    <updated>2017-11-26T08:25:15.424Z</updated>
+    <updated>2017-11-26T08:35:14.024Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>使用zxing生成解析二维码<br><a id="more"></a></p>
 <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>随着移动互联网的发展，我们经常在火车票、汽车票、快餐店、电影院、团购网站以及移动支付等各个场景下见到二维码的应用，可见二维码以经渗透到人们生活的各个方面。条码、二维码以及RFID被人们应用的更普遍一些，二维码相对一维码，具有数据存储量大，保密性好等特点，能够更好地与智能手机等移动终端相结合，形成了更好地互动性和用户体验。而与RFID相比较，二维码不仅成本优势凸显，他的用户体验和互动性也具有更好地应用前景。</p>
@@ -57,7 +57,7 @@
 <p>解析图片结果</p>
 <p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/%E4%BD%BF%E7%94%A8zxing%E7%94%9F%E6%88%90%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/f16ya5p9g0wv7esomaatid.png" alt="image"></p>
 <h1 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h1><ul>
-<li><a href="http://note.youdao.com/" target="_blank" rel="external">github项目地址</a></li>
+<li><a href="https://github.com/Echoingursb/generate-analysis-qrcode" target="_blank" rel="external">github项目地址</a></li>
 <li><a href="http://www.qrcode.com/zh/index.html" target="_blank" rel="external">QR二维码日文官网</a></li>
 </ul>
 ]]></content>
