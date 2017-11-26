@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-11-26T08:05:55.758Z</updated>
+  <updated>2017-11-26T08:12:30.810Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2017/11/26/%E4%BD%BF%E7%94%A8zxing%E7%94%9F%E6%88%90%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
     <id>http://echoingursb.github.io/2017/11/26/使用zxing生成解析二维码/</id>
     <published>2017-11-26T08:04:30.000Z</published>
-    <updated>2017-11-26T08:05:55.758Z</updated>
+    <updated>2017-11-26T08:12:30.810Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>使用zxing生成解析二维码<br><a id="more"></a></p>
 <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>随着移动互联网的发展，我们经常在火车票、汽车票、快餐店、电影院、团购网站以及移动支付等各个场景下见到二维码的应用，可见二维码以及渗透到人们生活的各个方面。条码、二维码以及RFID被人们应用的更普遍一些，二维码相对一维码，具有数据存储量大，保密性好等特点，能够更好地与智能手机等移动终端相结合，形成了更好地互动性和用户体验。而与RFID相比较，二维码不仅成本优势凸显，他的用户体验和互动性也具有更好地应用前景。</p>
@@ -43,7 +43,9 @@
 </ul>
 <p>项目目录</p>
 <p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/%E4%BD%BF%E7%94%A8zxing%E7%94%9F%E6%88%90%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/j5qltzteyyv9eewof1rbj2.png" alt="image"></p>
-<p>-生成二维码</p>
+<ul>
+<li>生成二维码</li>
+</ul>
 <p><strong>CreateQRCode核心代码</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @author <span class="built_in">echo</span></div><div class="line"> */</div><div class="line">package com.echo.zxing;</div><div class="line"></div><div class="line">import java.io.File;</div><div class="line">import java.nio.file.Path;</div><div class="line">import java.util.HashMap;</div><div class="line"></div><div class="line">import com.google.zxing.BarcodeFormat;</div><div class="line">import com.google.zxing.EncodeHintType;</div><div class="line">import com.google.zxing.MultiFormatWriter;</div><div class="line">import com.google.zxing.client.j2se.MatrixToImageWriter;</div><div class="line">import com.google.zxing.common.BitMatrix;</div><div class="line">import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;</div><div class="line"></div><div class="line">public class CreateQRCode &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int width = 300;</div><div class="line">		int height = 300;</div><div class="line">		String format = <span class="string">"png"</span>;</div><div class="line">		String content = <span class="string">"https://echoingursb.github.io/"</span>;</div><div class="line"></div><div class="line">		// 定义二维码的参数</div><div class="line">		HashMap hints = new HashMap();</div><div class="line">		hints.put(EncodeHintType.CHARACTER_SET, <span class="string">"utf-8"</span>);</div><div class="line">		hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);</div><div class="line">		hints.put(EncodeHintType.MARGIN, 2);</div><div class="line"></div><div class="line">		// 生成二维码</div><div class="line">		try &#123;</div><div class="line">			BitMatrix bitMatrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height, hints);</div><div class="line">			Path file = new File(<span class="string">"E:/ada/code/img.png"</span>).toPath();</div><div class="line">			MatrixToImageWriter.writeToPath(bitMatrix, format, file);</div><div class="line">		&#125; catch (Exception e) &#123;</div><div class="line">			// TODO Auto-generated catch block</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>生成图片结果</p>
 <p><img src="https://raw.githubusercontent.com/Echoingursb/gallery/master/%E4%BD%BF%E7%94%A8zxing%E7%94%9F%E6%88%90%E8%A7%A3%E6%9E%90%E4%BA%8C%E7%BB%B4%E7%A0%81/24sh3k9yt9tbr3vfgsyav9.png" alt="image"></p>
