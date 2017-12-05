@@ -1,4 +1,4 @@
-/**
+<script src="\assets\js\APlayer.min.js"> </script>/**
 项目JS主入口
 以依赖layui的layer和form模块为例
 **/
