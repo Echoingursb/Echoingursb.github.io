@@ -1,0 +1,76 @@
+<script src="\assets\js\APlayer.min.js"> </script>body {
+    background: #eeeeee;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+
+/*sidebar*/
+
+.sidebar {
+    margin: 15px 5px;
+    padding: 5px 5px;
+    color: #ffffff;
+}
+
+.side-content {
+    background: #29B6F6;
+    border-radius: 5px;
+}
+
+.side-title {
+    text-align: center;
+}
+
+.sidebar img {
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+.side-info dt {
+    margin: 0px 0px 10px 15px;
+}
+
+.side-info dd {
+    margin: 0px 0px 5px 30px;
+    padding: 5px 0;
+}
+
+
+/*music*/
+.aplayer-title {
+    color: #666;
+}
+
+
+/*main*/
+
+.main {
+    margin: 15px 5px;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+
+.main-info dt {
+    font-size: 16px;
+    color: #00A1D6;
+    padding: 5px 5px;
+    border-bottom: 1px solid #00A1D6;
+}
+
+.main-info li {
+    margin: 20px 0px 5px 15px;
+    padding: 5px 5px;
+}
+
+
+/*footet*/
+
+.footer p {
+    text-align: center;
+    line-height: 1.5px;
+}
