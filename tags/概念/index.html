@@ -12,20 +12,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>JavaScript教程(6)-快速入门-(4)数组 | WHOAMI</title>
+  <title>Tag: 概念 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速入门-(4)数组">
-<meta name="keywords" content="技术,js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript教程(6)-快速入门-(4)数组">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/index.html">
+  <meta name="description" content="Web Java front-end">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WHOAMI">
+<meta property="og:url" content="http://echoingursb.github.io/tags/概念/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-(4)数组">
+<meta property="og:description" content="Web Java front-end">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-26T08:18:46.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript教程(6)-快速入门-(4)数组">
-<meta name="twitter:description" content="快速入门-(4)数组">
+<meta name="twitter:title" content="WHOAMI">
+<meta name="twitter:description" content="Web Java front-end">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -185,98 +183,36 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript教程(6)-快速入门-(4)数组" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript教程(6)-快速入门-(4)数组
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/12/13/本地回环地址/" class="archive-article-date">
+  	<time datetime="2017-12-13T14:53:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/12/13/本地回环地址/">本地回环地址</a>
     </h1>
   
 
-        
-        <a href="/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/" class="archive-article-date">
-  	<time datetime="2017-09-03T09:55:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(4)数组</p>
-<a id="more"></a>
-<p>JavaScript的<code>Array</code>可以包含任意数据类型，并通过索引来访问每个元素。</p>
-<p>要取得<code>Array</code>的长度，直接访问<code>length</code>属性：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3.14</span>, <span class="string">'Hello'</span>, <span class="literal">null</span>, <span class="literal">true</span>];</div><div class="line">arr.length; <span class="comment">// 6</span></div></pre></td></tr></table></figure>
-<p>请注意，直接给<code>Array</code>的<code>length</code>赋一个新的值会导致<code>Array</code>大小的变化：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.length; <span class="comment">// 3</span></div><div class="line">arr.length = <span class="number">6</span>;</div><div class="line">arr; <span class="comment">// arr变为[1, 2, 3, undefined, undefined, undefined]</span></div><div class="line">arr.length = <span class="number">2</span>;</div><div class="line">arr; <span class="comment">// arr变为[1, 2]</span></div></pre></td></tr></table></figure>
-<p><code>Array</code>可以通过索引把对应的元素修改为新的值，因此，对<code>Array</code>的索引进行赋值会直接修改这个<code>Array</code>：</p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line">arr[<span class="number">1</span>] = <span class="number">99</span>;</div><div class="line">arr; // arr现在变为[<span class="string">'A'</span>, <span class="number">99</span>, <span class="string">'C'</span>]</div></pre></td></tr></table></figure>
-<p>请注意，如果通过索引赋值时，索引超过了范围，同样会引起<code>Array</code>大小的变化：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr[<span class="number">5</span>] = 'x';</div><div class="line">arr; <span class="comment">// arr变为[1, 2, 3, undefined, undefined, 'x']</span></div></pre></td></tr></table></figure>
-<p>大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的<code>Array</code>却不会有任何错误。在编写代码时，不建议直接修改<code>Array</code>的大小，访问索引时要确保索引不会越界。</p>
-<h1 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h1><p>与<code>String</code>类似，<code>Array</code>也可以通过<code>indexOf()</code>来搜索一个指定的元素的位置：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="number">10</span>, <span class="number">20</span>, '<span class="number">30</span>', 'xyz'];</div><div class="line">arr.indexOf(<span class="number">10</span>); <span class="comment">// 元素10的索引为0</span></div><div class="line">arr.indexOf(<span class="number">20</span>); <span class="comment">// 元素20的索引为1</span></div><div class="line">arr.indexOf(<span class="number">30</span>); <span class="comment">// 元素30没有找到，返回-1</span></div><div class="line">arr.indexOf('<span class="number">30</span>'); <span class="comment">// 元素'30'的索引为2</span></div></pre></td></tr></table></figure>
-<p>注意了，数字<code>30</code>和字符串<code>&#39;30&#39;</code>是不同的元素。</p>
-<h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><p><code>slice()</code>就是对应<code>String</code>的<code>substring()</code>版本，它截取<code>Array</code>的部分元素，然后返回一个新的<code>Array</code>：<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'G'</span>];</div><div class="line">arr.slice(<span class="number">0</span>, <span class="number">3</span>); // 从索引<span class="number">0</span>开始，到索引<span class="number">3</span>结束，但不包括索引<span class="number">3</span>: [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]</div><div class="line">arr.slice(<span class="number">3</span>); // 从索引<span class="number">3</span>开始到结束: [<span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'G'</span>]</div></pre></td></tr></table></figure></p>
-<p>注意到<code>slice()</code>的起止参数包括开始索引，不包括结束索引。</p>
-<p>如果不给<code>slice()</code>传递任何参数，它就会从头到尾截取所有元素。利用这一点，我们可以很容易地复制一个<code>Array</code>：<br><figure class="highlight cal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'G'</span>];</div><div class="line"><span class="keyword">var</span> aCopy = arr.slice();</div><div class="line">aCopy; // [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'G'</span>]</div><div class="line">aCopy === arr; // <span class="literal">false</span></div></pre></td></tr></table></figure></p>
-<h1 id="push和pop"><a href="#push和pop" class="headerlink" title="push和pop"></a>push和pop</h1><p><code>push()</code>向<code>Array</code>的末尾添加若干元素，<code>pop()</code>则把<code>Array</code>的最后一个元素删除掉：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="number">1</span>, <span class="number">2</span>];</div><div class="line">arr.<span class="keyword">push</span>(<span class="string">'A'</span>, <span class="string">'B'</span>); <span class="comment">// 返回Array新的长度: 4</span></div><div class="line">arr; <span class="comment">// [1, 2, 'A', 'B']</span></div><div class="line">arr.<span class="keyword">pop</span>(); <span class="comment">// pop()返回'B'</span></div><div class="line">arr; <span class="comment">// [1, 2, 'A']</span></div><div class="line">arr.<span class="keyword">pop</span>(); arr.<span class="keyword">pop</span>(); arr.<span class="keyword">pop</span>(); <span class="comment">// 连续pop 3次</span></div><div class="line">arr; <span class="comment">// []</span></div><div class="line">arr.<span class="keyword">pop</span>(); <span class="comment">// 空数组继续pop不会报错，而是返回undefined</span></div><div class="line">arr; <span class="comment">// []</span></div></pre></td></tr></table></figure></p>
-<h1 id="unshift和shift"><a href="#unshift和shift" class="headerlink" title="unshift和shift"></a>unshift和shift</h1><p>如果要往<code>Array</code>的头部添加若干元素，使用<code>unshift()</code>方法，<code>shift()</code>方法则把<code>Array</code>的第一个元素删掉：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="number">1</span>, <span class="number">2</span>];</div><div class="line">arr.unshift(<span class="string">'A'</span>, <span class="string">'B'</span>); <span class="regexp">//</span> 返回Array新的长度: <span class="number">4</span></div><div class="line">arr; <span class="regexp">//</span> [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="number">1</span>, <span class="number">2</span>]</div><div class="line">arr.shift(); <span class="regexp">//</span> <span class="string">'A'</span></div><div class="line">arr; <span class="regexp">//</span> [<span class="string">'B'</span>, <span class="number">1</span>, <span class="number">2</span>]</div><div class="line">arr.shift(); arr.shift(); arr.shift(); <span class="regexp">//</span> 连续shift <span class="number">3</span>次</div><div class="line">arr; <span class="regexp">//</span> []</div><div class="line">arr.shift(); <span class="regexp">//</span> 空数组继续shift不会报错，而是返回undefined</div><div class="line">arr; <span class="regexp">//</span> []</div></pre></td></tr></table></figure></p>
-<h1 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h1><p><code>sort()</code>可以对当前<code>Array</code>进行排序，它会直接修改当前<code>Array</code>的元素位置，直接调用时，按照默认顺序排序：</p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'A'</span>];</div><div class="line">arr.sort();</div><div class="line">arr; // [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]</div></pre></td></tr></table></figure>
-<p>能否按照我们自己指定的顺序排序呢？完全可以，我们将在后面的函数中讲到。</p>
-<h1 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h1><p><code>reverse()</code>把整个<code>Array</code>的元素给掉个个，也就是反转：<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</div><div class="line">arr.reverse(); </div><div class="line">arr; // [<span class="string">'three'</span>, <span class="string">'two'</span>, <span class="string">'one'</span>]</div></pre></td></tr></table></figure></p>
-<h1 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h1><p><code>splice()</code>方法是修改<code>Array</code>的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'Microsoft'</span>, <span class="string">'Apple'</span>, <span class="string">'Yahoo'</span>, <span class="string">'AOL'</span>, <span class="string">'Excite'</span>, <span class="string">'Oracle'</span>];</div><div class="line"><span class="regexp">//</span> 从索引<span class="number">2</span>开始删除<span class="number">3</span>个元素,然后再添加两个元素:</div><div class="line">arr.splice(<span class="number">2</span>, <span class="number">3</span>, <span class="string">'Google'</span>, <span class="string">'Facebook'</span>); <span class="regexp">//</span> 返回删除的元素 [<span class="string">'Yahoo'</span>, <span class="string">'AOL'</span>, <span class="string">'Excite'</span>]</div><div class="line">arr; <span class="regexp">//</span> [<span class="string">'Microsoft'</span>, <span class="string">'Apple'</span>, <span class="string">'Google'</span>, <span class="string">'Facebook'</span>, <span class="string">'Oracle'</span>]</div><div class="line"><span class="regexp">//</span> 只删除,不添加:</div><div class="line">arr.splice(<span class="number">2</span>, <span class="number">2</span>); <span class="regexp">//</span> [<span class="string">'Google'</span>, <span class="string">'Facebook'</span>]</div><div class="line">arr; <span class="regexp">//</span> [<span class="string">'Microsoft'</span>, <span class="string">'Apple'</span>, <span class="string">'Oracle'</span>]</div><div class="line"><span class="regexp">//</span> 只添加,不删除:</div><div class="line">arr.splice(<span class="number">2</span>, <span class="number">0</span>, <span class="string">'Google'</span>, <span class="string">'Facebook'</span>); <span class="regexp">//</span> 返回[],因为没有删除任何元素</div><div class="line">arr; <span class="regexp">//</span> [<span class="string">'Microsoft'</span>, <span class="string">'Apple'</span>, <span class="string">'Google'</span>, <span class="string">'Facebook'</span>, <span class="string">'Oracle'</span>]</div></pre></td></tr></table></figure></p>
-<h1 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h1><p><code>concat()</code>方法把当前的<code>Array</code>和另一个<code>Array</code>连接起来，并返回一个新的<code>Array</code>：<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line">var added = arr.concat([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</div><div class="line">added; // [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line">arr; // [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]</div></pre></td></tr></table></figure></p>
-<p>请注意，<code>concat()</code>方法并没有修改当前<code>Array</code>，而是返回了一个新的<code>Array</code>。</p>
-<p>实际上，<code>concat()</code>方法可以接收任意个元素和<code>Array</code>，并且自动把<code>Array</code>拆开，然后全部添加到新的<code>Array</code>里：<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];</div><div class="line">arr.concat(<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>]); // [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div></pre></td></tr></table></figure></p>
-<h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><p><code>join()</code>方法是一个非常实用的方法，它把当前<code>Array</code>的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.<span class="keyword">join</span>(<span class="string">'-'</span>); <span class="comment">// 'A-B-C-1-2-3'</span></div></pre></td></tr></table></figure>
-<p>如果<code>Array</code>的元素不是字符串，将自动转换为字符串后再连接。</p>
-<h1 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h1><p>如果数组的某个元素又是一个<code>Array</code>，则可以形成多维数组，例如：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">400</span>, <span class="number">500</span>, <span class="number">600</span>], '-'];</div></pre></td></tr></table></figure>
-<p>上述<code>Array</code>包含3个元素，其中头两个元素本身也是<code>Array</code>。</p>
-<p>练习：如何通过索引取到500这个值：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"><span class="keyword">var</span> arr = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">400</span>, <span class="number">500</span>, <span class="number">600</span>], <span class="string">'-'</span>];</div><div class="line"><span class="keyword">var</span> x = ??;</div><div class="line">alert(x); <span class="comment">// x应该为500</span></div></pre></td></tr></table></figure>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>Array提供了一种顺序存储一组元素的功能，并可以按索引来读写。</p>
-<p>练习：在新生欢迎会上，你已经拿到了新同学的名单，请排序后显示：欢迎XXX，XXX，XXX和XXX同学！：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"><span class="keyword">var</span> arr = [<span class="string">'小明'</span>, <span class="string">'小红'</span>, <span class="string">'大军'</span>, <span class="string">'阿黄'</span>];</div><div class="line">alert(<span class="string">'???'</span>);</div></pre></td></tr></table></figure>
-      
-
-      <div id="back-to-top" data-scroll="body">
-        <a href="#top" style="color:white"></a>
-      </div>
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -286,161 +222,25 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">概念</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
   
-  <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/">JavaScript教程(6)-快速入门-(4)数组</a></p>
-    <p><span>文章作者:</span>
-      <a href="/" title="访问 echo 的个人博客">echo</a>
-      <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
-    </p>
-    <p><span>发布时间:</span>2017年09月03日 - 17时55分</p>
-    <p><span>最后更新:</span>2017年11月26日 - 16时18分</p>
-    <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/" title="JavaScript教程(6)-快速入门-(4)数组">http://echoingursb.github.io/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/　　作者: echo" title="点击复制文章链接">
-          <i class="fa fa-clipboard"></i>
-      </span>
-    </p>
-    <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
-    <script src="https://echoingursb.github.io/js/clipboard.min.js"></script>
-    <script> var clipboard = new Clipboard('.copy-path'); </script>
-  </div>
-  <!-- <iframe src="http://121.42.195.113/emps/like.html" class="like" frameborder="no" scrolling="no"></iframe> -->
+    </div></section>
   
 
-
-
-<nav id="article-nav">
-  
-    <a href="/2017/09/10/JavaScript教程(7)-快速入门-(5)对象/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScript教程(7)-快速入门-(5)对象
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/09/03/JavaScript教程(5)-快速入门-(3)字符串/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript教程(5)-快速入门-(3)字符串</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://echoingursb.github.io/2017/09/03/JavaScript教程(6)-快速入门-(4)数组/",
-  owner: 'echoingursb',
-  repo: 'echoingursb.github.io',
-  oauth: {
-    client_id: 'ffff908e7f47730b61e7',
-    client_secret: '9fbf51b7ce2dcc118dca6c505dc7f10f14efcb29',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
+    
 
 
           </div>
@@ -576,9 +376,9 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

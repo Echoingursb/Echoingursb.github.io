@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-11-26T08:35:14.024Z</updated>
+  <updated>2017-12-13T15:02:41.001Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -14,6 +14,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本地回环地址</title>
+    <link href="http://echoingursb.github.io/2017/12/13/%E6%9C%AC%E5%9C%B0%E5%9B%9E%E7%8E%AF%E5%9C%B0%E5%9D%80/"/>
+    <id>http://echoingursb.github.io/2017/12/13/本地回环地址/</id>
+    <published>2017-12-13T14:53:42.000Z</published>
+    <updated>2017-12-13T15:02:41.001Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>本地回环地址</p>
+<p>127.0.0.1，通常被称为本地回环地址(Loop back address)，不属于任何一个有类别地址类。它代表设备的本地虚拟接口，所以默认被看作是永远不会宕掉的接口。在windows操作系统中也有相似的定义，所以通常在不安装网卡前就可以ping通这个本地回环地址。一般都会用来检查本地网络协议、基本数据接口等是否正常的。<br><a id="more"></a></p>
+<ul>
+<li>定义</li>
+</ul>
+<p>本地回环地址，不属于任何一个有类别地址类。它代表设备的本地虚拟接口，所以默认被看作是永远不会宕掉的接口。在windows操作系统中也有相似的定义，所以通常在不安装网卡前就可以ping通这个本地回环地址。一般都会用来检查本地网络协议、基本数据接口等是否正常的。</p>
+<ul>
+<li>解释</li>
+</ul>
+<p>如果IP地址中的网络号部分指向一个适当的网络，而主机域部分全部为1，那么，通过这样的地址可以向Internet上的任何远程网络发送广播分组（不过，许多网路管理员禁止这种特性）。最后，所有形如127.xx.yy.zz的地址都被保留用作回环测试</p>
+<ul>
+<li>作用</li>
+</ul>
+<p>1.测试本机的网络配置</p>
+<p>能PING通127.0.0.1说明本机的IP协议安装没有问题。</p>
+<p>2.某些SERVER/CLIENT的应用程序在运行时需调用服务器上的资源，一般要指定SERVER的IP地址，但当该程序要在同一台机器上运行而没有别的SERVER时就可以把SERVER的资源装在本机，SERVER的IP地址设为127.0.0.1同样也可以运行。</p>
+<ul>
+<li>验证案例</li>
+</ul>
+<p>以socket为例：</p>
+<p>监听本地1234端口 socket - tcp-listen:1234</p>
+<p>连接本地1234端口 socket - tcp:127.0.0.1:1234</p>
+<p>或 socket - tcp:127.255.255.254:1234</p>
+<p>以上两种写法都是可以进行通信的。</p>
+<p>即： 127.0.0.1 —&gt; 127.255.255.254（去掉0和255） 的范围都是本地回环地址。</p>
+<ul>
+<li>本地回环与路由</li>
+</ul>
+<p>1.作为一台路由器的管理地址</p>
+<p>系统管理员完成网络规划之后，为了方便管理，会为每一台路由器创建一个loopback接口，并在该接口 上单独指定一个IP 地址作为管理地址，管理员会使用该地址对路由器远程登录(telnet )，该地址实际上起到了类似设备名称一类的功能。</p>
+<p>通常每台路由器上存在众多接口和地址，为何不从当中随便挑选一个呢?</p>
+<p>原因如下：由于telnet 命令使用TCP 报文，会存在如下情况：路由器的某一个接口由于故障down 掉了，但是其他的接口却仍旧可以telnet ，也就是说，到达这台路由器的TCP 连接依旧存在。所以选择的telnet 地址必须是永远也不会down 掉的，而虚接口恰好满足此类要求。由于此类接口没有与对端互联互通的需求，所以为了节约地址资源，loopback 接口的地址通常指定为32 位掩码。</p>
+<p>2.使用该接口地址作为动态路由协议OSPF 、BGP的router id</p>
+<p>动态路由协议OSPF 、BGP 在运行过程中需要为该协议指定一个Router id ，作为此路由器的唯一标识，并要求在整个自治系统内唯一。由于router id 是一个32 位的无符号整数，这一点与IP 地址十分相像。而且IP 地址是不会出现重复现象的，所以通常将路由器的router id 指定为与该设备上的某个接口的地址相同。由于loopback 接口的IP 地址通常被视为路由器的标识，所以也就成router id 的最佳选择。</p>
+<p>3.使用该接口地址作为BGP 建立TCP 连接的源地址</p>
+<p>在BGP 协议中，两个运行BGP 的路由器之间建立邻居关系是通过TCP 建立连接完成的。在配置邻居时通常指定loopback 接口为建立TCP 连接的源地址。</p>
+<ul>
+<li>IPv6的本地回环</li>
+</ul>
+<p>IPV6的地址类型可分为三大类：</p>
+<p>1、单播地址</p>
+<p>2、组播地址</p>
+<p>3、任意播地址</p>
+<p>回环地址（Loop back address）属于单播地址（Unicast : one to one）</p>
+<p>形式：0:0:0:0:0:0:0:1</p>
+<p>同IPV4中127.0.0.1地址的含义一样，表示节点自已，也可以是::1，不特定地址写成 “::”，因为它只包含零。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本地回环地址&lt;/p&gt;
+&lt;p&gt;127.0.0.1，通常被称为本地回环地址(Loop back address)，不属于任何一个有类别地址类。它代表设备的本地虚拟接口，所以默认被看作是永远不会宕掉的接口。在windows操作系统中也有相似的定义，所以通常在不安装网卡前就可以ping通这个本地回环地址。一般都会用来检查本地网络协议、基本数据接口等是否正常的。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="概念" scheme="http://echoingursb.github.io/tags/%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>使用zxing生成解析二维码</title>
@@ -1308,28 +1377,6 @@
       <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="js" scheme="http://echoingursb.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【进阶版】有道云笔记Markdown指南</title>
-    <link href="http://echoingursb.github.io/2017/09/03/%E3%80%90%E8%BF%9B%E9%98%B6%E7%89%88%E3%80%91%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0Markdown%E6%8C%87%E5%8D%97/"/>
-    <id>http://echoingursb.github.io/2017/09/03/【进阶版】有道云笔记Markdown指南/</id>
-    <published>2017-09-03T03:34:49.000Z</published>
-    <updated>2017-09-03T03:35:57.354Z</updated>
-    
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;\assets\js\APlayer.min.js&quot;&gt; &lt;/script&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="Markdown语法(有道云笔记)" scheme="http://echoingursb.github.io/tags/Markdown%E8%AF%AD%E6%B3%95-%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
