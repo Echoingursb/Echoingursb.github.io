@@ -1,8 +1,2 @@
-/**
-项目JS主入口
-以依赖layui的layer和form模块为例
-**/
-layui.define([], function (exports) {
-  exports('index', {}); //注意，这里是模块输出的核心，模块名必须和use时的模块名一致
-});
-
+'use strict';
+console.log("\n             Bi rBU   \n            jB    VML rLIoFYovi           iri \n            Bi      USuviiiiirvooFUv  vNMGoJMi \n            B                     ijBMSi    Bu \n           Bv                               ML \n         iBi i          ii                  Br \n        MB iMBM                      ii     Mi \n       MM  iBMv        rF           BMBM   iB \n      LB             NGviMuUr       vBMB   vM \n      Bi              B   BOi               UL \n     vM               iBrOS                  B \n     iB                 i                    Mv \n     iM                                      BMi \n    i Br                                     Mv \n       B                iurFii              YB \n        Bv             Uii    ro            BMi \n         MBr     rIqIMG         Prvv       BP \n          iVBNviBki  rB        iBiiiPMi rOBi \n              MB      M        VN    iMBUi \n              B      BEji     iiBi     S \n                     O  iirrii   B");
