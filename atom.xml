@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2017-12-13T17:06:29.467Z</updated>
+  <updated>2018-01-03T07:33:22.510Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -14,6 +14,104 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Beautiful Tomorrow</title>
+    <link href="http://echoingursb.github.io/2018/01/03/Beautiful-Tomorrow/"/>
+    <id>http://echoingursb.github.io/2018/01/03/Beautiful-Tomorrow/</id>
+    <published>2018-01-03T07:12:48.000Z</published>
+    <updated>2018-01-03T07:33:22.510Z</updated>
+    
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>&lt;!DOCTYPE html&gt;</p>
+<p><html></html></p>
+<p><head><br>    <title></title><br></head></p>
+<p><body><br>                   <script src="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script></body></p>
+<pre><code>    &lt;div id=&quot;player-0416&quot; class=&quot;aplayer&quot;&gt;
+    &lt;/div&gt;
+
+&lt;script&gt;
+    var ap0416 = new APlayer({
+        element: document.getElementById(&apos;player-0416&apos;),
+        narrow: false,
+        autoplay: false,
+        showlrc: 1,
+        theme: &apos;#e6d0b2&apos;,
+        music: {
+            title: &apos;漫步在岁月洪流&apos;,
+            author: &apos;DoerChan&apos;,
+            url: &apos;http://ouws9w8xe.bkt.clouddn.com/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81%28Cover%EF%BC%9AKasaYAYA%29%20%281%29.mp3&apos;,
+            pic: &apos;http://ouws9w8xe.bkt.clouddn.com/2017041606.jpeg&apos;,
+            lrc: &apos;[00:00.00]【漫步在岁月洪流】\n[00:05.53]作曲：Mx-R辛照Bu萱\n[00:08.99]编曲：Mr-R恒曌\n[00:13.47]作词：沃特艾文儿\n[00:18.26]演唱：KasaYAYA\n[00:29.23]我曾于万丈红尘中奔走\n[00:35.85]在最不经意间与你碰头\n[00:41.96]一跃数载春秋 静观细水长流\n[00:49.31]以回忆建巨塔云楼\n[00:53.66]\n[00:54.84]你于人潮中 喧沸街头\n[00:59.06]向我伸出的双手\n[01:02.29]成就岁月洪流中的温柔\n[01:07.22]\n[01:08.19]而我在暴雨里 撑开衣袖\n[01:12.26]共你遮过头\n[01:15.78]一刻无言也恍若不朽\n[01:20.95]\n[01:22.17]幸而偌大人世中相逢\n[01:27.40]得你陪我于天地间一掷孤勇\n[01:34.09]陪造无稽的梦 陪发赤诚的疯\n[01:41.14]也陪着我 把旧歌轻轻地哼\n[01:47.84]\n[01:48.67]那日倦鸟正吻着天空\n[01:54.01]而旖旎霞火也燃上你我眉峰\n[02:00.69]并肩置身霓虹 共浴温软的风\n[02:07.67]韶光虽逝 却亦曾如此隽永\n[02:17.77]\n[02:20.91]—M—\n[02:37.33]\n[02:41.59]这旅途再远也终有尽头\n[02:47.69]到那天你会否红了双眸\n[02:54.00]启口语音颤抖 却终如鲠在喉\n[03:01.75]只微笑着再挥挥手\n[03:05.98]\n[03:07.12]曾满怀炙热 片刻占有\n[03:11.20]你一双澄澈眼眸\n[03:14.59]便使我颠沛中毕生富有\n[03:19.35]\n[03:20.41]也曾捱过霜雪 趟过江流\n[03:24.52]为与你邂逅\n[03:27.85]一瞬相视却恰似永久\n[03:33.11]\n[03:34.29]幸而庸常浮生中相拥\n[03:39.77]得你陪我于天地间一掷孤勇\n[03:46.45]陪造无稽的梦 陪发赤诚的疯\n[03:53.75]也陪着我 把旧歌轻轻地哼\n[04:00.19]\n[04:00.87]只是再不舍也会剧终\n[04:06.09]可惜我未能孤身只手擎苍穹\n[04:12.88]未能斩浪破空 如约护你一程\n[04:20.38]只能临别 轻描出一声珍重&apos;
+        }
+    });
+&lt;/script&gt;
+</code></pre><p><br><br><a id="more"></a><br>In the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+<p>In the beautiful tomorrow</p>
+<p>Well tears will pass away</p>
+<p>There’ll be no heartache</p>
+<p>And no pain</p>
+<p>In the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+<p>In the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+<p>There’ll be no dark clouds</p>
+<p>To block my gaze</p>
+<p>There’ll be no tears</p>
+<p>Upon my face</p>
+<p>In the beautiful tomorrow</p>
+<p>So much sweeter tomorrow</p>
+<p>In the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+<p>In the beautiful tomorrow</p>
+<p>Well tears will pass away</p>
+<p>There’ll be no dark clouds</p>
+<p>To block my gaze</p>
+<p>In the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+<p>Ther’ll be no tears</p>
+<p>Oh, to block my gaze</p>
+<p>In the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+<p>Oh, in the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+<p>InWell tears will pass away</p>
+<p>There’ll be no heartache</p>
+<p>Or painIn the beautiful tomorrow</p>
+<p>So much sweeter than today</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;html&gt;&lt;/html&gt;&lt;/p&gt;
+&lt;p&gt;&lt;head&gt;&lt;br&gt;    &lt;title&gt;&lt;/title&gt;&lt;br&gt;&lt;/head&gt;&lt;/p&gt;
+&lt;p&gt;&lt;body&gt;&lt;br&gt;                   &lt;script src=&quot;https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;div id=&amp;quot;player-0416&amp;quot; class=&amp;quot;aplayer&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;script&amp;gt;
+    var ap0416 = new APlayer({
+        element: document.getElementById(&amp;apos;player-0416&amp;apos;),
+        narrow: false,
+        autoplay: false,
+        showlrc: 1,
+        theme: &amp;apos;#e6d0b2&amp;apos;,
+        music: {
+            title: &amp;apos;漫步在岁月洪流&amp;apos;,
+            author: &amp;apos;DoerChan&amp;apos;,
+            url: &amp;apos;http://ouws9w8xe.bkt.clouddn.com/DoerChan%20-%20%E6%BC%AB%E6%AD%A5%E5%9C%A8%E5%B2%81%E6%9C%88%E6%B4%AA%E6%B5%81%28Cover%EF%BC%9AKasaYAYA%29%20%281%29.mp3&amp;apos;,
+            pic: &amp;apos;http://ouws9w8xe.bkt.clouddn.com/2017041606.jpeg&amp;apos;,
+            lrc: &amp;apos;[00:00.00]【漫步在岁月洪流】\n[00:05.53]作曲：Mx-R辛照Bu萱\n[00:08.99]编曲：Mr-R恒曌\n[00:13.47]作词：沃特艾文儿\n[00:18.26]演唱：KasaYAYA\n[00:29.23]我曾于万丈红尘中奔走\n[00:35.85]在最不经意间与你碰头\n[00:41.96]一跃数载春秋 静观细水长流\n[00:49.31]以回忆建巨塔云楼\n[00:53.66]\n[00:54.84]你于人潮中 喧沸街头\n[00:59.06]向我伸出的双手\n[01:02.29]成就岁月洪流中的温柔\n[01:07.22]\n[01:08.19]而我在暴雨里 撑开衣袖\n[01:12.26]共你遮过头\n[01:15.78]一刻无言也恍若不朽\n[01:20.95]\n[01:22.17]幸而偌大人世中相逢\n[01:27.40]得你陪我于天地间一掷孤勇\n[01:34.09]陪造无稽的梦 陪发赤诚的疯\n[01:41.14]也陪着我 把旧歌轻轻地哼\n[01:47.84]\n[01:48.67]那日倦鸟正吻着天空\n[01:54.01]而旖旎霞火也燃上你我眉峰\n[02:00.69]并肩置身霓虹 共浴温软的风\n[02:07.67]韶光虽逝 却亦曾如此隽永\n[02:17.77]\n[02:20.91]—M—\n[02:37.33]\n[02:41.59]这旅途再远也终有尽头\n[02:47.69]到那天你会否红了双眸\n[02:54.00]启口语音颤抖 却终如鲠在喉\n[03:01.75]只微笑着再挥挥手\n[03:05.98]\n[03:07.12]曾满怀炙热 片刻占有\n[03:11.20]你一双澄澈眼眸\n[03:14.59]便使我颠沛中毕生富有\n[03:19.35]\n[03:20.41]也曾捱过霜雪 趟过江流\n[03:24.52]为与你邂逅\n[03:27.85]一瞬相视却恰似永久\n[03:33.11]\n[03:34.29]幸而庸常浮生中相拥\n[03:39.77]得你陪我于天地间一掷孤勇\n[03:46.45]陪造无稽的梦 陪发赤诚的疯\n[03:53.75]也陪着我 把旧歌轻轻地哼\n[04:00.19]\n[04:00.87]只是再不舍也会剧终\n[04:06.09]可惜我未能孤身只手擎苍穹\n[04:12.88]未能斩浪破空 如约护你一程\n[04:20.38]只能临别 轻描出一声珍重&amp;apos;
+        }
+    });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>回到地面</title>
@@ -1301,64 +1399,6 @@
     <summary type="html">
     
       &lt;p&gt;快速入门-(1)基本语法&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://echoingursb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="js" scheme="http://echoingursb.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript教程(2)-快速入门</title>
-    <link href="http://echoingursb.github.io/2017/09/03/JavaScript%E6%95%99%E7%A8%8B(2)-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>http://echoingursb.github.io/2017/09/03/JavaScript教程(2)-快速入门/</id>
-    <published>2017-09-03T04:10:04.000Z</published>
-    <updated>2017-11-26T08:18:20.931Z</updated>
-    
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>快速入门</p>
-<a id="more"></a>
-<p>JavaScript代码可以直接嵌在网页的任何地方，不过通常我们都把JavaScript代码放到<code>&lt;head&gt;</code>中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    alert(<span class="string">'Hello, world'</span>);</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  ...</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>由<code>&lt;script&gt;...&lt;/script&gt;</code>包含的代码就是JavaScript代码，它将直接被浏览器执行。</p>
-<p>第二种方法是把JavaScript代码放到一个单独的.js文件，然后在HTML中通过<code>&lt;script src=&quot;...&quot;&gt;&lt;/script&gt;</code>引入这个文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;script src=<span class="string">"/static/js/abc.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  ...</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>这样，<code>/static/js/abc.js</code>就会被浏览器执行。</p>
-<p>把JavaScript代码放入一个单独的.js文件中更利于维护代码，并且多个页面可以各自引用同一份.js文件。</p>
-<p>可以在同一个页面中引入多个.js文件，还可以在页面中多次编写<code>&lt;script&gt; js代码... &lt;/script&gt;</code>，浏览器按照顺序依次执行。</p>
-<p>有些时候你会看到<code>&lt;script&gt;</code>标签还设置了一个type属性：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">  ...</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>但这是没有必要的，因为默认的type就是JavaScript，所以不必显式地把type指定为JavaScript。</p>
-<h1 id="如何编写JavaScript"><a href="#如何编写JavaScript" class="headerlink" title="如何编写JavaScript"></a>如何编写JavaScript</h1><p>可以用任何文本编辑器来编写JavaScript代码。这里我们推荐以下几种文本编辑器：</p>
-<p>Sublime Text</p>
-<p>免费，但不注册会不定时弹出提示框。</p>
-<p>Notepad++</p>
-<p>免费</p>
-<p><em>注意：不可以用Word或写字板来编写JavaScript或HTML，因为带格式的文本保存后不是纯文本文件，无法被浏览器正常读取。</em></p>
-<h1 id="如何运行JavaScript"><a href="#如何运行JavaScript" class="headerlink" title="如何运行JavaScript"></a>如何运行JavaScript</h1><p>要让浏览器运行JavaScript，必须先有一个HTML页面，在HTML页面中引入JavaScript，然后，让浏览器加载该HTML页面，就可以执行JavaScript代码。</p>
-<p>你也许会想，直接在我的硬盘上创建好HTML和JavaScript文件，然后用浏览器打开，不就可以看到效果了吗？</p>
-<p>这种方式运行部分JavaScript代码没有问题，但由于浏览器的安全限制，以<code>file://</code>开头的地址无法执行如联网等JavaScript代码，最终，你还是需要架设一个Web服务器，然后以<code>http://</code>开头的地址来正常执行所有JavaScript代码。</p>
-<p>不过，开始学习阶段，你无须关心如何搭建开发环境的问题，我们提供在页面输入JavaScript代码并直接运行的功能，让你专注于JavaScript的学习。</p>
-<p>试试直接点击“Run”按钮执行下面的JavaScript代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  // 以//开头直到行末的是注释，将被浏览器忽略</div><div class="line">  // 第一个JavaScript代码:</div><div class="line">  &lt;script&gt;</div><div class="line">    alert(<span class="string">'Hello, world'</span>);</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  ...</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>浏览器将弹出一个对话框，显示“Hello, world”。你也可以修改两个单引号中间的内容，再试着运行。</p>
-<h1 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h1><p>俗话说得好，“工欲善其事，必先利其器。”，写JavaScript的时候，如果期望显示ABC，结果却显示XYZ，到底代码哪里出了问题？不要抓狂，也不要泄气，作为小白，要坚信：JavaScript本身没有问题，浏览器执行也没有问题，有问题的一定是我的代码。</p>
-<p>如何找出问题代码？这就需要调试。</p>
-<p>怎么在浏览器中调试JavaScript代码呢？</p>
-<p>首先，你需要安装Google Chrome浏览器，Chrome浏览器对开发者非常友好，可以让你方便地调试JavaScript代码。从这里下载<a href="https://www.google.com/chrome/browser/desktop/index.html?system=true&amp;standalone=1" target="_blank" rel="external">Chrome浏览器</a>。 </p>
-<p>安装后，随便打开一个网页，然后点击菜单“查看(View)”-“开发者(Developer)”-“开发者工具(Developer Tools)”，浏览器窗口就会一分为二，下方就是开发者工具：</p>
-<p><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
-<p>先点击“控制台(Console)“，在这个面板里可以直接输入JavaScript代码，按回车后执行。</p>
-<p>要查看一个变量的内容，在Console中输入<code>console.log(a);</code>，回车后显示的值就是变量的内容。</p>
-<p>关闭Console请点击右上角的“×”按钮。请熟练掌握Console的使用方法，在编写JavaScript代码时，经常需要在Console运行测试代码。</p>
-<p>如果你对自己还有更高的要求，可以研究开发者工具的“源码(Sources)”，掌握断点、单步执行等高级调试技巧。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;快速入门&lt;/p&gt;
     
     </summary>
     
