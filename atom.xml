@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2018-01-03T07:37:39.883Z</updated>
+  <updated>2018-01-03T07:41:21.880Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://echoingursb.github.io/2018/01/03/Beautiful-Tomorrow/"/>
     <id>http://echoingursb.github.io/2018/01/03/Beautiful-Tomorrow/</id>
     <published>2018-01-03T07:12:48.000Z</published>
-    <updated>2018-01-03T07:37:39.883Z</updated>
+    <updated>2018-01-03T07:41:21.880Z</updated>
     
-    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2029428985&auto=1&height=430"></iframe><br><a id="more"></a><br>In the beautiful tomorrow</p>
+    <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2029428985&auto=0&height=430"></iframe><br><a id="more"></a><br>In the beautiful tomorrow</p>
 <p>So much sweeter than today</p>
 <p>In the beautiful tomorrow</p>
 <p>Well tears will pass away</p>
@@ -60,7 +60,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;450&quot; src=&quot;//music.163.com/outchain/player?type=0&amp;id=2029428985&amp;auto=1&amp;height=430&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;450&quot; src=&quot;//music.163.com/outchain/player?type=0&amp;id=2029428985&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
     
     </summary>
     
