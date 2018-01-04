@@ -12,20 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>JavaScript教程(3)-快速入门-(1)基本语法 | WHOAMI</title>
+  <title>数组的查找 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速入门-(1)基本语法">
-<meta name="keywords" content="技术,js">
+  <meta name="description" content="线性查找线性查找又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。    中文名 外文名 定义 应用学科 缩写 元    素     线性查找 linear search 又称为顺序查找 计算机技术方法术语 LS 顺序查找    概念线性查找又称顺序查找，是一种最简">
+<meta name="keywords" content="技术,java,数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript教程(3)-快速入门-(1)基本语法">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/index.html">
+<meta property="og:title" content="数组的查找">
+<meta property="og:url" content="http://echoingursb.github.io/2018/01/04/数组的查找/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-(1)基本语法">
+<meta property="og:description" content="线性查找线性查找又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。    中文名 外文名 定义 应用学科 缩写 元    素     线性查找 linear search 又称为顺序查找 计算机技术方法术语 LS 顺序查找    概念线性查找又称顺序查找，是一种最简">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-26T08:18:25.980Z">
+<meta property="og:updated_time" content="2018-01-04T14:43:29.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript教程(3)-快速入门-(1)基本语法">
-<meta name="twitter:description" content="快速入门-(1)基本语法">
+<meta name="twitter:title" content="数组的查找">
+<meta name="twitter:description" content="线性查找线性查找又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。    中文名 外文名 定义 应用学科 缩写 元    素     线性查找 linear search 又称为顺序查找 计算机技术方法术语 LS 顺序查找    概念线性查找又称顺序查找，是一种最简">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -185,45 +185,110 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript教程(3)-快速入门-(1)基本语法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数组的查找" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript教程(3)-快速入门-(1)基本语法
+      数组的查找
     </h1>
   
 
         
-        <a href="/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/" class="archive-article-date">
-  	<time datetime="2017-09-03T05:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
+        <a href="/2018/01/04/数组的查找/" class="archive-article-date">
+  	<time datetime="2018-01-04T14:41:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(1)基本语法</p>
-<a id="more"></a>
-<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>JavaScript的语法和Java语言类似，每个语句以<code>;</code>结束，语句块用<code>{...}</code>。但是，JavaScript并不强制要求在每个语句的结尾加<code>;</code>，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上<code>;</code>。</p>
-<p><em>注意：让JavaScript引擎自动加分号在某些情况下会改变程序的语义，导致运行结果与期望不一致。在本教程中，我们不会省略<code>;</code>，所有语句都会添加<code>;</code>。</em></p>
-<p>例如，下面的一行代码就是一个完整的赋值语句：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var x</span> = 1;</div></pre></td></tr></table></figure>
-<p>下面的一行代码是一个字符串，但仍然可以视为一个完整的语句：</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'Hello, World';</div></pre></td></tr></table></figure>
-<p>下面的一行代码包含两个语句，每个语句用<code>;</code>表示语句结束：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">1</span>; <span class="keyword">var</span> y = <span class="number">2</span>; <span class="comment">// 不建议一行写多个语句!</span></div></pre></td></tr></table></figure>
-<p>语句块是一组语句的集合，例如，下面的代码先做了一个判断，如果判断成立，将执行<code>{...}</code>中的所有语句：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (<span class="number">2</span> &gt; <span class="number">1</span>) &#123;</div><div class="line">    x = <span class="number">1</span>;</div><div class="line">    y = <span class="number">2</span>;</div><div class="line">    z = <span class="number">3</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意花括号<code>{...}</code>内的语句具有缩进，通常是4个空格。缩进不是JavaScript语法要求必须的，但缩进有助于我们理解代码的层次，所以编写代码时要遵守缩进规则。很多文本编辑器具有“自动缩进”的功能，可以帮助整理代码。<br><code>{...}</code>还可以嵌套，形成层级结构：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">if</span> (<span class="number">2</span> &gt; <span class="number">1</span>) &#123;</div><div class="line">    <span class="attribute">x</span> = <span class="number">1</span>;</div><div class="line">    <span class="attribute">y</span> = <span class="number">2</span>;</div><div class="line">    <span class="attribute">z</span> = <span class="number">3</span>;</div><div class="line">    <span class="attribute">if</span> (x &lt; y) &#123;</div><div class="line">        <span class="attribute">z</span> = <span class="number">4</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="attribute">if</span> (x &gt; y) &#123;</div><div class="line">        <span class="attribute">z</span> = <span class="number">5</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>JavaScript本身对嵌套的层级没有限制，但是过多的嵌套无疑会大大增加看懂代码的难度。遇到这种情况，需要把部分代码抽出来，作为函数来调用，这样可以减少代码的复杂度。</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>以<code>//</code>开头直到行末的字符被视为行注释，注释是给开发人员看到，JavaScript引擎会自动忽略：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 这是一行注释</span></div><div class="line"><span class="selector-tag">alert</span>(<span class="string">'hello'</span>); <span class="comment">// 这也是注释</span></div></pre></td></tr></table></figure>
-<p>另一种块注释是用<code>/*...*/</code>把多行字符包裹起来，把一大“块”视为一个注释：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 从这里开始是块注释</span></div><div class="line"><span class="comment">仍然是注释</span></div><div class="line"><span class="comment">仍然是注释</span></div><div class="line"><span class="comment">注释结束 */</span></div></pre></td></tr></table></figure>
+        <script src="\assets\js\APlayer.min.js"> </script><a id="more"></a>
+<h1 id="线性查找"><a href="#线性查找" class="headerlink" title="线性查找"></a>线性查找</h1><p>线性查找又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。</p>
+<table>
+<thead>
+<tr>
+<th>中文名</th>
+<th>外文名</th>
+<th>定义</th>
+<th>应用学科</th>
+<th>缩写</th>
+<th>元    素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线性查找</td>
+<td>linear search</td>
+<td>又称为顺序查找</td>
+<td>计算机技术方法术语</td>
+<td>LS</td>
+<td>顺序查找</td>
+</tr>
+</tbody>
+</table>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>线性查找又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。</p>
+<p>查找是对具有相同属性的数据元素（记录）的集合（数据对象）进行的，称之为表或文件，也称字典。对表的查找，若仅对表进行查找操作，而不能改变表中的数据元素，为静态查找；对表除了进行查找操作外，还可能对表进行插入或删除操作，则为动态查找。</p>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>例如r[i].key表示数据元素i中的关键字项。在流程图中的循环回路上要进行两次比较，即对数据元素的关键字项比较和对循环次数的判断。为了提高运算速度，可以作如下的改进：</p>
+<ul>
+<li><p>在原表长n的基础上增加一个元素n+1，将K值送入此元素的关键字项中，这样在循环回路上只要进行一次比较，我们把第n+1个记录称为“监视哨”。这样当n很大时几乎可以节省一半时间。</p>
+</li>
+<li><p>在顺序查找中，在找到第i个记录时，给定值K和记录中的关键字进行了i次比较。</p>
+</li>
+<li><p>由于平均查找长度与表长度n成线性关系，因此当n较大时，顺序查找的效率较低。但顺序查找算法比较简单，且对顺序表的存储结构没有限制，既可以用向量作存储结构也可以用链表作存储结构。</p>
+</li>
+</ul>
+<p>Java源代码：<br><figure class="highlight zephir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 线性查找法</span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> * <span class="doctag">@param</span> list</span></div><div class="line"><span class="comment"> * <span class="doctag">@param</span> key</span></div><div class="line"><span class="comment"> * <span class="doctag">@return</span></span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> linearSearch(<span class="keyword">int</span>[] <span class="keyword">list</span>, <span class="keyword">int</span> key) &#123;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">list</span>.length; i++) &#123;</div><div class="line">		<span class="keyword">if</span> (<span class="keyword">list</span>[i] == key) &#123;</div><div class="line">			<span class="keyword">return</span> i;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h1><p>二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p>
+<table>
+<thead>
+<tr>
+<th>中文名</th>
+<th>外文名</th>
+<th>别称</th>
+<th>表达式</th>
+<th>提出者</th>
+<th>提出时间</th>
+<th>应用学科</th>
+<th>适用领域范围</th>
+<th>优    点</th>
+<th>缺    点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二分查找</td>
+<td>Binary-Search</td>
+<td>折半查找</td>
+<td>无</td>
+<td>John Mauchly</td>
+<td>1946</td>
+<td>计算机</td>
+<td>编程语言</td>
+<td>查找速度快</td>
+<td>待查表为有序表</td>
+</tr>
+</tbody>
+</table>
+<h2 id="算法要求"><a href="#算法要求" class="headerlink" title="算法要求"></a>算法要求</h2><ol>
+<li>必须采用顺序存储结构。</li>
+<li>必须按关键字大小有序排列。</li>
+</ol>
+<h2 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h2><p>二分查找的基本思想是将n个元素分成大致相等的两部分，取a[n/2]与x做比较，如果x=a[n/2],则找到x,算法中止；如果x<a[n 2],则只要在数组a的左半部分继续搜索x,如果x="">a[n/2],则只要在数组a的右半部搜索x.</a[n></p>
+<p>时间复杂度无非就是while循环的次数！</p>
+<p>总共有n个元素，</p>
+<p>渐渐跟下去就是n,n/2,n/4,….n/2^k（接下来操作元素的剩余个数），其中k就是循环的次数</p>
+<p>由于你n/2^k取整后&gt;=1</p>
+<p>即令n/2^k=1</p>
+<p>可得k=log2n,（是以2为底，n的对数）</p>
+<p>所以时间复杂度可以表示O(h)=O(log2n)</p>
+<p>下面提供一段二分查找实现的伪代码:</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">BinarySearch(<span class="built_in">max</span>,<span class="built_in">min</span>,des)</div><div class="line"><span class="keyword">mid</span>-&lt;(<span class="built_in">max</span>+<span class="built_in">min</span>)/<span class="number">2</span></div><div class="line"><span class="keyword">while</span>(<span class="built_in">min</span>&lt;=<span class="built_in">max</span>)</div><div class="line"><span class="keyword">mid</span>=(<span class="built_in">min</span>+<span class="built_in">max</span>)/<span class="number">2</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">mid</span>=des <span class="keyword">then</span></div><div class="line"><span class="literal">return</span> <span class="keyword">mid</span></div><div class="line">elseif <span class="keyword">mid</span> &gt;des <span class="keyword">then</span></div><div class="line"><span class="built_in">max</span>=<span class="keyword">mid</span><span class="number">-1</span></div><div class="line"><span class="keyword">else</span></div><div class="line"><span class="built_in">min</span>=<span class="keyword">mid</span>+<span class="number">1</span></div><div class="line"><span class="literal">return</span> <span class="built_in">max</span></div></pre></td></tr></table></figure>
+<p>折半查找法也称为二分查找法，它充分利用了元素间的次序关系，采用分治策略，可在最坏的情况下用O(log n)完成搜索任务。它的基本思想是，将n个元素分成个数大致相同的两半，取a[n/2]与欲查找的x作比较，如果x=a[n/2]则找到x，算法终止。如 果x<a[n 2]，则我们只要在数组a的左半部继续搜索x（这里假设数组元素呈升序排列）。如果x="">a[n/2]，则我们只要在数组a的右 半部继续搜索x。</a[n></p>
+<p>Java源代码：<br><figure class="highlight zephir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 二分查找法</span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> * <span class="doctag">@param</span> list</span></div><div class="line"><span class="comment"> * <span class="doctag">@param</span> key</span></div><div class="line"><span class="comment"> * <span class="doctag">@return</span></span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> binarySearch(<span class="keyword">int</span>[] <span class="keyword">list</span>, <span class="keyword">int</span> key) &#123;</div><div class="line">	<span class="keyword">int</span> low = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> high = <span class="keyword">list</span>.length - <span class="number">1</span>;</div><div class="line"></div><div class="line">	<span class="keyword">while</span> (high &gt;= low) &#123;</div><div class="line">		<span class="keyword">int</span> mid = (low + high) / <span class="number">2</span>;</div><div class="line">		<span class="keyword">if</span> (key &lt; mid) &#123;</div><div class="line">			high = mid - <span class="number">1</span>;</div><div class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (key == <span class="keyword">list</span>[mid]) &#123;</div><div class="line">			<span class="keyword">return</span> mid;</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			low = mid + <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
       
 
       <div id="back-to-top" data-scroll="body">
@@ -266,7 +331,11 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数组</a>
         		</li>
       		
 		</ul>
@@ -322,7 +391,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2018/01/04/数组的查找/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -336,16 +405,16 @@ var _hmt = _hmt || [];
   
   
   <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/">JavaScript教程(3)-快速入门-(1)基本语法</a></p>
+    <p><span>本文标题:</span><a href="/2018/01/04/数组的查找/">数组的查找</a></p>
     <p><span>文章作者:</span>
       <a href="/" title="访问 echo 的个人博客">echo</a>
       <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
     </p>
-    <p><span>发布时间:</span>2017年09月03日 - 13时43分</p>
-    <p><span>最后更新:</span>2017年11月26日 - 16时18分</p>
+    <p><span>发布时间:</span>2018年01月04日 - 22时41分</p>
+    <p><span>最后更新:</span>2018年01月04日 - 22时43分</p>
     <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/" title="JavaScript教程(3)-快速入门-(1)基本语法">http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/　　作者: echo" title="点击复制文章链接">
+      <span>原始链接:</span><a class="post-url" href="/2018/01/04/数组的查找/" title="数组的查找">http://echoingursb.github.io/2018/01/04/数组的查找/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2018/01/04/数组的查找/　　作者: echo" title="点击复制文章链接">
           <i class="fa fa-clipboard"></i>
       </span>
     </p>
@@ -360,18 +429,9 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2017/09/03/JavaScript教程(4)-快速入门-(2)数据类型和变量/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScript教程(4)-快速入门-(2)数据类型和变量
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/03/JavaScript教程(2)-快速入门/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript教程(2)-快速入门</div>
+    <a href="/2018/01/03/Beautiful-Tomorrow/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Beautiful Tomorrow</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -410,7 +470,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/",
+  id: "http://echoingursb.github.io/2018/01/04/数组的查找/",
   owner: 'echoingursb',
   repo: 'echoingursb.github.io',
   oauth: {

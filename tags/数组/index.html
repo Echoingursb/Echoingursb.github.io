@@ -12,20 +12,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>JavaScript教程(3)-快速入门-(1)基本语法 | WHOAMI</title>
+  <title>Tag: 数组 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速入门-(1)基本语法">
-<meta name="keywords" content="技术,js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript教程(3)-快速入门-(1)基本语法">
-<meta property="og:url" content="http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/index.html">
+  <meta name="description" content="Web Java front-end">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WHOAMI">
+<meta property="og:url" content="http://echoingursb.github.io/tags/数组/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="快速入门-(1)基本语法">
+<meta property="og:description" content="Web Java front-end">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-26T08:18:25.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript教程(3)-快速入门-(1)基本语法">
-<meta name="twitter:description" content="快速入门-(1)基本语法">
+<meta name="twitter:title" content="WHOAMI">
+<meta name="twitter:description" content="Web Java front-end">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -185,78 +183,36 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript教程(3)-快速入门-(1)基本语法" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript教程(3)-快速入门-(1)基本语法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/01/04/数组的查找/" class="archive-article-date">
+  	<time datetime="2018-01-04T14:41:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/01/04/数组的查找/">数组的查找</a>
     </h1>
   
 
-        
-        <a href="/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/" class="archive-article-date">
-  	<time datetime="2017-09-03T05:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><p>快速入门-(1)基本语法</p>
-<a id="more"></a>
-<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>JavaScript的语法和Java语言类似，每个语句以<code>;</code>结束，语句块用<code>{...}</code>。但是，JavaScript并不强制要求在每个语句的结尾加<code>;</code>，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上<code>;</code>。</p>
-<p><em>注意：让JavaScript引擎自动加分号在某些情况下会改变程序的语义，导致运行结果与期望不一致。在本教程中，我们不会省略<code>;</code>，所有语句都会添加<code>;</code>。</em></p>
-<p>例如，下面的一行代码就是一个完整的赋值语句：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var x</span> = 1;</div></pre></td></tr></table></figure>
-<p>下面的一行代码是一个字符串，但仍然可以视为一个完整的语句：</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'Hello, World';</div></pre></td></tr></table></figure>
-<p>下面的一行代码包含两个语句，每个语句用<code>;</code>表示语句结束：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">1</span>; <span class="keyword">var</span> y = <span class="number">2</span>; <span class="comment">// 不建议一行写多个语句!</span></div></pre></td></tr></table></figure>
-<p>语句块是一组语句的集合，例如，下面的代码先做了一个判断，如果判断成立，将执行<code>{...}</code>中的所有语句：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (<span class="number">2</span> &gt; <span class="number">1</span>) &#123;</div><div class="line">    x = <span class="number">1</span>;</div><div class="line">    y = <span class="number">2</span>;</div><div class="line">    z = <span class="number">3</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意花括号<code>{...}</code>内的语句具有缩进，通常是4个空格。缩进不是JavaScript语法要求必须的，但缩进有助于我们理解代码的层次，所以编写代码时要遵守缩进规则。很多文本编辑器具有“自动缩进”的功能，可以帮助整理代码。<br><code>{...}</code>还可以嵌套，形成层级结构：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">if</span> (<span class="number">2</span> &gt; <span class="number">1</span>) &#123;</div><div class="line">    <span class="attribute">x</span> = <span class="number">1</span>;</div><div class="line">    <span class="attribute">y</span> = <span class="number">2</span>;</div><div class="line">    <span class="attribute">z</span> = <span class="number">3</span>;</div><div class="line">    <span class="attribute">if</span> (x &lt; y) &#123;</div><div class="line">        <span class="attribute">z</span> = <span class="number">4</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="attribute">if</span> (x &gt; y) &#123;</div><div class="line">        <span class="attribute">z</span> = <span class="number">5</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>JavaScript本身对嵌套的层级没有限制，但是过多的嵌套无疑会大大增加看懂代码的难度。遇到这种情况，需要把部分代码抽出来，作为函数来调用，这样可以减少代码的复杂度。</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>以<code>//</code>开头直到行末的字符被视为行注释，注释是给开发人员看到，JavaScript引擎会自动忽略：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 这是一行注释</span></div><div class="line"><span class="selector-tag">alert</span>(<span class="string">'hello'</span>); <span class="comment">// 这也是注释</span></div></pre></td></tr></table></figure>
-<p>另一种块注释是用<code>/*...*/</code>把多行字符包裹起来，把一大“块”视为一个注释：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 从这里开始是块注释</span></div><div class="line"><span class="comment">仍然是注释</span></div><div class="line"><span class="comment">仍然是注释</span></div><div class="line"><span class="comment">注释结束 */</span></div></pre></td></tr></table></figure>
-      
-
-      <div id="back-to-top" data-scroll="body">
-        <a href="#top" style="color:white"></a>
-      </div>
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -266,161 +222,29 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数组</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
   
-  <div class="copyright">
-    <p><span>本文标题:</span><a href="/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/">JavaScript教程(3)-快速入门-(1)基本语法</a></p>
-    <p><span>文章作者:</span>
-      <a href="/" title="访问 echo 的个人博客">echo</a>
-      <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
-    </p>
-    <p><span>发布时间:</span>2017年09月03日 - 13时43分</p>
-    <p><span>最后更新:</span>2017年11月26日 - 16时18分</p>
-    <p>
-      <span>原始链接:</span><a class="post-url" href="/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/" title="JavaScript教程(3)-快速入门-(1)基本语法">http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/</a>
-      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/　　作者: echo" title="点击复制文章链接">
-          <i class="fa fa-clipboard"></i>
-      </span>
-    </p>
-    <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
-    <script src="https://echoingursb.github.io/js/clipboard.min.js"></script>
-    <script> var clipboard = new Clipboard('.copy-path'); </script>
-  </div>
-  <!-- <iframe src="http://121.42.195.113/emps/like.html" class="like" frameborder="no" scrolling="no"></iframe> -->
+    </div></section>
   
 
-
-
-<nav id="article-nav">
-  
-    <a href="/2017/09/03/JavaScript教程(4)-快速入门-(2)数据类型和变量/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScript教程(4)-快速入门-(2)数据类型和变量
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/09/03/JavaScript教程(2)-快速入门/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript教程(2)-快速入门</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://echoingursb.github.io/2017/09/03/JavaScript教程(3)-快速入门-(1)基本语法/",
-  owner: 'echoingursb',
-  repo: 'echoingursb.github.io',
-  oauth: {
-    client_id: 'ffff908e7f47730b61e7',
-    client_secret: '9fbf51b7ce2dcc118dca6c505dc7f10f14efcb29',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
+    
 
 
           </div>
@@ -556,9 +380,9 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
