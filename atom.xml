@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://echoingursb.github.io/"/>
-  <updated>2018-01-06T08:54:08.436Z</updated>
+  <updated>2018-01-06T08:55:53.058Z</updated>
   <id>http://echoingursb.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://echoingursb.github.io/2018/01/06/%E6%95%B0%E7%BB%84%E7%9A%84%E6%8E%92%E5%BA%8F/"/>
     <id>http://echoingursb.github.io/2018/01/06/数组的排序/</id>
     <published>2018-01-06T06:33:55.000Z</published>
-    <updated>2018-01-06T08:54:08.436Z</updated>
+    <updated>2018-01-06T08:55:53.058Z</updated>
     
     <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>数组的排序<br><a id="more"></a></p>
 <h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。 选择排序是不稳定的排序方法（比如序列<code>[5， 5， 3]</code>第一次就将第一个<code>[5]</code>与<code>[3]</code>交换，导致第一个<code>5</code>挪动到第二个<code>5</code>后面）。</p>
@@ -52,19 +52,14 @@
 <h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p><code>n</code>个数的序列<code>&lt;a1,a2,a3,...,an&gt;</code>。</p>
 <h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>原序列的一个重排<code>&lt;a1*,a2*,a3*,...,an*&gt;</code>，使得<code>a1*&lt;=a2*&lt;=a3*&lt;=...&lt;=an*</code><br>排序算法有很多，包括插入排序，冒泡排序，堆排序，归并排序，选择排序，计数排序，基数排序，桶排序，快速排序等。插入排序，堆排序，选择排序，归并排序和快速排序，冒泡排序都是比较排序，它们通过对数组中的元素进行比较来实现排序，其他排序算法则是利用非比较的其他方法来获得有关输入数组的排序信息。</p>
 <h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p><code>n</code>个记录的文件的直接选择排序可经过<code>n-1</code>趟直接选择排序得到有序结果：</p>
-<ol>
-<li>初始状态：无序区为<code>R[1..n]</code>，有序区为空。</li>
-<li>第<code>1</code>趟排序</li>
-</ol>
+<p>1.初始状态：无序区为<code>R[1..n]</code>，有序区为空。<br>2.第<code>1</code>趟排序</p>
 <ul>
 <li><p>在无序区<code>R[1..n]</code>中选出关键字最小的记录<code>R[k]</code>，将它与无序区的第<code>1</code>个记录<code>R[1]</code>交换，使<code>R[1..1]</code>和<code>R[2..n]</code>分别变为记录个数增加<code>1</code>个的新有序区和记录个数减少<code>1</code>个的新无序区。</p>
 </li>
 <li><p>……</p>
 </li>
 </ul>
-<ol>
-<li>第<code>i</code>趟排序</li>
-</ol>
+<p>3.第<code>i</code>趟排序</p>
 <ul>
 <li>第<code>i</code>趟排序开始时，当前有序区和无序区分别为<code>R[1..i-1]</code>和<code>R[i..n]</code>。该趟排序从当前无序区中选出关键字最小的记录 <code>R[k]</code>，将它与无序区的第<code>1</code>个记录<code>R[i]</code>交换，使<code>R[1..i]</code>和<code>R[i+1..n]</code>分别变为记录个数增加<code>1</code>个的新有序区和记录个数减少<code>1</code>个的新无序区。</li>
 </ul>
