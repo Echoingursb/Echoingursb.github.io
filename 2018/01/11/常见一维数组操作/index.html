@@ -12,18 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--自动将http的不安全请求升级为https-->
   <link rel="dns-prefetch" href="http://echoingursb.github.io">
-  <title>Archives: 2017/8 | WHOAMI</title>
+  <title>常见一维数组操作 | WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Web Java front-end">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WHOAMI">
-<meta property="og:url" content="http://echoingursb.github.io/archives/2017/08/index.html">
+  <meta name="description" content="常见一维数组操作">
+<meta name="keywords" content="技术,java,数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见一维数组操作">
+<meta property="og:url" content="http://echoingursb.github.io/2018/01/11/常见一维数组操作/index.html">
 <meta property="og:site_name" content="WHOAMI">
-<meta property="og:description" content="Web Java front-end">
+<meta property="og:description" content="常见一维数组操作">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-11T15:48:13.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WHOAMI">
-<meta name="twitter:description" content="Web Java front-end">
+<meta name="twitter:title" content="常见一维数组操作">
+<meta name="twitter:description" content="常见一维数组操作">
   
     <link rel="alternative" href="/atom.xml" title="WHOAMI" type="application/atom+xml">
   
@@ -183,36 +185,61 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-常见一维数组操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/30/单词/" class="archive-article-date">
-  	<time datetime="2017-08-30T01:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/30/单词/">单词</a>
+    <h1 class="article-title" itemprop="name">
+      常见一维数组操作
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/11/常见一维数组操作/" class="archive-article-date">
+  	<time datetime="2018-01-11T15:46:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script src="\assets\js\APlayer.min.js"> </script><p>常见一维数组操作<br><a id="more"></a><br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 1)(使用输入值初始化数组）下面的循环使用用户输人的数值初始化数组array</span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> inputInitalize() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</div><div class="line"></div><div class="line">	Scanner input = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">	System.out.<span class="built_in">print</span>(<span class="string">"1)输入值初始化数组："</span>);</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		<span class="keyword">array</span>[i] = input.nextInt();</div><div class="line">	&#125;</div><div class="line">	input.<span class="built_in">close</span>();</div><div class="line">	System.out.<span class="built_in">println</span>(Arrays.toString(<span class="keyword">array</span>));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 2)(使用随机数初始化数组）下面的循环使用0.0 到100.0 之间，但小于100.0 的随机值初始化数组array</span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> randomInitialize() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</div><div class="line">	System.out.<span class="built_in">print</span>(<span class="string">"2)随机数初始化数组："</span>);</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		<span class="keyword">array</span>[i] = (<span class="keyword">int</span>) (Math.<span class="built_in">random</span>() * <span class="number">100</span>);</div><div class="line">	&#125;</div><div class="line">	System.out.<span class="built_in">println</span>(Arrays.toString(<span class="keyword">array</span>));</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 3)(显示數组）为了打印数组，必须使用类似下面的循环，打印数组中的每一个元素。</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> displayArray() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> &#125;;</div><div class="line">	System.out.<span class="built_in">print</span>(<span class="string">"3)&#123; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 &#125;显示数组："</span>);</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		System.out.<span class="built_in">print</span>(<span class="keyword">array</span>[i] + <span class="string">" "</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 4)(对所有元素求和）使用名为sum的变量存储和,sum的值初始化为0,使用如下循环将数组中的每个元素加到sum中：</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> sumArray() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> &#125;;</div><div class="line">	<span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">	System.out.<span class="built_in">println</span>();</div><div class="line">	System.out.<span class="built_in">print</span>(<span class="string">"4)对&#123; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 &#125;所有元素求和："</span>);</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		sum += <span class="keyword">array</span>[i];</div><div class="line">	&#125;</div><div class="line">	System.out.<span class="built_in">println</span>(sum);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 5)(找出最大元素）使用名为max 的变量存储最大元素。 将max的值初始化为myList[0]。</span></div><div class="line"><span class="comment"> * 为了找出数组array中的最大元素，将每个元素与max比较,如果该元索大于max, 则更新max。</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> searchMax() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> &#125;;</div><div class="line">	<span class="keyword">int</span> <span class="built_in">max</span> = <span class="keyword">array</span>[<span class="number">0</span>];</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		<span class="built_in">if</span> (<span class="keyword">array</span>[i] &gt; <span class="built_in">max</span>) &#123;</div><div class="line">			<span class="built_in">max</span> = <span class="keyword">array</span>[i];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	System.out.<span class="built_in">println</span>(<span class="string">"5)数组&#123; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 &#125;最大元素："</span> + <span class="built_in">max</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 6)(找出最大元素的最小下标值）经常需要找出数组中的最大元素。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 如果数组中含有多个最大元素，那么找出最大元素的最小下标值。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 假设数组array为&#123;1,5,3,4,5,5&#125;。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 最大元素为5,5的最小下标为1。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 使用名为max的变量存储最大元素，使用名为indexOfMax的变量表示最大元素的下标。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 将max的值初始化为array[0], 而将indexOfMax 的值初始化为0。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 将array中的每个元素与max比较，如果这个元素大于max，则更新max和indexOfMax。</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> searchIndexOfMax() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = &#123; <span class="number">1</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">5</span> &#125;;</div><div class="line">	<span class="keyword">int</span> <span class="built_in">max</span> = <span class="keyword">array</span>[<span class="number">0</span>];</div><div class="line">	<span class="keyword">int</span> indexOfMax = <span class="number">0</span>;</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		<span class="built_in">if</span> (<span class="keyword">array</span>[i] &gt; <span class="built_in">max</span>) &#123;</div><div class="line">			<span class="built_in">max</span> = <span class="keyword">array</span>[i];</div><div class="line">			indexOfMax = i;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	System.out.<span class="built_in">println</span>(<span class="string">"6)"</span> + Arrays.toString(<span class="keyword">array</span>) + <span class="string">"最大元素："</span> + <span class="built_in">max</span> + <span class="string">" 最小下标："</span> + indexOfMax);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 7)(随机打乱）在很多应用程序中，需要对数组中的元素进行任意的重新排序。这称作打乱（shuffling)。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 为完成这种功能，针对每个元素array[i], 随意产生一个下标j, 然后将array[i]和array[j]互换。</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> shuffleArray() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> &#125;;</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		<span class="keyword">int</span> j = (<span class="keyword">int</span>) (Math.<span class="built_in">random</span>() * (i + <span class="number">1</span>));</div><div class="line"></div><div class="line">		<span class="comment">// 用array[j]交换array[i]</span></div><div class="line">		<span class="keyword">int</span> temp = <span class="keyword">array</span>[i];</div><div class="line">		<span class="keyword">array</span>[i] = <span class="keyword">array</span>[j];</div><div class="line">		<span class="keyword">array</span>[j] = temp;</div><div class="line">	&#125;</div><div class="line">	System.out.<span class="built_in">println</span>(<span class="string">"7)将数组"</span> + <span class="string">"&#123; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 &#125;"</span> + <span class="string">"随机打乱："</span> + Arrays.toString(<span class="keyword">array</span>));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 8)(移动元素）有时候需要向左或向右移动元素。</span></div><div class="line"><span class="comment"> * &lt;P&gt;</span></div><div class="line"><span class="comment"> * 这里的例子就是将元素向左移动一个位置并且将第一个元素放在最后一个元素的位置：</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> moveLeftArray() &#123;</div><div class="line">	<span class="keyword">int</span>[] <span class="keyword">array</span> = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> &#125;;</div><div class="line">	<span class="keyword">int</span> temp = <span class="keyword">array</span>[<span class="number">0</span>];</div><div class="line">	<span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="keyword">array</span>.length; i++) &#123;</div><div class="line">		<span class="keyword">array</span>[i - <span class="number">1</span>] = <span class="keyword">array</span>[i];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">array</span>[<span class="keyword">array</span>.length - <span class="number">1</span>] = temp;</div><div class="line">	System.out.<span class="built_in">println</span>(<span class="string">"8)将数组&#123; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 &#125;向左移动一个元素："</span> + Arrays.toString(<span class="keyword">array</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+
+      <div id="back-to-top" data-scroll="body">
+        <a href="#top" style="color:white"></a>
+      </div>
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -222,52 +249,156 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">单词</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数组</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://echoingursb.github.io/2018/01/11/常见一维数组操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/28/关于小猫OwO/" class="archive-article-date">
-  	<time datetime="2017-08-28T05:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/28/关于小猫OwO/">关于小猫OwO</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+  
+  
+  <div class="copyright">
+    <p><span>本文标题:</span><a href="/2018/01/11/常见一维数组操作/">常见一维数组操作</a></p>
+    <p><span>文章作者:</span>
+      <a href="/" title="访问 echo 的个人博客">echo</a>
+      <a href="https://github.com/Echoingursb" title="访问 echo 的GitHub"><i class="fa fa-github-alt"></i></a>
+    </p>
+    <p><span>发布时间:</span>2018年01月11日 - 23时46分</p>
+    <p><span>最后更新:</span>2018年01月11日 - 23时48分</p>
+    <p>
+      <span>原始链接:</span><a class="post-url" href="/2018/01/11/常见一维数组操作/" title="常见一维数组操作">http://echoingursb.github.io/2018/01/11/常见一维数组操作/</a>
+      <span class="copy-path" data-clipboard-text="原文: http://echoingursb.github.io/2018/01/11/常见一维数组操作/　　作者: echo" title="点击复制文章链接">
+          <i class="fa fa-clipboard"></i>
+      </span>
+    </p>
+    <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+    <script src="https://echoingursb.github.io/js/clipboard.min.js"></script>
+    <script> var clipboard = new Clipboard('.copy-path'); </script>
   </div>
-</article>
-  
-  
-    </div></section>
+  <!-- <iframe src="http://121.42.195.113/emps/like.html" class="like" frameborder="no" scrolling="no"></iframe> -->
   
 
-    
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/10/java保留两位小数四种方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java保留两位小数四种方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://echoingursb.github.io/2018/01/11/常见一维数组操作/",
+  owner: 'echoingursb',
+  repo: 'echoingursb.github.io',
+  oauth: {
+    client_id: 'ffff908e7f47730b61e7',
+    client_secret: '9fbf51b7ce2dcc118dca6c505dc7f10f14efcb29',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -403,8 +534,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
